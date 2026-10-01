@@ -1,6 +1,5 @@
-@charset "UTF-8";
 /* @settings
-name: AnuPpuccin Themes Extended
+name: Kodann Themes Extended
 id: anuppuccin-theme-settings-extended
 settings:
   -
@@ -100,9 +99,6 @@ settings:
         -
             label: Nord Dark (Custom palette)
             value: ctp-nord-darker
-        -
-            label: Rosé Pine
-            value: ctp-rosepine-dark
         -
             label: Rosebox
             value: ctp-rosebox
@@ -3104,140 +3100,6 @@ settings:
   	25
   ,
   25 ;
-}
-
-.theme-dark.anp-theme-ext-dark.ctp-rosepine-dark,
-.anp-theme-ext-dark.ctp-rosepine-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 243
-  	,
-  	215
-  ,
-  204 ;
-  --ctp-ext-flamingo: 235
-  	,
-  	188
-  ,
-  186 ;
-  --ctp-ext-pink: 223
-  	,
-  	167
-  ,
-  231 ;
-  --ctp-ext-mauve: 196
-  	,
-  	167
-  ,
-  231 ;
-  --ctp-ext-red: 235
-  	,
-  	111
-  ,
-  146 ;
-  --ctp-ext-maroon: 235
-  	,
-  	122
-  ,
-  111 ;
-  --ctp-ext-peach: 235
-  	,
-  	159
-  ,
-  111 ;
-  --ctp-ext-yellow: 246
-  	,
-  	193
-  ,
-  119 ;
-  --ctp-ext-green: 114
-  	,
-  	182
-  ,
-  156 ;
-  --ctp-ext-teal: 156
-  	,
-  	207
-  ,
-  216 ;
-  --ctp-ext-sky: 49
-  	,
-  	116
-  ,
-  143 ;
-  --ctp-ext-sapphire: 68
-  	,
-  	132
-  ,
-  171 ;
-  --ctp-ext-blue: 76
-  	,
-  	127
-  ,
-  169 ;
-  --ctp-ext-lavender: 210
-  	,
-  	193
-  ,
-  231 ;
-  --ctp-ext-text: 224
-  	,
-  	222
-  ,
-  244 ;
-  --ctp-ext-subtext1: 144
-  	,
-  	140
-  ,
-  170 ;
-  --ctp-ext-subtext0: 110
-  	,
-  	106
-  ,
-  134 ;
-  --ctp-ext-overlay2: 82
-  	,
-  	79
-  ,
-  103 ;
-  --ctp-ext-overlay1: 64
-  	,
-  	61
-  ,
-  82 ;
-  --ctp-ext-overlay0: 54
-  	,
-  	50
-  ,
-  83 ;
-  --ctp-ext-surface2: 46
-  	,
-  	42
-  ,
-  70 ;
-  --ctp-ext-surface1: 33
-  	,
-  	32
-  ,
-  46 ;
-  --ctp-ext-surface0: 31
-  	,
-  	29
-  ,
-  46 ;
-  --ctp-ext-base: 25
-  	,
-  	23
-  ,
-  36 ;
-  --ctp-ext-mantle: 17
-  	,
-  	16
-  ,
-  25 ;
-  --ctp-ext-crust: 11
-  	,
-  	10
-  ,
-  16 ;
 }
 
 .theme-dark.anp-theme-ext-dark.ctp-royal-velvet,

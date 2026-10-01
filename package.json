@@ -1,0 +1,15 @@
+{
+  "name": "kodann",
+  "version": "1.0.0",
+  "description": "A customized Obsidian theme fork based on AnuPpuccin.",
+  "scripts": {
+    "build": "make build",
+    "build:snippets": "make snippets"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  },
+  "keywords": [],
+  "author": "Ninn818",
+  "license": "GPL-3.0-only"
+}

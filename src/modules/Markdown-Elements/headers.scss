@@ -6,6 +6,16 @@
     padding: 0px 6px;
 }
 
+.theme-dark.ctp-overcast-clouds-dark .app-container,
+.theme-dark.ctp-overcast-clouds-dark .print {
+    --h1-color: #dad8c0;
+    --h2-color: #F7CFD9;
+    --h3-color: #f3b9e9;
+    --h4-color: #b38db8;
+    --h5-color: #c761ae;
+    --h6-color: #a354a4;
+}
+
 // Custom header font
 
 $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach",

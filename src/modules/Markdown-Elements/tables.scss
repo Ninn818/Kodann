@@ -1,20 +1,40 @@
-/*-Recolor table borders-*/
-.anp-table-toggle {
+/*-Default Markdown table appearance-*/
+.markdown-preview-view:not(.cards):not(.table-disable) table,
+.markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.is-live-preview:not(.cards):not(.table-disable) table,
+.is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    background-color: rgba(var(--ctp-surface0), 0.2);
+    border: var(--anp-table-thickness, 1px) solid rgba(var(--ctp-text), 0.12);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
 
+    td,
+    th {
+        border: 0;
+        border-right: var(--anp-table-thickness, 1px) solid rgba(var(--ctp-text), 0.12);
+        border-bottom: var(--anp-table-thickness, 1px) solid rgba(var(--ctp-text), 0.12);
+    }
+
+    tr>:last-child {
+        border-right: 0;
+    }
+
+    tbody:last-child>tr:last-child>* {
+        border-bottom: 0;
+    }
+}
+
+/*-Optional table text alignment-*/
+.anp-table-toggle {
     .markdown-preview-view:not(.cards):not(.table-disable) table,
     .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
     .is-live-preview:not(.cards):not(.table-disable) table,
     .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
-
-        &,
-        td,
-        th,
-        thead tr>th:first-child,
-        thead tr>th,
-        thead tr>th:last-child {
-            border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
-        }
-
         th:not([align]),
         thead tr>th:first-child:not([align]),
         thead tr>th:not([align]),

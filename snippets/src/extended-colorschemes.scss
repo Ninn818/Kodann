@@ -1,5 +1,5 @@
 /* @settings
-name: AnuPpuccin Themes Extended
+name: Kodann Themes Extended
 id: anuppuccin-theme-settings-extended
 settings:
   -
@@ -100,9 +100,6 @@ settings:
             label: Nord Dark (Custom palette)
             value: ctp-nord-darker
         -
-            label: Rosé Pine
-            value: ctp-rosepine-dark
-        -
             label: Rosebox
             value: ctp-rosebox
         -
@@ -136,7 +133,6 @@ settings:
 @import "ext-colorschemes/notion-light.scss";
 @import "ext-colorschemes/notion-dark.scss";
 @import "ext-colorschemes/rosebox.scss";
-@import "ext-colorschemes/rosepine-dark.scss";
 @import "ext-colorschemes/royal-velvet.scss";
 @import "ext-colorschemes/sandy-beaches-light.scss";
 @import "ext-colorschemes/solarized-dark.scss";
@@ -157,7 +153,7 @@ $ext-theme-list: $theme-atom-light, $theme-amoled-dark, $theme-atom-dark,
 	$theme-kanagawa-dark, $theme-luminescence-light, $theme-material-mint-light,
 	$theme-material-mint-dark, $theme-nord-dark, $theme-nord-darker,
 	$theme-nord-light, $theme-notion-light, $theme-notion-dark, $theme-rosebox,
-	$theme-rosepine-dark, $theme-royal-velvet, $theme-sandy-beaches-light,
+    $theme-royal-velvet, $theme-sandy-beaches-light,
 	$theme-solarized-dark, $theme-solarized-light, $theme-thorns;
 
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {

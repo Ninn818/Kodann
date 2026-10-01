@@ -1,19 +1,16 @@
 /*===============================================================
-                           AnuPpuccin
+                             Kodann
                            ----------
-                  Personal theme for Obsidian
+          Customized AnuPpuccin fork for Obsidian
 
-AnuPpuccin is licensed under the GPL-3.0 license which allows you
-  to modify the code freely, however the Copyright and license
-notices must be preserved in your CSS. If you redistribute a part
-of my code, please credit my theme in your CSS file, and specify
-  which code you are using. Please keep my Buy Me a Coffee link
-                  in your README if you do so.
+Kodann is a customized fork of AnuPpuccin by AnubisNekhet.
+The source is licensed under GPL-3.0. Preserve upstream copyright
+and license notices when redistributing derived code.
 
             https://www.buymeacoffee.com/anubisnekhet
 *===============================================================*/
 /* @settings
-name: AnuPpuccin
+name: Kodann
 id: anuppuccin-theme-settings
 settings:
 
@@ -32,14 +29,23 @@ settings:
     description: Select your preferred light mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-latte
+    default: ctp-sandy-beaches-light
     options:
     -
-        label: Latte
-        value: ctp-latte
+        label: Sandy Beaches
+        value: ctp-sandy-beaches-light
     -
-        label: Rosé Pine
-        value: ctp-rosepine-light
+        label: Overcast Clouds
+        value: ctp-overcast-clouds-light
+    -
+        label: Etching
+        value: ctp-etching-light
+    -
+        label: Kawaii
+        value: ctp-kawaii-light
+    -
+        label: Blueberry & Creme
+        value: ctp-blueberry-creme-light
 -
     id: anuppuccin-theme-dark
     title: Dark Theme Flavor
@@ -49,17 +55,20 @@ settings:
     default: ctp-mocha
     options:
     -
-        label: Frappe
-        value: ctp-frappe
+        label: Sandy Beaches Dark
+        value: ctp-sandy-beaches-dark
     -
-        label: Macchiato
-        value: ctp-macchiato
+        label: Overcast Clouds Dark
+        value: ctp-overcast-clouds-dark
     -
-        label: Mocha
-        value: ctp-mocha
+        label: Etching
+        value: ctp-etching-dark
     -
-        label: Mocha Old
-        value: ctp-mocha-old
+        label: Kawaii
+        value: ctp-kawaii-dark
+    -
+        label: Blueberry & Creme
+        value: ctp-blueberry-creme-dark
 -
     id: anuppuccin-light-theme-accents
     title: Light Theme Accent
@@ -169,7 +178,7 @@ settings:
 -
     id: anuppuccin-url-extended-colorschemes
     title: Extended Color Schemes Snippet
-    description: "Download the snippet by clicking on [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)."
+    description: "Download the upstream snippet from [this link](https://github.com/Ninn818/Kodann/blob/main/snippets/extended-colorschemes.css)."
     type: info-text
     markdown: true
 
@@ -370,7 +379,7 @@ settings:
 -
     id: anp-editor-header
     title: File Editor & Markdown Elements
-    description: Callouts, Checkboxes, Codeblocks, Lists, Tables, Tags, etc.
+    description: Callouts, Tables, Tags, etc.
     type: heading
     level: 1
     collapsed: true
@@ -398,7 +407,7 @@ settings:
 -
     id: anp-callout-header
     title: Callouts
-    description: Callout styles, border radius, custom colors
+    description: Callout styles and custom colors
     type: heading
     level: 2
     collapsed: true
@@ -419,147 +428,12 @@ settings:
         label: Block
         value: anp-callout-block
     -
-        label: Vanilla Normal
-        value: anp-callout-vanilla-normal
-    -
-        label: Vanilla Plus
-        value: anp-callout-vanilla-plus
+        label: Lacey Frame (Blueberry & Creme Light)
+        value: anp-callout-lacey-frame
 -
     id: anp-callout-color-toggle
     title: Enable Custom Callout Colors
     type: class-toggle
--
-    id: callout-radius
-    title: Callout Radius
-    type: variable-number
-    default: 4
-    format: px
--
-    id: callout-padding
-    title: Callout Padding
-    description: Be careful, it does not properly work with all the callouts style yet.
-    type: variable-text
-    default: 0px
--
-    id: callout-title-padding
-    title: Callout Title Padding
-    type: variable-text
-    default: 8px
--
-    id: callout-title-opacity
-    title: Callout Title Background Opacity
-    description: Applies to Sleek, Vanilla and Vanilla Plus callouts
-    type: variable-number-slider
-    default: 0.1
-    min: 0
-    max: 1
-    step: 0.05
--
-    id: callout-content-padding
-    title: Callout Content Padding
-    type: variable-text
-    default: 8px
--
-    id: anp-callout-fold-position
-    title: Callout Fold Position
-    type: variable-select
-    default: '0'
-    options:
-    -
-        label: Left
-        value: 0
-    -
-        label: Right
-        value: 1
-
-# File Editor & Markdown Elements :: Checkboxes
-
--
-    id: anp-custom-checkboxes-header
-    title: Checkboxes
-    description: Custom checkboxes and speech bubbles
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-custom-checkboxes
-    title: Enable Custom Checkboxes
-    type: class-toggle
--
-    id: anp-speech-bubble
-    title: Enable Speech Bubbles
-    type: class-toggle
-
-# File Editor & Markdown Elements :: Codeblocks
-
--
-    id: anp-codeblock-header
-    title: Codeblocks
-    description: Codeblock wrapping, line numbering
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-codeblock-numbers
-    title: Enable Codeblock Numbering
-    type: class-toggle
--
-    id: anp-codeblock-wrap-edit
-    title: Codeblock Line Wrap (Edit Mode)
-    description: Does not work for codeblocks with syntax highlighting
-    type: class-select
-    default: none
-    options:
-    -
-        label: Wrap
-        value: none
-    -
-        label: No Wrap
-        value: anp-codeblock-edit-nowrap
--
-    id: anp-codeblock-wrap-preview
-    title: Codeblock Line Wrap (Preview Mode)
-    description: Does not work for codeblocks with syntax highlighting
-    type: class-select
-    default: none
-    options:
-    -
-        label: Wrap
-        value: none
-    -
-        label: No Wrap
-        value: anp-codeblock-preview-nowrap
--
-    id: anp-codeblock-wrap-hl-preview
-    title: Syntax Highlighted Codeblock Line Wrap (Preview Mode)
-    type: class-select
-    default: none
-    options:
-    -
-        label: Wrap
-        value: none
-    -
-        label: No Wrap
-        value: anp-codeblock-preview-hl-nowrap
--
-    id: anp-code-bg-color
-    title: Codeblock Background Color
-    type: variable-themed-color
-    allowEmpty: true
-    format: hex
-    opacity: false
-    default-light: '#'
-    default-dark: '#'
--
-    id: anp-code-text-color
-    title: Codeblock Text Color
-    type: variable-themed-color
-    description: Applies to codeblocks without syntax highlighting
-    allowEmpty: true
-    format: hex
-    opacity: false
-    default-light: '#'
-    default-dark: '#'
 
 # File Editor & Markdown Elements :: Embeds
 -
@@ -575,265 +449,6 @@ settings:
     type: variable-number
     default: 4
     format: px
-
-# File Editor & Markdown Elements :: LaTeX
-
--
-    id: anp-latex-header
-    title: LaTex
-    type: heading
-    description: LaTeX (Math) color, font size
-    level: 2
-    collapsed: true
--
-    id: anp-latex-inline-color
-    title: LaTeX Inline Color
-    type: class-select
-    allowEmpty: true
-    default: anp-latex-inline-text
-    options:
-    -
-        label: Rosewater
-        value: anp-latex-inline-rosewater
-    -
-        label: Flamingo
-        value: anp-latex-inline-flamingo
-    -
-        label: Pink
-        value: anp-latex-inline-pink
-    -
-        label: Mauve
-        value: anp-latex-inline-mauve
-    -
-        label: Red
-        value: anp-latex-inline-red
-    -
-        label: Maroon
-        value: anp-latex-inline-maroon
-    -
-        label: Peach
-        value: anp-latex-inline-peach
-    -
-        label: Yellow
-        value: anp-latex-inline-yellow
-    -
-        label: Green
-        value: anp-latex-inline-green
-    -
-        label: Teal
-        value: anp-latex-inline-teal
-    -
-        label: Sky
-        value: anp-latex-inline-sky
-    -
-        label: Sapphire
-        value: anp-latex-inline-sapphire
-    -
-        label: Blue
-        value: anp-latex-inline-blue
-    -
-        label: Lavender
-        value: anp-latex-inline-lavender
-    -
-        label: Text
-        value: anp-latex-inline-text
-    -
-        label: Subtext 1
-        value: anp-latex-inline-subtext1
-    -
-        label: Subtext 0
-        value: anp-latex-inline-subtext0
-    -
-        label: Overlay 2
-        value: anp-latex-inline-overlay2
-    -
-        label: Overlay 1
-        value: anp-latex-inline-overlay1
-    -
-        label: Overlay 0
-        value: anp-latex-inline-overlay0
-    -
-        label: Surface 2
-        value: anp-latex-inline-surface2
-    -
-        label: Surface 1
-        value: anp-latex-inline-surface1
-    -
-        label: Surface 0
-        value: anp-latex-inline-surface0
--
-    id: anp-latex-block-color
-    title: LaTeX Block Color
-    type: class-select
-    allowEmpty: true
-    default: anp-latex-block-text
-    options:
-    -
-        label: Rosewater
-        value: anp-latex-block-rosewater
-    -
-        label: Flamingo
-        value: anp-latex-block-flamingo
-    -
-        label: Pink
-        value: anp-latex-block-pink
-    -
-        label: Mauve
-        value: anp-latex-block-mauve
-    -
-        label: Red
-        value: anp-latex-block-red
-    -
-        label: Maroon
-        value: anp-latex-block-maroon
-    -
-        label: Peach
-        value: anp-latex-block-peach
-    -
-        label: Yellow
-        value: anp-latex-block-yellow
-    -
-        label: Green
-        value: anp-latex-block-green
-    -
-        label: Teal
-        value: anp-latex-block-teal
-    -
-        label: Sky
-        value: anp-latex-block-sky
-    -
-        label: Sapphire
-        value: anp-latex-block-sapphire
-    -
-        label: Blue
-        value: anp-latex-block-blue
-    -
-        label: Lavender
-        value: anp-latex-block-lavender
-    -
-        label: Text
-        value: anp-latex-block-text
-    -
-        label: Subtext 1
-        value: anp-latex-block-subtext1
-    -
-        label: Subtext 0
-        value: anp-latex-block-subtext0
-    -
-        label: Overlay 2
-        value: anp-latex-block-overlay2
-    -
-        label: Overlay 1
-        value: anp-latex-block-overlay1
-    -
-        label: Overlay 0
-        value: anp-latex-block-overlay0
-    -
-        label: Surface 2
-        value: anp-latex-block-surface2
-    -
-        label: Surface 1
-        value: anp-latex-block-surface1
-    -
-        label: Surface 0
-        value: anp-latex-block-surface0
--
-    id: anp-latex-block-font-size
-    title: LaTeX Block Font Size
-    description: Change the font size of LaTeX blocks.
-    type: variable-number
-    default: 100
-    format: "%"
-
-# File Editor & Markdown Elements :: Lists
-
--
-    id: anp-list-header
-    title: Lists
-    description: Styling, indent, spacing
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-list-toggle
-    title: Enable List Styling
-    type: class-toggle
--
-    id: list-indent
-    title: List Indent
-    type: variable-number
-    default: 2
-    format: em
--
-    id: list-spacing
-    title: List Spacing
-    type: variable-number
-    default: 0.075
-    format: em
--
-    id: list-marker-color
-    title: Unordered list bullet color
-    type: variable-themed-color
-    default-light: '#'
-    default-dark: '#'
-    format: 'hex'
--
-    id: list-numbered-style
-    title: Ordered list style
-    type: variable-select
-    default: decimal
-    options:
-    -
-        label: "Decimal"
-        value: decimal
-    -
-        label: "Decimal with leading zeroes"
-        value: decimal-leading-zero
-    -
-        label: "Lowercase alphabetical"
-        value: lower-alpha
-    -
-        label: "Uppercase alphabetical"
-        value: upper-alpha
-    -
-        label: "Lowercase Roman Numerals"
-        value: lower-roman
-    -
-        label: "Uppercase Roman Numerals"
-        value: upper-roman
-    -
-        label: "Lowercase Latin"
-        value: lower-latin
-    -
-        label: "Uppercase Latin"
-        value: upper-latin
-    -
-        label: "Lowercase Greek"
-        value: lower-greek
-    -
-        label: "Uppercase Greek"
-        value: upper-greek
-    -
-        label: "Hiragana"
-        value: hiragana
-    -
-        label: "Hiragana Iroha"
-        value: hiragana-iroha
-    -
-        label: "Katakana"
-        value: armenian
-    -
-        label: "Katakana Iroha"
-        value: katakana-iroha
-    -
-        label: "Armenian"
-        value: armenian
-    -
-        label: "CJK Ideographic"
-        value: cjk-ideographic
-    -
-        label: "Hebrew"
-        value: hebrew
 
 # File Editor & Markdown Elements :: Tables
 
@@ -992,252 +607,6 @@ settings:
     default: 700
     format: px
 
-# Integrations
-
--
-    id: anp-plugin-header
-    title: Integrations
-    description: Kanban, MAKE.md, Minimal Cards Snippet, etc.
-    type: heading
-    level: 1
-    collapsed: true
-
-# Integrations :: Kanban
-
--
-    id: anp-plugin-kanban
-    title: Kanban
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
-
-# Integrations :: Kanban :: Card Settings
-
--
-    id: anp-plugin-card-settings
-    title: Card Settings
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: anp-kanban-hide-card-menus
-    title: Hide the Card Menu Button
-    type: class-toggle
--
-    id: anp-kanban-hide-archive-btn
-    title: Hide the Archive Card Button
-    type: class-toggle
--
-    id: anp-kanban-hide-card-border
-    title: Disable Card Borders
-    type: class-toggle
--
-    id: anp-kanban-card-opacity
-    title: Card Opacity
-    type: variable-number-slider
-    default: 1
-    min: 0
-    max: 1
-    step: 0.05
--
-    id: anp-kanban-card-radius
-    title: Card Radius
-    type: variable-number-slider
-    default: 6
-    format: px
-    min: 0
-    max: 10
-    step: 1
--
-    id: anp-kanban-card-spacing
-    title: Card Spacing
-    type: variable-number-slider
-    default: 8
-    format: px
-    min: -1
-    max: 8
-    step: 1
-
-# Integrations :: Kanban :: Lane Settings
-
--
-    id: anp-plugin-lane-settings
-    title: Lane Settings
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: anp-kanban-lanes
-    title: Enable Full Height Lanes
-    description: Toggles maximum height for Kanban lanes
-    type: class-toggle
--
-    id: anp-kanban-hide-lane-border
-    title: Disable Lane Borders
-    type: class-toggle
--
-    id: anp-kanban-lane-opacity
-    title: Lane Opacity
-    type: variable-number-slider
-    default: 1
-    min: 0
-    max: 1
-    step: 0.05
--
-    id: anp-kanban-lane-radius
-    title: Lane Radius
-    type: variable-number-slider
-    default: 6
-    format: px
-    min: 0
-    max: 10
-    step: 1
--
-    id: anp-kanban-lane-spacing
-    title: Lane Spacing
-    type: variable-number-slider
-    default: 10
-    format: px
-    min: -1
-    max: 20
-    step: 1
-
-# Integrations :: Kanban :: Search Settings
-
--
-    id: anp-plugin-kanban-search-settings
-    title: Search Settings
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: anp-kanban-search-full
-    title: Enable Full Width Search Bar
-    description: 
-    type: class-toggle
--
-    id: anp-kanban-collapse-lanes
-    title: Collapse Lanes With No Search Results
-    description: 
-    type: class-toggle
--
-    id: anp-kanban-hide-cards
-    title: Hide Cards That Don't Contain the Search Query
-    description: 
-    type: class-toggle
--
-    id: anp-kanban-hide-mark
-    title: Hide Search Result Highlight in Cards
-    description: 
-    type: class-toggle
--
-    id: anp-kanban-uncollapse-lanes
-    title: Uncollapse Lanes and Unhide Cards When Sorting
-    description: 
-    type: class-toggle
-
-# Integrations :: MAKE.md
-
--
-    id: anp-plugin-makemd
-    title: MAKE.md
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-inline-title-vis
-    title: Inline Title Visibility
-    description: Make.md requires inline titles to be enabled to show folder titles, hence this toggle exists to disable it on notes elsewhere.
-    type: variable-select
-    default: block
-    options:
-    -
-        label: Visible
-        value: block
-    -
-        label: Invisible
-        value: none
-
-# Integrations :: Minimal Cards
-
--
-    id: anp-snippet-minimal-cards
-    title: Minimal Cards
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-snippet-minimal-cards-disc
-    title: Usage
-    description: "Minimal Cards is a feature of [Minimal](https://github.com/kepano/obsidian-minimal). AnuPpuccin does not come compiled with the snippet, however you can use a compiled version with this theme."
-    type: info-text
-    markdown: true
--
-    id: anuppuccin-url-minimal-cards-snippet
-    title: Minimal Cards Snippet
-    description: "Download the snippet from [kepano](https://github.com/kepano/)'s github via [this link](https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss)."
-    type: info-text
-    markdown: true
--
-    id: cards-min-width
-    title: Card minimum width
-    type: variable-text
-    default: 180px
--
-    id: cards-max-width
-    title: Card maximum width
-    description: Default fills the available width, accepts valid CSS units
-    type: variable-text
-    default: 1fr
--
-    id: cards-mobile-width
-    title: Card minimum width on mobile
-    type: variable-text
-    default: 120px
--
-    id: cards-padding
-    title: Card padding
-    type: variable-text
-    default: 1.2em
--
-    id: cards-image-height
-    title: Card maximum image height
-    type: variable-text
-    default: 400px
--
-    id: cards-border-width
-    title: Card border width
-    type: variable-text
-    default: 1px
-
-# Miscellaneous
-
--
-    id: anp-misc-element-header
-    title: Miscellaneous
-    description: Color Palette Transition, Custom Metadata Button
-    type: heading
-    level: 1
-    collapsed: true
--
-    id: anp-color-transition-toggle
-    title: Enable Color Transition (WIP)
-    description: "Adds a transition when switching palettes, looks really neat :)"
-    type: class-toggle
--
-    id: anp-button-metadata-toggle
-    title: Enable Custom Metadata Button
-    type: class-toggle
--
-    id: anp-print
-    title: Enable Print Styling
-    type: class-toggle
-
 # Show/Hide UI Elements
 
 -
@@ -1284,909 +653,6 @@ settings:
     title: Hide External Link Icon
     type: class-toggle
     default: true
-
-# Typography
-
--
-    id: anp-typography-header
-    title: Typography
-    description: Fonts, Headings, Text Decoration, etc.
-    type: heading
-    level: 1
-    collapsed: true
-
-# Typography :: Font Families
-
--
-    id: anp-font-families-header
-    title: Font Families
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-editor-font-source
-    title: Source Editor Font
-    type: variable-text
-    default: Iosevka Comfy Duo
--
-    id: anp-editor-font-lp
-    title: Live Preview Editor Font
-    type: variable-text
-    default: Noto Sans
--
-    id: anp-editor-font-rv
-    title: Reading View Editor Font
-    type: variable-text
-    default: Noto Sans
-
-# Typography :: Font Weights
-
--
-    id: anp-font-weight-header
-    title: Font Weights
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: bold-weight
-    title: Bold Weight
-    type: variable-select
-    default: '600'
-    options:
-    -
-        label: 'Bolder (Relative)'
-        value: bolder
-    -
-        label: Lightest
-        value: 100
-    -
-        label: Lighter
-        value: 200
-    -
-        label: Light
-        value: 300
-    -
-        label: Normal
-        value: 400
-    -
-        label: Bold
-        value: 500
-    -
-        label: Bolder
-        value: 600
-    -
-        label: Extrabold
-        value: 700
-    -
-        label: Extra-extrabold
-        value: 800
-    -
-        label: Black
-        value: 900
--
-    id: anp-font-live-preview-wt
-    title: Live Preview Mode Weight
-    type: variable-select
-    default: '400'
-    options:
-    -
-        label: Lightest
-        value: 100
-    -
-        label: Lighter
-        value: 200
-    -
-        label: Light
-        value: 300
-    -
-        label: Normal
-        value: 400
-    -
-        label: Bold
-        value: 500
-    -
-        label: Bolder
-        value: 600
-    -
-        label: Extrabold
-        value: 700
-    -
-        label: Extra-extrabold
-        value: 800
-    -
-        label: Black
-        value: 900
--
-    id: anp-font-preview-wt
-    title: Reading Mode Weight
-    type: variable-select
-    default: '400'
-    options:
-    -
-        label: Lightest
-        value: 100
-    -
-        label: Lighter
-        value: 200
-    -
-        label: Light
-        value: 300
-    -
-        label: Normal
-        value: 400
-    -
-        label: Bold
-        value: 500
-    -
-        label: Bolder
-        value: 600
-    -
-        label: Extrabold
-        value: 700
-    -
-        label: Extra-extrabold
-        value: 800
-    -
-        label: Black
-        value: 900
--
-    id: anp-font-editor-wt
-    title: Source Mode Weight
-    type: variable-select
-    default: '400'
-    options:
-    -
-        label: Lightest
-        value: 100
-    -
-        label: Lighter
-        value: 200
-    -
-        label: Light
-        value: 300
-    -
-        label: Normal
-        value: 400
-    -
-        label: Bold
-        value: 500
-    -
-        label: Bolder
-        value: 600
-    -
-        label: Extrabold
-        value: 700
-    -
-        label: Extra-extrabold
-        value: 800
-    -
-        label: Black
-        value: 900
-
-# Typography :: Headings
-
--
-    id: anp-header-header
-    title: Headings
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-header-color-toggle
-    title: Enable Custom Heading Colors
-    type: class-toggle
--
-    id: anp-header-margin-toggle
-    title: Enable Custom Heading Margin
-    type: class-toggle
--
-    id: anp-header-divider-color-toggle
-    title: Inherit Divider Color from Heading Color
-    type: class-toggle
--
-    id: anp-header-margin-value
-    title: Heading margin value
-    description: Size unit is px
-    type: variable-number-slider
-    min: 0
-    max: 30
-    step: 2
-    default: 15
-    format: px
-
-# Typography :: Headings :: H1
-
--
-    id: anp-h1-header
-    title: H1
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: h1-font
-    title: H1 Font Family
-    type: variable-text
-    default: Noto Serif
--
-    id: h1-size
-    title: H1 Font Size
-    type: variable-number
-    default: 2
-    format: em
--
-    id: h1-weight
-    title: H1 Font Weight
-    type: variable-number
-    default: 700
--
-    id: h1-line-height
-    title: H1 Line Height
-    type: variable-number
-    default: 1.2
--
-    id: anp-h1-color-custom
-    title: H1 Color
-    type: class-select
-    allowEmpty: true
-    default: anp-h1-red
-    options:
-    -
-        label: Rosewater
-        value: anp-h1-rosewater
-    -
-        label: Flamingo
-        value: anp-h1-flamingo
-    -
-        label: Pink
-        value: anp-h1-pink
-    -
-        label: Mauve
-        value: anp-h1-mauve
-    -
-        label: Red
-        value: anp-h1-red
-    -
-        label: Maroon
-        value: anp-h1-maroon
-    -
-        label: Peach
-        value: anp-h1-peach
-    -
-        label: Yellow
-        value: anp-h1-yellow
-    -
-        label: Green
-        value: anp-h1-green
-    -
-        label: Teal
-        value: anp-h1-teal
-    -
-        label: Sky
-        value: anp-h1-sky
-    -
-        label: Sapphire
-        value: anp-h1-sapphire
-    -
-        label: Blue
-        value: anp-h1-blue
-    -
-        label: Lavender
-        value: anp-h1-lavender
--
-    id: anp-h1-divider
-    title: H1 Divider
-    type: class-toggle
-
-# Typography :: Headings :: H2
-
--
-    id: anp-h2-header
-    title: H2
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: h2-font
-    title: H2 Font Family
-    type: variable-text
-    default: Noto Serif
--
-    id: h2-size
-    title: H2 Font Size
-    type: variable-number
-    default: 1.6
-    format: em
--
-    id: h2-weight
-    title: H2 Font Weight
-    type: variable-number
-    default: 600
--
-    id: h2-line-height
-    title: H2 Line Height
-    type: variable-number
-    default: 1.2
--
-    id: anp-h2-color-custom
-    title: H2 Color
-    type: class-select
-    allowEmpty: true
-    default: anp-h2-peach
-    options:
-    -
-        label: Rosewater
-        value: anp-h2-rosewater
-    -
-        label: Flamingo
-        value: anp-h2-flamingo
-    -
-        label: Pink
-        value: anp-h2-pink
-    -
-        label: Mauve
-        value: anp-h2-mauve
-    -
-        label: Red
-        value: anp-h2-red
-    -
-        label: Maroon
-        value: anp-h2-maroon
-    -
-        label: Peach
-        value: anp-h2-peach
-    -
-        label: Yellow
-        value: anp-h2-yellow
-    -
-        label: Green
-        value: anp-h2-green
-    -
-        label: Teal
-        value: anp-h2-teal
-    -
-        label: Sky
-        value: anp-h2-sky
-    -
-        label: Sapphire
-        value: anp-h2-sapphire
-    -
-        label: Blue
-        value: anp-h2-blue
-    -
-        label: Lavender
-        value: anp-h2-lavender
--
-    id: anp-h2-divider
-    title: H2 Divider
-    type: class-toggle
-
-# Typography :: Headings :: H3
-
--
-    id: anp-h3-header
-    title: H3
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: h3-font
-    title: H3 Font Family
-    type: variable-text
-    default: Noto Serif
--
-    id: h3-size
-    title: H3 Font Size
-    type: variable-number
-    default: 1.37
-    format: em
--
-    id: h3-weight
-    title: H3 Font Weight
-    type: variable-number
-    default: 600
--
-    id: h3-line-height
-    title: H3 Line Height
-    type: variable-number
-    default: 1.3
--
-    id: anp-h3-color-custom
-    title: H3 Color
-    type: class-select
-    allowEmpty: true
-    default: anp-h3-green
-    options:
-    -
-        label: Rosewater
-        value: anp-h3-rosewater
-    -
-        label: Flamingo
-        value: anp-h3-flamingo
-    -
-        label: Pink
-        value: anp-h3-pink
-    -
-        label: Mauve
-        value: anp-h3-mauve
-    -
-        label: Red
-        value: anp-h3-red
-    -
-        label: Maroon
-        value: anp-h3-maroon
-    -
-        label: Peach
-        value: anp-h3-peach
-    -
-        label: Yellow
-        value: anp-h3-yellow
-    -
-        label: Green
-        value: anp-h3-green
-    -
-        label: Teal
-        value: anp-h3-teal
-    -
-        label: Sky
-        value: anp-h3-sky
-    -
-        label: Sapphire
-        value: anp-h3-sapphire
-    -
-        label: Blue
-        value: anp-h3-blue
-    -
-        label: Lavender
-        value: anp-h3-lavender
--
-    id: anp-h3-divider
-    title: H3 Divider
-    type: class-toggle
-
-# Typography :: Headings :: H4
-
--
-    id: anp-h4-header
-    title: H4
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: h4-font
-    title: H4 Font Family
-    type: variable-text
-    default: Noto Serif
--
-    id: h4-size
-    title: H4 Font Size
-    type: variable-number
-    default: 1.25
-    format: em
--
-    id: h4-weight
-    title: H4 Font Weight
-    type: variable-number
-    default: 600
--
-    id: h4-line-height
-    title: H4 Line Height
-    type: variable-number
-    default: 1.4
--
-    id: anp-h4-color-custom
-    title: H4 Color
-    type: class-select
-    allowEmpty: true
-    default: anp-h4-teal
-    options:
-    -
-        label: Rosewater
-        value: anp-h4-rosewater
-    -
-        label: Flamingo
-        value: anp-h4-flamingo
-    -
-        label: Pink
-        value: anp-h4-pink
-    -
-        label: Mauve
-        value: anp-h4-mauve
-    -
-        label: Red
-        value: anp-h4-red
-    -
-        label: Maroon
-        value: anp-h4-maroon
-    -
-        label: Peach
-        value: anp-h4-peach
-    -
-        label: Yellow
-        value: anp-h4-yellow
-    -
-        label: Green
-        value: anp-h4-green
-    -
-        label: Teal
-        value: anp-h4-teal
-    -
-        label: Sky
-        value: anp-h4-sky
-    -
-        label: Sapphire
-        value: anp-h4-sapphire
-    -
-        label: Blue
-        value: anp-h4-blue
-    -
-        label: Lavender
-        value: anp-h4-lavender
--
-    id: anp-h4-divider
-    title: H4 Divider
-    type: class-toggle
-
-# Typography :: Headings :: H5
-
--
-    id: anp-h5-header
-    title: H5
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: h5-font
-    title: H5 Font Family
-    type: variable-text
-    default: Noto Serif
--
-    id: h5-size
-    title: H5 Font Size
-    type: variable-number
-    default: 1.12
-    format: em
--
-    id: h5-weight
-    title: H5 Font Weight
-    type: variable-number
-    default: 600
--
-    id: h5-line-height
-    title: H5 Line Height
-    type: variable-number
-    default: 1.5
--
-    id: anp-h5-color-custom
-    title: H5 Color
-    type: class-select
-    allowEmpty: true
-    default: anp-h5-lavender
-    options:
-    -
-        label: Rosewater
-        value: anp-h5-rosewater
-    -
-        label: Flamingo
-        value: anp-h5-flamingo
-    -
-        label: Pink
-        value: anp-h5-pink
-    -
-        label: Mauve
-        value: anp-h5-mauve
-    -
-        label: Red
-        value: anp-h5-red
-    -
-        label: Maroon
-        value: anp-h5-maroon
-    -
-        label: Peach
-        value: anp-h5-peach
-    -
-        label: Yellow
-        value: anp-h5-yellow
-    -
-        label: Green
-        value: anp-h5-green
-    -
-        label: Teal
-        value: anp-h5-teal
-    -
-        label: Sky
-        value: anp-h5-sky
-    -
-        label: Sapphire
-        value: anp-h5-sapphire
-    -
-        label: Blue
-        value: anp-h5-blue
-    -
-        label: Lavender
-        value: anp-h5-lavender
--
-    id: anp-h5-divider
-    title: H5 Divider
-    type: class-toggle
-
-# Typography :: Headings :: H6
-
--
-    id: anp-h6-header
-    title: H6
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
--
-    id: h6-font
-    title: H6 Font Family
-    type: variable-text
-    default: Noto Serif
--
-    id: h6-size
-    title: H6 Font Size
-    type: variable-number
-    default: 1.12
-    format: em
--
-    id: h6-weight
-    title: H6 Font Weight
-    type: variable-number
-    default: 600
--
-    id: h6-line-height
-    title: H6 Line Height
-    type: variable-number
-    default: 1.5
--
-    id: anp-h6-color-custom
-    title: H6 Color
-    type: class-select
-    allowEmpty: true
-    default: anp-h6-mauve
-    options:
-    -
-        label: Rosewater
-        value: anp-h6-rosewater
-    -
-        label: Flamingo
-        value: anp-h6-flamingo
-    -
-        label: Pink
-        value: anp-h6-pink
-    -
-        label: Mauve
-        value: anp-h6-mauve
-    -
-        label: Red
-        value: anp-h6-red
-    -
-        label: Maroon
-        value: anp-h6-maroon
-    -
-        label: Peach
-        value: anp-h6-peach
-    -
-        label: Yellow
-        value: anp-h6-yellow
-    -
-        label: Green
-        value: anp-h6-green
-    -
-        label: Teal
-        value: anp-h6-teal
-    -
-        label: Sky
-        value: anp-h6-sky
-    -
-        label: Sapphire
-        value: anp-h6-sapphire
-    -
-        label: Blue
-        value: anp-h6-blue
-    -
-        label: Lavender
-        value: anp-h6-lavender
--
-    id: anp-h6-divider
-    title: H6 Divider
-    type: class-toggle
-
-# Typography :: Comments
-
--
-    id: anp-comment-header
-    title: Comments
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: hide-comments
-    title: Hide Comments
-    description: Hides the comments while not editing them.
-    type: class-toggle
--
-    id: hide-comment-indicators
-    title: Hide Comment Indicators
-    description: Hides the '%%' while not editing comments.
-    type: class-toggle
-
-# Typography :: Text Decoration
-
--
-    id: anp-decor-header
-    title: Text Decoration
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: anp-decoration-toggle
-    title: Enable Decoration Colors
-    type: class-toggle
--
-    id: anp-bold-custom
-    title: Bold Color
-    type: class-select
-    allowEmpty: false
-    default: anp-bold-red
-    options:
-    -
-        label: None
-        value: none
-    -
-        label: Rosewater
-        value: anp-bold-rosewater
-    -
-        label: Flamingo
-        value: anp-bold-flamingo
-    -
-        label: Pink
-        value: anp-bold-pink
-    -
-        label: Mauve
-        value: anp-bold-mauve
-    -
-        label: Red
-        value: anp-bold-red
-    -
-        label: Maroon
-        value: anp-bold-maroon
-    -
-        label: Peach
-        value: anp-bold-peach
-    -
-        label: Yellow
-        value: anp-bold-yellow
-    -
-        label: Green
-        value: anp-bold-green
-    -
-        label: Teal
-        value: anp-bold-teal
-    -
-        label: Sky
-        value: anp-bold-sky
-    -
-        label: Sapphire
-        value: anp-bold-sapphire
-    -
-        label: Blue
-        value: anp-bold-blue
-    -
-        label: Lavender
-        value: anp-bold-lavender
--
-    id: anp-italic-custom
-    title: Italic Color
-    type: class-select
-    allowEmpty: false
-    default: anp-italic-green
-    options:
-    -
-        label: None
-        value: none
-    -
-        label: Rosewater
-        value: anp-italic-rosewater
-    -
-        label: Flamingo
-        value: anp-italic-flamingo
-    -
-        label: Pink
-        value: anp-italic-pink
-    -
-        label: Mauve
-        value: anp-italic-mauve
-    -
-        label: Red
-        value: anp-italic-red
-    -
-        label: Maroon
-        value: anp-italic-maroon
-    -
-        label: Peach
-        value: anp-italic-peach
-    -
-        label: Yellow
-        value: anp-italic-yellow
-    -
-        label: Green
-        value: anp-italic-green
-    -
-        label: Teal
-        value: anp-italic-teal
-    -
-        label: Sky
-        value: anp-italic-sky
-    -
-        label: Sapphire
-        value: anp-italic-sapphire
-    -
-        label: Blue
-        value: anp-italic-blue
-    -
-        label: Lavender
-        value: anp-italic-lavender
--
-    id: anp-highlight-custom
-    title: Highlight Color
-    type: class-select
-    allowEmpty: false
-    default: anp-highlight-yellow
-    options:
-    -
-        label: Rosewater
-        value: anp-highlight-rosewater
-    -
-        label: Flamingo
-        value: anp-highlight-flamingo
-    -
-        label: Pink
-        value: anp-highlight-pink
-    -
-        label: Mauve
-        value: anp-highlight-mauve
-    -
-        label: Red
-        value: anp-highlight-red
-    -
-        label: Maroon
-        value: anp-highlight-maroon
-    -
-        label: Peach
-        value: anp-highlight-peach
-    -
-        label: Yellow
-        value: anp-highlight-yellow
-    -
-        label: Green
-        value: anp-highlight-green
-    -
-        label: Teal
-        value: anp-highlight-teal
-    -
-        label: Sky
-        value: anp-highlight-sky
-    -
-        label: Sapphire
-        value: anp-highlight-sapphire
-    -
-        label: Blue
-        value: anp-highlight-blue
-    -
-        label: Lavender
-        value: anp-highlight-lavender
 
 # Workspace
 
@@ -2324,7 +790,7 @@ settings:
 -
     id: anuppuccin-url-custom-rainbow-colors
     title: Custom rainbow folder colors snippet
-    description: "Download the snippet through [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css)."
+    description: "Download the snippet from [this link](https://github.com/Ninn818/Kodann/blob/main/snippets/custom-rainbow-colors.css)."
     type: info-text
     markdown: true
 -
@@ -2675,148 +1141,32 @@ settings:
 
 -
     id: anuppuccin-support
-    title: Support AnuPpuccin
-    description: If you like the theme, here are some ways to support development
+    title: Kodann and Upstream Credits
+    description: Support the original AnuPpuccin author or visit the Kodann repository
     type: heading
     level: 1
     collapsed: true
 -
     id: anuppuccin-url-donate
-    title: Buy Me a Coffee
+    title: Support the original AnuPpuccin author
     description: "[https://www.buymeacoffee.com/anubisnekhet](https://www.buymeacoffee.com/anubisnekhet)"
     type: info-text
     markdown: true
 -
     id: anuppuccin-url-star-repo
     title: Star the Theme on GitHub
-    description: "[https://github.com/anubisnekhet/anuppuccin](https://github.com/anubisnekhet/anuppuccin)"
+    description: "[https://github.com/Ninn818/Kodann](https://github.com/Ninn818/Kodann)"
     type: info-text
     markdown: true
 -
     id: anuppuccin-url-submit-issue
     title: Submit an Issue on GitHub
-    description: "[https://github.com/anubisnekhet/anuppuccin/issues](https://github.com/anubisnekhet/anuppuccin/issues)"
+    description: "[https://github.com/Ninn818/Kodann/issues](https://github.com/Ninn818/Kodann/issues)"
     type: info-text
     markdown: true
 
 */
 /*------------------Defining Colorschemes-------------------*/
-.theme-light.ctp-latte, .ctp-latte .themed-color-wrapper > .theme-light {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 222, 149, 132));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 221, 120, 120));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 236, 131, 208));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 136, 57, 239));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 210, 15, 57));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 230, 69, 83));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 254, 100, 11));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 228, 147, 32));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 64, 160, 43));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 23, 146, 153));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 4, 165, 229));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 32, 159, 181));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 42, 110, 245));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 114, 135, 253));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 76, 79, 105));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 92, 95, 119));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 108, 111, 133));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 124, 127, 147));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 140, 143, 161));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 156, 160, 176));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 172, 176, 190));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 188, 192, 204));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 204, 208, 218));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 239, 241, 245));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 230, 233, 239));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 220, 224, 232));
-}
-
-.theme-light.ctp-rosepine-light, .ctp-rosepine-light .themed-color-wrapper > .theme-light {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 214, 129, 125));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 214, 129, 125));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 144, 122, 169));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 144, 122, 169));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 180, 99, 122));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 180, 99, 122));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 214, 129, 125));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 234, 157, 52));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 86, 148, 159));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 86, 148, 159));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 40, 105, 131));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 40, 105, 131));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 40, 105, 131));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 144, 122, 169));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 87, 82, 121));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 97, 92, 132));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 121, 117, 147));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 128, 124, 153));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 152, 147, 165));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 161, 156, 173));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 202, 193, 185));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 209, 201, 194));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 220, 211, 203));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 238, 230, 221));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 230, 219, 209));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 221, 208, 198));
-}
-
-.theme-dark.ctp-frappe, .ctp-frappe .themed-color-wrapper > .theme-dark {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 242, 213, 207));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 238, 190, 190));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 244, 184, 228));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 202, 158, 230));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 231, 130, 132));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 234, 153, 156));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 239, 159, 118));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 229, 200, 144));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 209, 137));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 129, 200, 190));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 153, 209, 219));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 133, 193, 220));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 140, 170, 238));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 186, 187, 241));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 198, 206, 239));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 181, 189, 220));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 165, 172, 201));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 148, 155, 183));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 131, 138, 164));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 115, 120, 145));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 98, 103, 126));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 81, 86, 108));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 65, 69, 89));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 48, 52, 70));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 41, 44, 60));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 35, 38, 52));
-}
-
-.theme-dark.ctp-macchiato, .ctp-macchiato .themed-color-wrapper > .theme-dark {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 244, 219, 214));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 240, 198, 198));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 245, 189, 230));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 198, 160, 246));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 237, 135, 150));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 238, 153, 160));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 245, 169, 127));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 238, 212, 159));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 218, 149));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 139, 213, 202));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 145, 215, 227));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 125, 196, 228));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 138, 173, 244));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 183, 189, 248));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 197, 207, 245));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 179, 188, 224));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 161, 170, 203));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 143, 151, 183));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 125, 132, 162));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 108, 114, 141));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 90, 95, 120));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 72, 76, 100));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 54, 58, 79));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 36, 39, 58));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 30, 32, 48));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 24, 25, 38));
-}
-
 .theme-dark.ctp-mocha, .ctp-mocha .themed-color-wrapper > .theme-dark {
   --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 245, 224, 220));
   --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 242, 205, 205));
@@ -2875,6 +1225,296 @@ settings:
   --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 22, 19, 32));
 }
 
+.theme-light.ctp-sandy-beaches-light, .ctp-sandy-beaches-light .themed-color-wrapper > .theme-light {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 222, 215, 206));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 210, 203, 195));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 200, 191, 186));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 152, 146, 147));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 161, 138, 131));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 170, 146, 132));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 186, 164, 142));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 200, 190, 167));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 154, 155, 142));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 152, 158, 156));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 145, 157, 164));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 131, 140, 148));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 119, 122, 132));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 139, 134, 142));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 100, 95, 86));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 108, 101, 93));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 119, 109, 100));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 131, 124, 117));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 143, 136, 129));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 158, 151, 143));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 208, 204, 197));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 218, 213, 207));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 228, 224, 218));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 242, 239, 232));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 235, 232, 225));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 227, 223, 216));
+}
+
+.theme-dark.ctp-sandy-beaches-dark, .ctp-sandy-beaches-dark .themed-color-wrapper > .theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 196, 179, 167));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 186, 173, 161));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 195, 182, 177));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 173, 164, 165));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 181, 144, 134));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 166, 136, 127));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 185, 160, 138));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 190, 181, 156));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 170, 166, 146));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 165, 167, 160));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 163, 167, 170));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 150, 155, 160));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 150, 154, 159));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 173, 165, 170));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 229, 224, 217));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 208, 200, 191));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 177, 169, 161));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 144, 135, 126));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 123, 112, 104));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 107, 98, 89));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 101, 92, 84));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 94, 86, 79));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 83, 75, 68));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 83, 66, 60));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 65, 58, 52));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 61, 55, 49));
+}
+
+.theme-light.ctp-overcast-clouds-light, .ctp-overcast-clouds-light .themed-color-wrapper > .theme-light {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 215, 168, 184));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 209, 158, 175));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 214, 166, 190));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 185, 155, 184));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 201, 130, 147));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 185, 130, 145));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 211, 169, 160));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 216, 199, 174));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 169, 185, 177));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 159, 188, 192));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 166, 192, 208));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 151, 175, 197));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 146, 153, 188));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 178, 164, 199));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 94, 89, 109));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 119, 113, 132));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 145, 137, 153));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 164, 155, 167));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 183, 173, 183));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 200, 190, 198));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 222, 213, 219));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 232, 224, 228));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 239, 233, 235));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 247, 243, 243));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 241, 235, 237));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 233, 226, 231));
+}
+
+.theme-dark.ctp-overcast-clouds-dark, .ctp-overcast-clouds-dark .themed-color-wrapper > .theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 210, 169, 194));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 201, 154, 185));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 201, 163, 208));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 183, 162, 207));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 209, 142, 170));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 196, 130, 160));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 214, 168, 142));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 216, 196, 155));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 167, 185, 169));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 154, 189, 185));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 154, 183, 199));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 137, 158, 187));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 155, 166, 208));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 181, 165, 210));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 196, 193, 224));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 185, 179, 199));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 155, 149, 170));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 130, 123, 145));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 112, 106, 126));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 97, 91, 110));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 81, 75, 96));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 72, 66, 83));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 64, 58, 75));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 54, 49, 63));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 48, 43, 57));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 41, 37, 50));
+}
+
+.theme-light.ctp-etching-light, .ctp-etching-light .themed-color-wrapper > .theme-light {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 181, 177, 174));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 166, 165, 163));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 179, 178, 177));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 153, 155, 160));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 146, 125, 122));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 125, 111, 112));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 162, 141, 132));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 170, 169, 148));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 133, 140, 137));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 133, 141, 146));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 132, 145, 155));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 119, 131, 142));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 119, 127, 139));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 146, 146, 155));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 63, 66, 70));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 87, 92, 98));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 110, 116, 122));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 130, 136, 142));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 154, 160, 166));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 177, 183, 188));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 211, 215, 218));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 222, 226, 229));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 233, 236, 238));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 243, 245, 246));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 235, 238, 240));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 226, 229, 232));
+}
+
+.theme-dark.ctp-etching-dark, .ctp-etching-dark .themed-color-wrapper > .theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 194, 185, 178));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 179, 175, 171));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 196, 193, 190));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 171, 174, 180));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 181, 142, 137));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 159, 129, 128));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 182, 160, 145));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 189, 187, 162));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 164, 170, 166));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 159, 169, 174));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 157, 170, 181));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 144, 157, 168));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 149, 157, 168));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 176, 175, 183));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 224, 227, 230));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 196, 201, 205));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 168, 174, 179));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 141, 148, 154));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 119, 126, 132));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 98, 105, 111));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 77, 83, 89));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 65, 71, 77));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 55, 61, 67));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 46, 52, 58));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 40, 46, 52));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 34, 40, 46));
+}
+
+.theme-light.ctp-kawaii-light, .ctp-kawaii-light .themed-color-wrapper > .theme-light {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 233, 169, 200));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 233, 156, 183));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 231, 166, 208));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 187, 168, 216));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 217, 134, 153));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 199, 126, 150));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 241, 185, 164));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 240, 216, 142));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 182, 204, 141));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 145, 214, 214));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 156, 217, 235));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 143, 197, 224));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 145, 188, 232));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 185, 181, 232));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 82, 97, 107));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 104, 121, 132));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 130, 145, 155));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 154, 170, 177));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 180, 196, 200));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 201, 217, 218));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 215, 228, 200));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 225, 235, 215));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 234, 242, 227));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 247, 250, 242));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 239, 245, 232));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 229, 238, 219));
+}
+
+.theme-dark.ctp-kawaii-dark, .ctp-kawaii-dark .themed-color-wrapper > .theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 232, 175, 203));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 233, 157, 189));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 229, 169, 212));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 196, 174, 224));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 216, 137, 162));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 198, 125, 152));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 232, 174, 150));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 232, 209, 142));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 178, 201, 130));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 131, 187, 220));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 145, 195, 232));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 130, 174, 227));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 150, 180, 239));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 190, 178, 227));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 226, 235, 239));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 195, 209, 215));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 163, 180, 189));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 132, 150, 160));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 108, 126, 136));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 86, 104, 115));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 69, 75, 61));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 60, 68, 56));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 53, 62, 52));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 48, 57, 47));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 41, 51, 43));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 35, 44, 37));
+}
+
+.theme-light.ctp-blueberry-creme-light, .ctp-blueberry-creme-light .themed-color-wrapper > .theme-light {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 83, 103, 131));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 220, 214, 206));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 187, 174, 182));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 167, 162, 178));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 174, 145, 142));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 169, 154, 151));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 207, 196, 182));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 211, 203, 185));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 174, 181, 170));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 163, 173, 181));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 152, 166, 187));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 86, 102, 128));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 97, 114, 143));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 175, 182, 197));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 66, 76, 96));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 83, 103, 131));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 98, 108, 128));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 98, 108, 128));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 180, 178, 174));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 198, 196, 191));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 227, 224, 218));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 238, 235, 228));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 248, 246, 241));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 243, 241, 236));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 236, 234, 229));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 227, 226, 221));
+}
+
+.theme-dark.ctp-blueberry-creme-dark, .ctp-blueberry-creme-dark .themed-color-wrapper > .theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 243, 233, 223));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 220, 208, 197));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 198, 181, 189));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 181, 175, 187));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 190, 159, 154));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 182, 165, 160));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 205, 192, 179));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 208, 199, 182));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 177, 184, 175));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 168, 177, 184));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 184, 194, 207));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 135, 147, 168));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 163, 174, 191));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 197, 200, 208));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 228, 227, 225));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 202, 204, 209));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 175, 180, 189));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 70, 79, 96));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 85, 95, 111));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 101, 111, 126));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 80, 90, 107));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 70, 80, 96));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 61, 71, 87));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 52, 60, 74));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 44, 52, 67));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 38, 45, 60));
+}
+
 .theme-dark {
   --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 245, 224, 220));
   --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 242, 205, 205));
@@ -2905,32 +1545,32 @@ settings:
 }
 
 .theme-light {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 222, 149, 132));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 221, 120, 120));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 236, 131, 208));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 136, 57, 239));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 210, 15, 57));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 230, 69, 83));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 254, 100, 11));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 228, 147, 32));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 64, 160, 43));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 23, 146, 153));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 4, 165, 229));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 32, 159, 181));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 42, 110, 245));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 114, 135, 253));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 76, 79, 105));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 92, 95, 119));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 108, 111, 133));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 124, 127, 147));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 140, 143, 161));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 156, 160, 176));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 172, 176, 190));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 188, 192, 204));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 204, 208, 218));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 239, 241, 245));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 230, 233, 239));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 220, 224, 232));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 222, 215, 206));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 210, 203, 195));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 200, 191, 186));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 152, 146, 147));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 161, 138, 131));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 170, 146, 132));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 186, 164, 142));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 200, 190, 167));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 154, 155, 142));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 152, 158, 156));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 145, 157, 164));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 131, 140, 148));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 119, 122, 132));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 139, 134, 142));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 100, 95, 86));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 108, 101, 93));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 119, 109, 100));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 131, 124, 117));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 143, 136, 129));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 158, 151, 143));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 208, 204, 197));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 218, 213, 207));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 228, 224, 218));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 242, 239, 232));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 235, 232, 225));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 227, 223, 216));
 }
 
 /*------------------Selecting Accents-------------------*/
@@ -3473,14 +2113,14 @@ body.theme-dark {
 .ͼ2 .cm-panels-bottom {
   border-top: 1px solid rgb(var(--ctp-surface1));
 }
+.ͼ2 .cm-panels-bottom input:hover, .ͼ2 .cm-panels-bottom input:focus, .ͼ2 .cm-panels-bottom input:focus-visible {
+  border: none;
+  box-shadow: none;
+}
 .ͼ2 .cm-panels-bottom input {
   background-color: transparent;
   font-family: var(--font-monospace);
   width: 100%;
-}
-.ͼ2 .cm-panels-bottom input:hover, .ͼ2 .cm-panels-bottom input:focus, .ͼ2 .cm-panels-bottom input:focus-visible {
-  border: none;
-  box-shadow: none;
 }
 
 .ͼp .cm-vim-panel {
@@ -3964,15 +2604,6 @@ body.is-translucent {
   --title-bar-duration: 300ms;
   --title-bar-target-translate-y: 18px;
   --title-bar-translate-y: 40px;
-  /**
-  * This should fix the drag/click titlebar issue.
-  * 
-  * Invisible boxes are not rendered (as if they were fully transparent),
-  * cannot be interacted with (and behave as if they had pointer-events: none),
-  * and are removed from navigation (similar to display: none).
-  * 
-  * @see: https://drafts.csswg.org/css-display/#visibility
-  */
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
   margin-top: calc(var(--title-bar-translate-y) * -1);
@@ -4001,6 +2632,17 @@ body.is-translucent {
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header-title {
   --file-header-font-size: var(--font-ui-medium);
+}
+.anp-autohide-titlebar:not(.is-mobile) {
+  /**
+   * This should fix the drag/click titlebar issue.
+   *
+   * Invisible boxes are not rendered (as if they were fully transparent),
+  * cannot be interacted with (and behave as if they had pointer-events: none),
+   * and are removed from navigation (similar to display: none).
+   *
+  * @see: https://drafts.csswg.org/css-display/#visibility
+  */
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header > div {
   transition: visibility var(--title-bar-duration) var(--title-bar-delay);
@@ -4036,14 +2678,6 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 }
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
   margin: 5px 0 !important;
-  gap: var(--anp-safari-tab-gap, 10px);
-}
-.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header {
-  border-radius: var(--anp-safari-tab-radius, 5px);
-  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color);
-  background-color: var(--tab-background-inactive);
-  color: var(--text-muted);
-  max-width: var(--tab-max-width);
 }
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) {
   --icon-color: var(--text-muted);
@@ -4055,6 +2689,13 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header::before, .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header::after {
   display: none;
 }
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header {
+  border-radius: var(--anp-safari-tab-radius, 5px);
+  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color);
+  background-color: var(--tab-background-inactive);
+  color: var(--text-muted);
+  max-width: var(--tab-max-width);
+}
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   background-color: var(--tab-background-active);
   max-width: var(--tab-max-width);
@@ -4063,16 +2704,19 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
   background-color: transparent;
 }
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
+  gap: var(--anp-safari-tab-gap, 10px);
+}
 .anp-safari-tab-toggle:not(.anp-disable-newtab-align) .workspace-tab-header-container-inner {
   width: 100%;
 }
 
-.anp-safari-tab-toggle.anp-safari-tab-animated .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header {
-  transition: max-width 400ms ease-in-out, width 400ms ease-in-out, flex-grow 400ms ease, background-color 150ms;
-}
 .anp-safari-tab-toggle.anp-safari-tab-animated .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   flex-grow: 1.67;
   max-width: var(--tab-max-width-active);
+}
+.anp-safari-tab-toggle.anp-safari-tab-animated .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header {
+  transition: max-width 400ms ease-in-out, width 400ms ease-in-out, flex-grow 400ms ease, background-color 150ms;
 }
 
 .anp-alternate-tab-toggle,
@@ -4214,10 +2858,12 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 }
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
   background-color: transparent;
-  box-shadow: none;
 }
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header::before, .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header::after {
   display: none;
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
+  box-shadow: none;
 }
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   border-bottom: 2px solid var(--color-accent);
@@ -4519,11 +3165,11 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split {
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
   background-color: var(--card-background-color);
 }
-body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
-  border-left: var(--border-border-style);
-}
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container .workspace-leaf {
   background-color: var(--card-foreground-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
+  border-left: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-left: var(--border-border-style);
@@ -4547,11 +3193,11 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split {
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
   background-color: var(--card-background-color);
 }
-body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
-  border-right: var(--border-border-style);
-}
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container .workspace-leaf {
   background-color: var(--card-foreground-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
+  border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-right: var(--border-border-style);
@@ -4563,11 +3209,11 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
   border-top: var(--border-border-style);
   border-right: var(--border-border-style);
 }
-body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
-  background-color: var(--card-background-color);
-}
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
   padding-bottom: 0;
+}
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+  background-color: var(--card-background-color);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs {
   background-color: var(--card-background-color);
@@ -4686,9 +3332,6 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .callout:not([data-callout-metadata*=revert]) {
   --callout-blend-mode: normal;
 }
-.callout:not([data-callout-metadata*=revert]) > .callout-title > .callout-title-inner {
-  flex-grow: var(--anp-callout-fold-position, 0);
-}
 .theme-light .callout:not([data-callout-metadata*=revert]) > .callout-title > .callout-title-inner {
   color: var(--text-normal);
 }
@@ -4725,9 +3368,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   margin: 0 !important;
 }
 
-.anp-callout-block .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-vanilla-plus]):not([data-callout-metadata*=revert],
+.anp-callout-block .callout:not([data-callout-metadata*=anp-sleek]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]),
 .callout[data-callout-metadata*=anp-block]:not([data-callout-metadata*=revert],
@@ -4736,9 +3377,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   border-left: var(--size-2-3) solid rgb(var(--callout-color));
 }
 
-.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-vanilla-plus]):not([data-callout-metadata*=revert],
+.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]),
 .callout[data-callout-metadata*=anp-sleek]:not([data-callout-metadata*=revert],
@@ -4750,9 +3389,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --callout-border-width: 1px;
   background-color: rgba(var(--ctp-mantle), 0.4);
 }
-.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-vanilla-plus]):not([data-callout-metadata*=revert],
+.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]) > .callout-title,
 .callout[data-callout-metadata*=anp-sleek]:not([data-callout-metadata*=revert],
@@ -4760,9 +3397,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 [data-callout=multi-column]) > .callout-title {
   background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
 }
-.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-vanilla-plus]):not([data-callout-metadata*=revert],
+.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]) > .callout-content,
 .callout[data-callout-metadata*=anp-sleek]:not([data-callout-metadata*=revert],
@@ -4770,9 +3405,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 [data-callout=multi-column]) > .callout-content {
   border-top: var(--callout-border-width) dashed rgba(var(--callout-color), var(--callout-border-opacity));
 }
-.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-vanilla-plus]):not([data-callout-metadata*=revert],
+.anp-callout-sleek .callout:not([data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]) .list-collapse-indicator,
 .callout[data-callout-metadata*=anp-sleek]:not([data-callout-metadata*=revert],
@@ -4782,87 +3415,52 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   padding-right: 3px;
 }
 
-.anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-plus],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]),
-.callout[data-callout-metadata*=anp-vanilla-normal]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) {
-  background-color: transparent;
-}
-.anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-plus],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title,
-.callout[data-callout-metadata*=anp-vanilla-normal]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title {
-  background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
-}
-.anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-plus],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-content,
-.callout[data-callout-metadata*=anp-vanilla-normal]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-content {
-  background-color: rgb(var(--ctp-mantle));
-}
-.anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-plus],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title,
-.anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-plus],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-content,
-.callout[data-callout-metadata*=anp-vanilla-normal]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title,
-.callout[data-callout-metadata*=anp-vanilla-normal]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-content {
-  border-left: var(--size-2-3) solid rgb(var(--callout-color));
+.theme-light.ctp-blueberry-creme-light .lacey-frame {
+  padding: 40px;
 }
 
-.anp-callout-vanilla-plus .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]),
-.callout[data-callout-metadata*=anp-vanilla-plus]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) {
-  background-color: transparent;
+.theme-light.ctp-blueberry-creme-light .lacey-frame,
+.theme-light.ctp-blueberry-creme-light.anp-callout-lacey-frame .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) {
+  --lacey-frame-bg: rgb(var(--ctp-surface0));
+  --lacey-frame-line: rgb(var(--ctp-overlay1));
+  --lacey-frame-decoration: rgb(var(--ctp-overlay2));
+  position: relative;
+  isolation: isolate;
+  background: transparent;
 }
-.anp-callout-vanilla-plus .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title,
-.callout[data-callout-metadata*=anp-vanilla-plus]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title {
-  background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
-  border-left: var(--size-2-3) solid rgb(var(--callout-color));
+.theme-light.ctp-blueberry-creme-light .lacey-frame::before, .theme-light.ctp-blueberry-creme-light .lacey-frame::after,
+.theme-light.ctp-blueberry-creme-light.anp-callout-lacey-frame .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column])::before,
+.theme-light.ctp-blueberry-creme-light.anp-callout-lacey-frame .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column])::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
 }
-.anp-callout-vanilla-plus .callout:not([data-callout-metadata*=anp-sleek],
-[data-callout-metadata*=anp-vanilla-normal],
-[data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-content,
-.callout[data-callout-metadata*=anp-vanilla-plus]:not([data-callout-metadata*=revert],
-[data-callout=blank-container],
-[data-callout=multi-column]) > .callout-content {
-  background-color: rgb(var(--ctp-mantle));
+.theme-light.ctp-blueberry-creme-light .lacey-frame::before,
+.theme-light.ctp-blueberry-creme-light.anp-callout-lacey-frame .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column])::before {
+  inset: 0;
+  z-index: -1;
+  background: repeating-linear-gradient(90deg, var(--lacey-frame-line) 0 2px, transparent 2px 4px) 15px 15px/calc(100% - 30px) 1px repeat-x, repeating-linear-gradient(90deg, var(--lacey-frame-line) 0 2px, transparent 2px 4px) 15px calc(100% - 15px)/calc(100% - 30px) 1px repeat-x, repeating-linear-gradient(0deg, var(--lacey-frame-line) 0 2px, transparent 2px 4px) 15px 15px/1px calc(100% - 30px) repeat-y, repeating-linear-gradient(0deg, var(--lacey-frame-line) 0 2px, transparent 2px 4px) calc(100% - 15px) 15px/1px calc(100% - 30px) repeat-y, var(--lacey-frame-bg);
+  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='lace' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.06' numOctaves='3' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='7'/%3E%3C/filter%3E%3C/svg%3E#lace") drop-shadow(0 8px 16px rgba(var(--ctp-crust), 0.15));
+}
+.theme-light.ctp-blueberry-creme-light .lacey-frame::after,
+.theme-light.ctp-blueberry-creme-light.anp-callout-lacey-frame .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column])::after {
+  top: 8px;
+  left: 0;
+  width: 100%;
+  color: var(--lacey-frame-decoration);
+  font-size: 14px;
+  letter-spacing: 60px;
+  text-align: center;
+  content: "❋ ❋ ❋ ❋";
 }
 
+@supports not (filter: url("#")) {
+  .theme-light.ctp-blueberry-creme-light .lacey-frame::before,
+  .theme-light.ctp-blueberry-creme-light.anp-callout-lacey-frame .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column])::before {
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(var(--ctp-crust), 0.15);
+  }
+}
 /*---------------CALLOUT COLORS----------------*/
 .anp-callout-color-toggle .callout[data-callout=note] {
   --callout-color: var(--ctp-blue);
@@ -4903,13 +3501,13 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   mix-blend-mode: normal;
   background-color: transparent !important;
 }
-.callout[data-callout=formula] .callout-title {
-  background-color: rgba(var(--callout-color), 0.05) !important;
-  color: var(--ctp-text);
-}
 .callout[data-callout=formula] .callout-title .callout-icon,
 .callout[data-callout=formula] .callout-title .callout-fold {
   display: none;
+}
+.callout[data-callout=formula] .callout-title {
+  background-color: rgba(var(--callout-color), 0.05) !important;
+  color: var(--ctp-text);
 }
 .callout[data-callout=formula] .callout-content {
   background-color: transparent !important;
@@ -4931,10 +3529,10 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
-.markdown-rendered .internal-link {
+.markdown-rendered .internal-link:hover, .markdown-rendered .internal-link:active, .markdown-rendered .internal-link.is-unresolved:hover, .markdown-rendered .internal-link.is-unresolved {
   text-decoration-line: none;
 }
-.markdown-rendered .internal-link:hover, .markdown-rendered .internal-link:active, .markdown-rendered .internal-link.is-unresolved:hover, .markdown-rendered .internal-link.is-unresolved {
+.markdown-rendered .internal-link {
   text-decoration-line: none;
 }
 
@@ -4998,6 +3596,16 @@ video {
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   margin-left: -22px;
   padding: 0px 6px;
+}
+
+.theme-dark.ctp-overcast-clouds-dark .app-container,
+.theme-dark.ctp-overcast-clouds-dark .print {
+  --h1-color: #dad8c0;
+  --h2-color: #F7CFD9;
+  --h3-color: #f3b9e9;
+  --h4-color: #b38db8;
+  --h5-color: #c761ae;
+  --h6-color: #a354a4;
 }
 
 .anp-header-color-toggle.anp-h1-rosewater .app-container,
@@ -5779,33 +4387,47 @@ hr {
   display: none;
 }
 
-/*-Recolor table borders-*/
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child,
-.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
-.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview),
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child {
-  border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
+/*-Default Markdown table appearance-*/
+.markdown-preview-view:not(.cards):not(.table-disable) table,
+.markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.is-live-preview:not(.cards):not(.table-disable) table,
+.is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  background-color: rgba(var(--ctp-surface0), 0.2);
+  border: var(--anp-table-thickness, 1px) solid rgba(var(--ctp-text), 0.12);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
 }
+.markdown-preview-view:not(.cards):not(.table-disable) table td,
+.markdown-preview-view:not(.cards):not(.table-disable) table th,
+.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.is-live-preview:not(.cards):not(.table-disable) table td,
+.is-live-preview:not(.cards):not(.table-disable) table th,
+.is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  border: 0;
+  border-right: var(--anp-table-thickness, 1px) solid rgba(var(--ctp-text), 0.12);
+  border-bottom: var(--anp-table-thickness, 1px) solid rgba(var(--ctp-text), 0.12);
+}
+.markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child {
+  border-right: 0;
+}
+.markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > * {
+  border-bottom: 0;
+}
+
+/*-Optional table text alignment-*/
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table th:not([align]),
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:not([align]),
@@ -6031,15 +4653,15 @@ body.rainbow-tags {
   margin-left: 10px;
 }
 
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content {
+  padding: 0;
+  background-color: var(--background-primary);
+  overflow-y: hidden;
+}
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] {
   background-color: var(--background-primary);
   border-radius: 6px;
   mix-blend-mode: normal;
-  overflow-y: hidden;
-}
-.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content {
-  padding: 0;
-  background-color: var(--background-primary);
   overflow-y: hidden;
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] {
@@ -6053,10 +4675,6 @@ body.rainbow-tags {
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content {
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] {
-  border: none;
-  padding: 0;
-}
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-content {
   margin: 0 10px 7px 10px;
   background-color: var(--background-primary);
@@ -6067,41 +4685,49 @@ body.rainbow-tags {
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title {
   text-transform: uppercase;
-  background-color: transparent;
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title > .callout-title-inner, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title > .callout-title-inner {
   color: rgba(var(--ctp-text), 0.7);
   font-size: 80%;
 }
-.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] {
-  border-radius: 0;
-  margin: -1px;
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title {
+  background-color: transparent;
+}
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] {
+  border: none;
+  padding: 0;
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content {
   padding: 0;
 }
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] {
+  border-radius: 0;
+}
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] p:first-child, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] p:first-child {
   margin-bottom: 0;
 }
-.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] {
-  background-color: var(--background-secondary);
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] {
+  margin: -1px;
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content {
   padding-right: 0;
   padding-left: 0;
   background-color: var(--background-secondary);
 }
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] {
+  background-color: var(--background-secondary);
+}
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content {
   padding: 0;
+}
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content {
+  padding: var(--callout-padding);
+  background-color: var(--background-primary);
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] {
   border-width: 0 1px 0 0;
   background-color: var(--background-primary);
   mix-blend-mode: normal;
-}
-.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content {
-  padding: var(--callout-padding);
-  background-color: var(--background-primary);
 }
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] {
   border-color: var(--background-modifier-border);
@@ -6325,9 +4951,6 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon:hover {
   color: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top {
-  --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
-}
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header,
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header,
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header,
@@ -6344,6 +4967,9 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button,
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
   --tab-text-color-focused: var(--colorful-icon-color-alt);
+  --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
+}
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top {
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -6644,11 +5270,6 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   --checkbox-color: rgb(var(--ctp-green));
   --checkbox-color-hover: rgb(var(--ctp-green));
 }
-.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked {
-  --checkbox-color: rgb(var(--ctp-yellow));
-  --checkbox-color-hover: rgb(var(--ctp-yellow));
-}
 .anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:after {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 512'%3E%3C!--!  --%3E%3Cpath d='M96 64c0-17.7-14.3-32-32-32S32 46.3 32 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM64 480c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z'/%3E%3C/svg%3E");
@@ -6662,11 +5283,10 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked {
-  --checkbox-color: transparent;
-  --checkbox-color-hover: transparent;
-  border-width: 0;
+.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked {
+  --checkbox-color: rgb(var(--ctp-yellow));
+  --checkbox-color-hover: rgb(var(--ctp-yellow));
 }
 .anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked:after {
@@ -6683,14 +5303,11 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="-"] {
-  text-decoration: var(--checklist-done-decoration);
-  color: var(--checklist-done-color);
-}
-.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked {
-  --checkbox-color: rgb(var(--ctp-red));
-  --checkbox-color-hover: rgb(var(--ctp-red));
+.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
 }
 .anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked:after {
@@ -6705,11 +5322,14 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked {
-  --checkbox-color: transparent;
-  --checkbox-color-hover: transparent;
-  border-width: 0;
+.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked {
+  --checkbox-color: rgb(var(--ctp-red));
+  --checkbox-color-hover: rgb(var(--ctp-red));
+}
+.anp-custom-checkboxes [data-task="-"] {
+  text-decoration: var(--checklist-done-decoration);
+  color: var(--checklist-done-color);
 }
 .anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked:after {
@@ -6726,8 +5346,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6747,8 +5367,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6768,8 +5388,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6789,8 +5409,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6810,8 +5430,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6831,8 +5451,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6852,8 +5472,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6873,8 +5493,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6894,11 +5514,11 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked {
-  --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
-  --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
-  border-color: rgb(var(--ctp-subtext0)) !important;
+.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
 }
 .anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:after {
@@ -6912,11 +5532,11 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked {
-  --checkbox-color: transparent;
-  --checkbox-color-hover: transparent;
-  border-width: 0;
+.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked {
+  --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
+  --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
+  border-color: rgb(var(--ctp-subtext0)) !important;
 }
 .anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:after {
@@ -6933,8 +5553,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6954,8 +5574,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6975,8 +5595,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=u] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=u] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=u][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -6996,8 +5616,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=d] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=d] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=d][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=u] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=u] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=u][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -7017,8 +5637,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=f] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=f] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=f][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=d] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=d] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=d][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -7038,8 +5658,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=k] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=k] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=k][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=f] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=f] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=f][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -7059,8 +5679,8 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=w] > input[type=checkbox]:checked,
-.anp-custom-checkboxes [data-task=w] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=w][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=k] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=k] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=k][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
@@ -7079,6 +5699,12 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
+}
+.anp-custom-checkboxes [data-task=w] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=w] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=w][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
 }
 
 .anp-custom-checkboxes-labels [data-task="!"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="!"][type=checkbox]:checked:before {
@@ -7215,7 +5841,6 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .theme-dark.anp-speech-bubble [data-task="8"],
 .theme-dark.anp-speech-bubble [data-task="9"] {
   --text-normal: var(--background-primary);
-  transition: background-color 0.2s, background 0.2s, border-radius 0.2s;
 }
 .theme-dark.anp-speech-bubble [data-task="0"]::selection,
 .theme-dark.anp-speech-bubble [data-task="1"]::selection,
@@ -7229,6 +5854,18 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .theme-dark.anp-speech-bubble [data-task="9"]::selection {
   background-color: rgba(var(--ctp-crust), 0.2);
   background: rgba(var(--ctp-crust), 0.2);
+}
+.theme-dark.anp-speech-bubble [data-task="0"],
+.theme-dark.anp-speech-bubble [data-task="1"],
+.theme-dark.anp-speech-bubble [data-task="2"],
+.theme-dark.anp-speech-bubble [data-task="3"],
+.theme-dark.anp-speech-bubble [data-task="4"],
+.theme-dark.anp-speech-bubble [data-task="5"],
+.theme-dark.anp-speech-bubble [data-task="6"],
+.theme-dark.anp-speech-bubble [data-task="7"],
+.theme-dark.anp-speech-bubble [data-task="8"],
+.theme-dark.anp-speech-bubble [data-task="9"] {
+  transition: background-color 0.2s, background 0.2s, border-radius 0.2s;
 }
 
 .anp-speech-bubble .is-live-preview [data-task="0"].cm-active,
@@ -7774,7 +6411,6 @@ None of the original code was used and the feature was implemented from scratch.
 }
 
 .style-settings-container .setting-item:is([data-id=tag-border-width],
-[data-id=callout-radius],
 [data-id=file-line-width],
 [data-id=file-margins],
 [data-id=anp-card-radius],
@@ -7798,8 +6434,7 @@ None of the original code was used and the feature was implemented from scratch.
 [data-id=h4-size],
 [data-id=h5-size],
 [data-id=h6-size],
-[data-id=list-indent],
-[data-id=list-spacing]) .setting-item-control::after {
+[data-id=h6-size]) .setting-item-control::after {
   content: "em";
 }
 
@@ -7854,9 +6489,6 @@ None of the original code was used and the feature was implemented from scratch.
 .setting-item:is([data-id*=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
 }
-.setting-item:is([data-id*=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
-}
 .setting-item:is([data-id*=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
@@ -7872,15 +6504,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anuppuccin-theme-settings-extended]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anuppuccin-theme-settings-extended]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anuppuccin-theme-settings-extended]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -7897,15 +6529,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anuppuccin-theme-settings-extended]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anuppuccin-theme-settings-extended]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-colors-section-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-colors-section-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-colors-section-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -7922,15 +6554,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-colors-section-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-colors-section-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-editor-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-editor-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-editor-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -7947,15 +6579,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-editor-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-editor-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-preview-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-preview-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-preview-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -7972,15 +6604,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-preview-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-preview-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-plugin-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-plugin-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-plugin-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -7997,15 +6629,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-plugin-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-plugin-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-misc-element-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-misc-element-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-misc-element-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -8022,15 +6654,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-misc-element-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-misc-element-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-show-hide-elements-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-show-hide-elements-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-show-hide-elements-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -8047,15 +6679,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-show-hide-elements-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-show-hide-elements-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-typography-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-typography-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-typography-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -8072,15 +6704,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-typography-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-typography-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-workspace-header]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-workspace-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-workspace-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -8097,15 +6729,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anp-workspace-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anp-workspace-header]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anuppuccin-support]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anuppuccin-support]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anuppuccin-support]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -8122,15 +6754,15 @@ None of the original code was used and the feature was implemented from scratch.
   vertical-align: text-top;
   margin-right: 0;
 }
+.setting-item:is([data-id*=anuppuccin-support]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
+}
 .setting-item:is([data-id*=anuppuccin-support]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
 }
 
 .setting-item:is([data-id*=anp-custom-rainbow-colors]) > .setting-item-info > .setting-item-name {
   margin-left: -3px;
-}
-.setting-item:is([data-id*=anp-custom-rainbow-colors]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-custom-rainbow-colors]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-repeat: no-repeat;
@@ -8146,6 +6778,9 @@ None of the original code was used and the feature was implemented from scratch.
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
+}
+.setting-item:is([data-id*=anp-custom-rainbow-colors]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  margin-right: 4px;
 }
 .setting-item:is([data-id*=anp-custom-rainbow-colors]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
   display: none;
@@ -8368,14 +7003,14 @@ None of the original code was used and the feature was implemented from scratch.
   gap: 10px;
 }
 
-#cMenuModalBar {
-  border: 2px solid rgba(var(--ctp-crust), 0.2);
-}
 #cMenuModalBar .cMenuCommandItem {
   background-color: rgba(var(--ctp-mantle), 0.4);
 }
 #cMenuModalBar .cMenuCommandItem:hover {
   background-color: rgba(var(--ctp-mantle), 0.6);
+}
+#cMenuModalBar {
+  border: 2px solid rgba(var(--ctp-crust), 0.2);
 }
 
 #cMenuModalBar button.cMenuCommandItem:hover {
@@ -8416,11 +7051,11 @@ None of the original code was used and the feature was implemented from scratch.
   margin: auto;
 }
 
-.calendar .day.svelte-q3wqg9 {
-  transition: background-color 0.1s;
-}
 .calendar .day.svelte-q3wqg9:hover {
   background-color: rgb(var(--ctp-crust));
+}
+.calendar .day.svelte-q3wqg9 {
+  transition: background-color 0.1s;
 }
 
 .cMenuToolbarDefaultAesthetic {
@@ -9077,4 +7712,121 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 .anp-kanban-hide-mark .kanban-plugin__item-wrapper .is-search-hit mark {
   background-color: transparent;
   color: inherit;
+}
+
+.cssjournal {
+  /* Use theme colors instead of fixed palette  */
+  --journal-paper: var(--background-primary);
+  --journal-ink: var(--text-normal);
+  --journal-rule: var(--background-modifier-border);
+  --journal-moss: var(--text-muted);
+  --journal-image-mat: var(--background-secondary);
+}
+.cssjournal.markdown-preview-view, .cssjournal.markdown-source-view {
+  background-color: var(--journal-paper);
+  color: var(--journal-ink);
+  font-family: var(--font-text); /* use theme text font */
+}
+.cssjournal .markdown-preview-sizer {
+  max-width: 1120px;
+  padding: clamp(24px, 5vw, 64px);
+}
+.cssjournal .markdown-rendered h1,
+.cssjournal .markdown-rendered h2,
+.cssjournal .markdown-rendered h3 {
+  color: var(--journal-ink);
+  font-family: var(--font-text);
+  font-weight: 500;
+  text-align: center;
+}
+.cssjournal .markdown-rendered p {
+  color: var(--journal-ink);
+  font-family: var(--font-text);
+  font-size: 1.05em;
+  font-style: italic;
+  line-height: 1.35;
+}
+.cssjournal .markdown-rendered img {
+  background-color: var(--journal-image-mat);
+  border: 1px solid var(--journal-rule);
+  border-radius: 0;
+  box-shadow: 0 0 0 4px var(--journal-paper), 0 0 0 5px var(--journal-rule);
+  display: block;
+  margin: 0 auto 14px;
+  object-fit: cover;
+  padding: 5px;
+}
+.cssjournal .bases-view {
+  color: var(--journal-ink);
+  font-family: var(--font-text);
+}
+.cssjournal .bases-cards {
+  counter-reset: journal-card;
+  display: grid;
+  gap: 38px 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.cssjournal .bases-cards-item {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--journal-ink);
+  counter-increment: journal-card;
+  font-family: var(--font-text);
+  min-width: 0;
+  text-align: center;
+}
+.cssjournal .bases-cards-item::before {
+  color: var(--journal-moss);
+  content: "(" counter(journal-card, decimal-leading-zero) ")";
+  display: block;
+  font-family: var(--font-monospace);
+  font-size: 0.8em;
+  font-style: normal;
+  margin-bottom: 8px;
+}
+.cssjournal .bases-cards-item-thumbnail,
+.cssjournal .bases-cards-item img {
+  background-color: var(--journal-image-mat);
+  border: 1px solid var(--journal-rule);
+  border-radius: 0;
+  box-shadow: 0 0 0 4px var(--journal-paper), 0 0 0 5px var(--journal-rule);
+  margin: 0 auto 14px;
+  object-fit: cover;
+  padding: 5px;
+}
+.cssjournal .bases-cards-item-title,
+.cssjournal .bases-cards-item-content,
+.cssjournal .bases-cards-item-properties {
+  color: var(--journal-ink);
+  font-family: var(--font-text);
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.35;
+  text-align: left;
+}
+.cssjournal table {
+  background-color: transparent;
+  border-collapse: collapse;
+  color: var(--journal-ink);
+  font-family: var(--font-text);
+}
+.cssjournal th,
+.cssjournal td {
+  border-color: color-mix(in srgb, var(--journal-rule) 60%, transparent);
+  color: var(--journal-ink);
+}
+@media (max-width: 800px) {
+  .cssjournal .bases-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .cssjournal .markdown-preview-sizer {
+    padding: 20px;
+  }
+  .cssjournal .bases-cards {
+    gap: 30px 18px;
+    grid-template-columns: 1fr;
+  }
 }

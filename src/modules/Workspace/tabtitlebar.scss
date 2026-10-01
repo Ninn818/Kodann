@@ -39,12 +39,12 @@
     }
 
     /**
-   * This should fix the drag/click titlebar issue.
-   * 
-   * Invisible boxes are not rendered (as if they were fully transparent),
+    * This should fix the drag/click titlebar issue.
+    *
+    * Invisible boxes are not rendered (as if they were fully transparent),
    * cannot be interacted with (and behave as if they had pointer-events: none),
-   * and are removed from navigation (similar to display: none).
-   * 
+    * and are removed from navigation (similar to display: none).
+    *
    * @see: https://drafts.csswg.org/css-display/#visibility
    */
     .workspace-leaf-content .view-header>div {

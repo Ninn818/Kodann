@@ -8,7 +8,6 @@
             color: var(--text-normal); //text color for callout titles in light theme
         }
 
-        flex-grow: var(--anp-callout-fold-position, 0); //set fold position via style settings
     }
 
     &:not(.is-collapsible) {
@@ -59,5 +58,4 @@
 
 @import "styles/block.scss";
 @import "styles/sleek.scss";
-@import "styles/vanilla-normal.scss";
-@import "styles/vanilla-plus.scss";
+@import "styles/lacey-frame.scss";

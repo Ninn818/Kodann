@@ -1,57 +1,68 @@
-<h1 align="center">AnuPpuccin</h1>
-<h3 align="center">Personal theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
+<h1 align="center">Kodann</h1>
+<h3 align="center">A customized Obsidian theme based on <a href="https://github.com/AnubisNekhet/AnuPpuccin">AnuPpuccin</a></h3><br>
+
+Kodann is a customized fork maintained by <a href="https://github.com/Ninn818">Ninn818</a>. It builds on AnuPpuccin by AnubisNekhet; upstream authorship and GPL-3.0 notices are preserved. This repository is an independent project, not the original AnuPpuccin theme.
 
 <p align="center"> <img src="assets/gh-preview.webp"> </p>
 
 <br>
-<h3 align="center">Voted <b>Best Theme</b> in <a href="https://forum.obsidian.md/t/gems-of-the-year-2022-winners/54903">Gems of the Year 2022</a> awards 🎉
+<h3 align="center">The upstream AnuPpuccin theme was voted <b>Best Theme</b> in the <a href="https://forum.obsidian.md/t/gems-of-the-year-2022-winners/54903">Gems of the Year 2022</a> awards
 </h3>
 
-<h2 align="center">Notice</h2>
-<p align="center">AnuPpuccin is currently on hiatus!<br>I have been busy with endsems and projects, thus I haven't been able to dedicate time to fix bugs and issues and I'm really sorry for that 😅. Thank you for your understanding!</p>
+<p align="center">Kodann is independently maintained and may differ from upstream AnuPpuccin.</p>
 
 ## Preface
 
-Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
-This theme makes heavy use of the <a href="https://github.com/mgmeyers/obsidian-style-settings">style settings</a> plugin, which controls most of the features in the theme. The theme is perfectly usable even without style settings, but it's only a fraction of what it actually is with the plugin.
-<br><br>
-I will respond to feature/code removal only if there is substantial evidence of it being a direct copy of the original code and not just a simple imitation. (Please keep this point in mind before accusing me of being a low-effort theme developer.)
+Kodann is a personal customization of AnuPpuccin. Most features remain optional, and theme variables are available for use in custom snippets. The theme makes extensive use of the <a href="https://github.com/mgmeyers/obsidian-style-settings">Style Settings</a> plugin; it remains usable without the plugin, but some configuration options will be unavailable.
 
-### If you like my theme:
+### Support the upstream author
 
-I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
+Kodann is free. If you would like to support the original AnuPpuccin author, use the link below.<br>
 <a href="https://www.buymeacoffee.com/anubisnekhet" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## License
 
-AnuPpuccin is licensed under the GPL-3.0 license which allows you to modify the code freely, however the Copyright and license notices must be preserved in your CSS. If you redistribute a part of my code, please credit my theme in your CSS file, and specify which code you are using. **Please keep my <a href="https://www.buymeacoffee.com/anubisnekhet">Buy Me a Coffee link</a> in your README if you do so.**
+Kodann is distributed under GPL-3.0; see [LICENSE](LICENSE). It is derived from AnuPpuccin by AnubisNekhet. Preserve the upstream copyright and license notices when redistributing derived code. The upstream author also requests that their <a href="https://www.buymeacoffee.com/anubisnekhet">support link</a> remain with redistributed AnuPpuccin-derived code.
 
 <details>
 <summary><h2>Installation</h2></summary>
 <h3>Normal Installation</h3>
-Go to your theme folder (<code>.obsidian/themes</code>) and run:<br><br>
-<pre><code>git clone https://github.com/AnubisNekhet/AnuPpuccin.git</code></pre>
+Clone Kodann into your theme folder (<code>.obsidian/themes</code>):<br><br>
+<pre><code>git clone https://github.com/Ninn818/Kodann.git</code></pre>
 <h3>Updating</h3>
-Go to your AnuPuccin folder (<code>.obsidian/themes/Anuppuccin</code>) and run:<br><br>
+Go to your Kodann folder (<code>.obsidian/themes/Kodann</code>) and run:<br><br>
 <pre><code>git pull</code></pre>
 <h3>Building</h3>
-Clone the github repo and run <code>sass src/base.scss theme.css</code> in the root folder.
+Clone the GitHub repo, run <code>npm install</code>, then run <code>make build</code> in the root folder to generate both theme stylesheets.
 </details>
+
+## Journal View
+
+Enable the optional paper-style journal layout on an individual note by adding this frontmatter:
+
+```yaml
+---
+cssclasses:
+	- cssjournal
+---
+```
+
+The `cssjournal` class styles the note and any embedded Bases card view, including a numbered card grid, framed images, and italic captions. It also styles tables in that note. Other notes are unchanged.
 
 ## Community Contributions
 
-AnuPpuccin has a [Discussions](https://github.com/AnubisNekhet/AnuPpuccin/discussions/categories/snippets) page dedicated to snippets that add a personal touch to your obsidian setup. If you want to share your customizations, feel free to do so!
+For upstream AnuPpuccin discussions and community snippets, visit [the original project](https://github.com/AnubisNekhet/AnuPpuccin/discussions/categories/snippets).
 
 ## Features
 
 ### Custom palette
 
 <p align="center"> <img src="assets/gh-colorscheme-preview.webp"> </p>
-The theme supports various palettes (5 in the base theme and even more if you use the <a href="https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css">extended colorschemes</a> snippet) which include many popular colorschemes such as Catppuccin and Dracula. These are heavily integrated into the theme as they are directly used to stylize various UI elements.
+The theme includes 12 built-in flavors across six palette families, with more available through the <a href="https://github.com/Ninn818/Kodann/blob/main/snippets/extended-colorschemes.css">extended colorschemes</a> snippet. Palette colors are integrated throughout the interface, including callouts and other UI elements.
 
 ### Layouts
 
-Anuppuccin currently supports 2 layout variants.
+Kodann currently supports 2 layout variants.
 
 <p align="center"> <img src="assets/gh-layout-preview.webp"> </p>
 
@@ -86,12 +97,13 @@ Bold and italic colors can be toggled on and off and can be customised according
 <p align="center"> <img src="assets/gh-callout-preview.webp"> </p>
 The theme comes with many custom callout styles (which can be toggled so they won't interfere with your own callout snippet).<br>
 The snippet also includes support for using the colors of your selected palette which means that the callouts don't ever look out of place :)<br>
-If you use the admonition plugin/have custom callout colors, they won't be affected by the recolor as it only targets vanilla callouts. However, you can make them use AnuPpuccin's palette to support dynamic per-palette theming.<br>
+If you use the admonition plugin/have custom callout colors, they won't be affected by the recolor as it only targets vanilla callouts. However, you can make them use Kodann's palette to support dynamic per-palette theming.<br>
+Blueberry & Creme's light flavor gives standard callouts a scalloped lace frame with a dashed inset and floral detail.
 
 ### Custom checkboxes & Speech bubbles
 
 <p align="center"> <img src="assets/gh-checkbox-preview.webp" width="50%"> </p>
-Anuppuccin's custom checkboxes try to mimic the original checkbox design as much as possible, while still being optional incase you want to use your own checkbox snippet.
+Kodann's custom checkboxes try to mimic the original checkbox design as much as possible, while still being optional in case you want to use your own checkbox snippet.
 Speech bubbles have been provided which are useful for language learners and RPG vault users alike.<br>Custom checkboxes have been designed to match those provided by the <a href="https://github.com/ceciliamay/obsidianmd-theme-primary">Primary</a> theme for ease of migration and consistency.
 
 | Syntax  | Description     |
@@ -145,12 +157,12 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 
 ## Colorschemes used
 
-**Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css) snippet. <br> **Important**: Some colorschemes have been been modified to fit the Catppuccin color value style, which means there will be some changes made to make the theme feel more natural.
+**Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/Ninn818/Kodann/blob/main/snippets/extended-colorschemes.css) snippet. <br> **Important**: Some colorschemes have been modified to fit the Catppuccin color value style, which means there will be some changes made to make the theme feel more natural.
 
 | Theme                                                     | Light Mode | Dark Mode | Extra Notes                                                                                                                 |
 | --------------------------------------------------------- | ---------- | --------- | --------------------------------------------------------------------------------------------------------------------------- |
 | [Atom](https://github.com/kognise/obsidian-atom)          | Yes        | Yes       | Accent value is hardcoded into the theme.                                                                                   |
-| [Catppuccin](https://github.com/catppuccin/catppuccin)    | Yes        | Yes       | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
+| [Catppuccin](https://github.com/catppuccin/catppuccin)    | No         | Yes       | Includes Mocha and Mocha Old.                                                                                            |
 | Coffee                                                    | No         | Yes       | Custom colorscheme                                                                                                          |
 | [Biscuit](https://github.com/Biscuit-Colorscheme/biscuit) | Yes        | Yes       | -                                                                                                                           |
 | [Everforest](https://github.com/sainnhe/everforest)       | Yes        | Yes       | -                                                                                                                           |
@@ -159,10 +171,13 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Nord](https://github.com/arcticicestudio/nord)           | Yes        | Yes       | A custom darker variant of the dark theme is included as well. <br> Accent value is hardcoded into the theme.               |
 | Notion                                                    | Yes        | Yes       | -                                                                                                                           |
 | [Kanagawa](https://github.com/rebelot/kanagawa.nvim)      | No         | Yes       | -                                                                                                                           |
-| [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes        | Yes       | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet.                                    |
 | [Rosebox](https://github.com/KraXen72/rosebox)            | No         | Yes       | Accent value is hardcoded into the theme.                                                                                   |
 | [Royal Velvet](https://github.com/caro401/royal-velvet)   | No         | Yes       | -                                                                                                                           |
-| Sandy Beaches                                             | Yes        | No        | Provided by [melnhh](https://github.com/melnhh)                                                                             |
+| Sandy Beaches                                             | Yes        | Yes       | Light palette provided by [melnhh](https://github.com/melnhh); both flavors have a subtle 2% warm tint.                       |
+| Blueberry & Creme                                         | Yes        | Yes       | Custom palette; the light flavor adds a lace-framed callout style.                                                          |
+| Etching                                                   | Yes        | Yes       | Custom palette.                                                                                                             |
+| Kawaii                                                    | Yes        | Yes       | Custom palette.                                                                                                             |
+| Overcast Clouds                                           | Yes        | Yes       | Custom palette.                                                                                                             |
 | [Solarized](https://github.com/altercation/solarized)     | Yes        | Yes       | -                                                                                                                           |
 | [thorns](https://codeberg.org/rini/thorns)                | No         | Yes       | -                                                                                                                           |
 
@@ -175,12 +190,6 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 </details>
 <details>
 <summary><h4>Catppuccin</h4></summary>
-<h4 align="center">Latte</h4>
-<img src="assets/colorschemes/catppuccin-latte.webp"/>
-<h4 align="center">Frappe</h4>
-<img src="assets/colorschemes/catppuccin-frappe.webp"/>
-<h4 align="center">Macchiato</h4>
-<img src="assets/colorschemes/catppuccin-macchiato.webp"/>
 <h4 align="center">Mocha</h4>
 <img src="assets/colorschemes/catppuccin-mocha.webp"/>
 <h4 align="center">Mocha Old</h4>
@@ -238,13 +247,6 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/rosebox-dark.webp"/>
 </details>
 <details>
-<summary><h4>Rosé Pine</h4></summary>
-<h4 align="center">Rosé Pine Dawn</h4>
-<img src="assets/colorschemes/rosepine-light.webp"/>
-<h4 align="center">Rosé Pine</h4>
-<img src="assets/colorschemes/rosepine-dark.webp"/>
-</details>
-<details>
 <summary><h4>Royal Velvet</h4></summary>
 <img src="assets/colorschemes/royal-velvet.webp"/>
 </details>
@@ -259,7 +261,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 </details>
 </details>
 
-Note: Themes are toggled via style settings, the default themes are **Latte** for light mode and **Mocha** for dark mode.
+Note: Themes are toggled via style settings, the default themes are **Sandy Beaches** for light mode and **Mocha** for dark mode.
 
 ### Custom CSS Classes
 

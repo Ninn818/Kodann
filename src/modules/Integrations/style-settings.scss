@@ -120,7 +120,6 @@
 }
 
 .style-settings-container .setting-item:is([data-id="tag-border-width"],
-    [data-id="callout-radius"],
     [data-id="file-line-width"],
     [data-id="file-margins"],
     [data-id="anp-card-radius"],
@@ -144,8 +143,7 @@
     [data-id="h4-size"],
     [data-id="h5-size"],
     [data-id="h6-size"],
-    [data-id="list-indent"],
-    [data-id="list-spacing"]) .setting-item-control::after {
+    [data-id="h6-size"]) .setting-item-control::after {
     content: 'em';
 }
 

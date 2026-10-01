@@ -1,6 +1,4 @@
-.anp-callout-sleek .callout:not([data-callout-metadata*="anp-block"],
-    [data-callout-metadata*="anp-vanilla-normal"],
-    [data-callout-metadata*="anp-vanilla-plus"]),
+.anp-callout-sleek .callout:not([data-callout-metadata*="anp-block"]),
 //do not apply to callouts with these metadata
 .callout[data-callout-metadata*="anp-sleek"] {
 
