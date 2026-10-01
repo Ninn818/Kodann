@@ -6,6 +6,26 @@
     padding: 0px 6px;
 }
 
+.theme-light.ctp-overcast-clouds-light .app-container,
+.theme-light.ctp-overcast-clouds-light .print {
+    --h1-color: #CFC59A;
+    --h2-color: #E6B8C4;
+    --h3-color: #E8B8DB;
+    --h4-color: #D0B8D8;
+    --h5-color: #DFB1D0;
+    --h6-color: #C3A8D7;
+}
+
+.theme-light.ctp-sandy-beaches-light .app-container,
+.theme-light.ctp-sandy-beaches-light .print {
+    --h1-color: #D3C6B8;
+    --h2-color: #E2C8AF;
+    --h3-color: #B8E2EF;
+    --h4-color: #BFE5C2;
+    --h5-color: #F4E1B8;
+    --h6-color: #E8C4C0;
+}
+
 .theme-dark.ctp-overcast-clouds-dark .app-container,
 .theme-dark.ctp-overcast-clouds-dark .print {
     --h1-color: #dad8c0;
@@ -14,6 +34,16 @@
     --h4-color: #b38db8;
     --h5-color: #c761ae;
     --h6-color: #a354a4;
+}
+
+.theme-dark.ctp-sandy-beaches-dark .app-container,
+.theme-dark.ctp-sandy-beaches-dark .print {
+    --h1-color: #D7C7B6;
+    --h2-color: #E5C9A9;
+    --h3-color: #D3F1FA;
+    --h4-color: #D2F0D5;
+    --h5-color: #FFF0D3;
+    --h6-color: #F1D5D1;
 }
 
 // Custom header font
