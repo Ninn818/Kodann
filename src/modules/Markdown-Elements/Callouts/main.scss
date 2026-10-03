@@ -56,6 +56,591 @@
     }
 }
 
+// Blueberry & Creme callouts:
+// Soft paper body with a woven blueberry/plum plaid title.
+
+.theme-light.ctp-blueberry-creme-light,
+.theme-dark.ctp-blueberry-creme-dark {
+
+    // ------------------------------------------------------------------------
+    // Shared callout styling
+    // ------------------------------------------------------------------------
+
+    .callout:not([data-callout-metadata*="revert"]):not([data-callout="blank-container"]):not([data-callout="multi-column"]) {
+
+        // --------------------------------------------------------------------
+        // Palette
+        // --------------------------------------------------------------------
+
+        --blueberry-callout-bg: rgba(var(--ctp-base), 0.96);
+        --blueberry-callout-panel: rgba(var(--ctp-surface0), 0.92);
+
+        --blueberry-border: rgba(var(--ctp-overlay1), 0.72);
+        --blueberry-inner-border: rgba(var(--ctp-surface2), 0.55);
+
+        --blueberry-divider: rgba(var(--ctp-overlay1), 0.62);
+
+        // These are used for the title text/icon.
+        --blueberry-title-text: var(--text-normal);
+
+
+        // --------------------------------------------------------------------
+        // Callout container
+        // --------------------------------------------------------------------
+
+        position: relative;
+        overflow: hidden;
+
+        padding: 0.8rem 1rem 0.9rem;
+
+        border: 1.5px solid var(--blueberry-border);
+        border-radius: 16px;
+
+        // FLAT COLOR — no gradient.
+        background-color: var(--blueberry-callout-bg);
+
+        box-shadow:
+            inset 0 0 0 1px var(--blueberry-inner-border),
+            0 8px 16px rgba(var(--ctp-crust), 0.12);
+
+
+        // ====================================================================
+        // TITLE
+        // ====================================================================
+
+        > .callout-title {
+
+            position: relative;
+            z-index: 1;
+
+            margin: -0.05rem -0.15rem 0.8rem;
+            padding: 0.65rem 0.85rem;
+
+            min-height: 2.65rem;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+
+            border: 1px solid rgba(var(--ctp-overlay1), 0.58);
+            border-radius: 11px;
+
+            // ----------------------------------------------------------------
+            // ACTUAL PLAID
+            // ----------------------------------------------------------------
+            //
+            // This is an SVG tile rather than CSS gradients.
+            //
+            // The pattern is intentionally fairly large so that the plaid
+            // remains obvious inside Obsidian instead of disappearing into
+            // the title background.
+            //
+            // 48 x 48 tile:
+            //
+            //   cream base
+            //   ├── wide blueberry vertical stripe
+            //   ├── narrow blue thread
+            //   ├── wide plum horizontal stripe
+            //   └── narrow cream/light threads
+            //
+            // The overlapping rectangles create the darker intersections.
+            //
+
+            background-color: #d9d3cf;
+
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23d9d3cf'/%3E%3Crect x='8' y='0' width='12' height='48' fill='%238b91b0' fill-opacity='.42'/%3E%3Crect x='32' y='0' width='7' height='48' fill='%237b86aa' fill-opacity='.32'/%3E%3Crect x='0' y='10' width='48' height='11' fill='%23a58ca7' fill-opacity='.48'/%3E%3Crect x='0' y='34' width='48' height='7' fill='%239d82a0' fill-opacity='.36'/%3E%3Crect x='4' y='0' width='2' height='48' fill='%23f0ece7' fill-opacity='.42'/%3E%3Crect x='25' y='0' width='2' height='48' fill='%23eee9e5' fill-opacity='.38'/%3E%3Crect x='0' y='4' width='48' height='2' fill='%23f1ede9' fill-opacity='.4'/%3E%3Crect x='0' y='27' width='48' height='2' fill='%23f0ece7' fill-opacity='.34'/%3E%3Crect x='0' y='21' width='48' height='2' fill='%23727d9e' fill-opacity='.2'/%3E%3Crect x='20' y='0' width='2' height='48' fill='%236f7b9d' fill-opacity='.18'/%3E%3C/svg%3E");
+
+            background-repeat: repeat;
+            background-size: 48px 48px;
+
+            box-shadow:
+                inset 0 0 0 1px rgba(var(--ctp-base), 0.2),
+                inset 0 1px 0 rgba(var(--ctp-white), 0.08),
+                0 2px 5px rgba(var(--ctp-crust), 0.08);
+
+
+            // ----------------------------------------------------------------
+            // Woven surface texture
+            // ----------------------------------------------------------------
+            //
+            // This adds tiny thread marks over the plaid.
+            // Again, this is an SVG pattern rather than a CSS gradient.
+            //
+
+            &::before {
+
+                content: "";
+
+                position: absolute;
+                inset: 0;
+
+                pointer-events: none;
+
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M0 1H8M0 5H8' stroke='%23ffffff' stroke-opacity='.10' stroke-width='.55'/%3E%3Cpath d='M1 0V8M5 0V8' stroke='%234d5369' stroke-opacity='.08' stroke-width='.55'/%3E%3C/svg%3E");
+
+                background-repeat: repeat;
+                background-size: 8px 8px;
+
+                opacity: 0.65;
+
+                z-index: 0;
+            }
+
+
+            // ----------------------------------------------------------------
+            // Keep Obsidian's title content above the fabric
+            // ----------------------------------------------------------------
+
+            .callout-icon,
+            .callout-fold,
+            .callout-title-inner {
+
+                position: relative;
+                z-index: 2;
+
+                color: var(--blueberry-title-text);
+            }
+
+
+            // Make the title text slightly more readable against the plaid.
+
+            .callout-title-inner {
+                font-weight: 600;
+                text-shadow:
+                    0 1px 1px rgba(var(--ctp-base), 0.18);
+            }
+        }
+
+
+        // ====================================================================
+        // BODY
+        // ====================================================================
+
+        > .callout-content {
+
+            position: relative;
+            z-index: 1;
+
+            padding-top: 0.3rem;
+
+            // ----------------------------------------------------------------
+            // Dashed divider
+            // ----------------------------------------------------------------
+
+            border-top:
+                1.5px dashed
+                var(--blueberry-divider);
+
+            // FLAT COLOR — no gradient.
+            background-color: transparent;
+        }
+    }
+}
+
+// Kawaii callouts: soft rounded cards with pastel dots and blobs.
+.theme-light.ctp-kawaii-light,
+.theme-dark.ctp-kawaii-dark {
+    .callout:not([data-callout-metadata*="revert"]):not([data-callout="blank-container"]):not([data-callout="multi-column"]) {
+        --kawaii-callout-bg: rgba(var(--ctp-base), 0.9);
+        --kawaii-callout-accent: rgba(var(--callout-color), 0.55);
+        --kawaii-callout-shadow: rgba(var(--ctp-crust), 0.15);
+        position: relative;
+        overflow: hidden;
+        padding: 0.7rem 0.9rem 0.9rem;
+        border: 2px solid var(--kawaii-callout-accent);
+        border-radius: 22px 18px 20px 18px / 18px 20px 18px 22px;
+        background:
+            radial-gradient(circle at 12% 18%, rgba(var(--callout-color), 0.18) 0 12%, transparent 13%),
+            radial-gradient(circle at 88% 72%, rgba(var(--callout-color), 0.12) 0 14%, transparent 15%),
+            linear-gradient(135deg, rgba(var(--ctp-surface0), 0.9), var(--kawaii-callout-bg)),
+            repeating-linear-gradient(0deg, rgba(var(--ctp-overlay1), 0.09) 0 2px, transparent 2px 8px),
+            repeating-linear-gradient(90deg, rgba(var(--ctp-overlay1), 0.08) 0 2px, transparent 2px 8px);
+        box-shadow: inset 0 0 0 2px rgba(var(--ctp-surface1), 0.32), 0 10px 18px var(--kawaii-callout-shadow);
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 8px 10px auto auto;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(var(--callout-color), 0.2);
+            box-shadow: -18px 10px 0 2px rgba(var(--callout-color), 0.12), -6px 28px 0 -4px rgba(var(--callout-color), 0.16);
+            pointer-events: none;
+        }
+
+        > .callout-title {
+            margin: -0.2rem -0.2rem 0.5rem;
+            padding: 0.55rem 0.85rem;
+            border: 2px solid rgba(var(--callout-color), 0.55);
+            border-radius: 18px 16px 18px 14px / 16px 18px 16px 20px;
+            background: linear-gradient(135deg, rgba(var(--callout-color), 0.20), rgba(var(--callout-color), 0.10));
+            box-shadow: inset 0 0 0 1px rgba(var(--ctp-base), 0.25);
+            backdrop-filter: blur(1px);
+        }
+
+        > .callout-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 0.2rem;
+            border-top: 2px dashed rgba(var(--callout-color), 0.32);
+        }
+
+        .callout-icon,
+        .callout-fold,
+        .callout-title-inner {
+            color: var(--text-normal);
+        }
+    }
+}
+
+// Etching callouts: vintage engraved-paper shape with a raised arched top.
+// Etching callouts: responsive vintage engraved-paper silhouette.
+.theme-light.ctp-etching-light,
+.theme-dark.ctp-etching-dark {
+    .callout:not([data-callout-metadata*="revert"]):not([data-callout="blank-container"]):not([data-callout="multi-column"]) {
+        --etching-bg: rgba(var(--ctp-surface0), 0.88);
+        --etching-border: rgba(var(--ctp-overlay1), 0.82);
+        --etching-inner: rgba(var(--ctp-overlay2), 0.45);
+
+        position: relative;
+        overflow: visible;
+
+        margin-top: 2.2rem;
+        margin-bottom: 2rem;
+
+        padding: 3.2rem 1.5rem 1.2rem;
+
+        border: 0;
+        border-radius: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+
+
+        // --------------------------------------------------------------------
+        // Main callout silhouette
+        // --------------------------------------------------------------------
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            z-index: 0;
+
+            pointer-events: none;
+
+            background-color: var(--etching-bg);
+
+            border: 2px solid var(--etching-border);
+
+            border-radius:
+                18px
+                18px
+                14px
+                14px;
+
+            clip-path: polygon(
+                0% 8%,
+                2% 5%,
+                30% 5%,
+                35% 4%,
+                40% 2%,
+                45% 0.5%,
+                50% 0%,
+                55% 0.5%,
+                60% 2%,
+                65% 4%,
+                70% 5%,
+                98% 5%,
+                100% 8%,
+                100% 96%,
+                98% 100%,
+                2% 100%,
+                0% 96%
+            );
+
+            box-shadow:
+                inset 0 0 0 1px var(--etching-inner),
+                0 8px 18px rgba(var(--ctp-crust), 0.14);
+        }
+
+
+        // --------------------------------------------------------------------
+        // Inner etched line
+        // --------------------------------------------------------------------
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            inset: 5px;
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            border: 1px solid rgba(var(--ctp-overlay1), 0.35);
+
+            border-radius:
+                14px
+                14px
+                11px
+                11px;
+
+            clip-path: polygon(
+                0% 8%,
+                2% 5%,
+                30% 5%,
+                35% 4%,
+                40% 2%,
+                45% 0.5%,
+                50% 0%,
+                55% 0.5%,
+                60% 2%,
+                65% 4%,
+                70% 5%,
+                98% 5%,
+                100% 8%,
+                100% 96%,
+                98% 100%,
+                2% 100%,
+                0% 96%
+            );
+        }
+
+
+        // --------------------------------------------------------------------
+        // Title
+        // --------------------------------------------------------------------
+
+        > .callout-title {
+            position: absolute;
+
+            top: 0.35rem;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            z-index: 3;
+
+            width: auto;
+            min-width: 170px;
+
+            margin: 0;
+
+            padding: 0.55rem 1rem 0.45rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 0.45rem;
+
+            background: transparent;
+
+            border: 0;
+
+            box-shadow: none;
+
+            text-align: center;
+
+            white-space: nowrap;
+
+
+            .callout-icon,
+            .callout-fold,
+            .callout-title-inner {
+                color: var(--text-normal);
+            }
+
+
+            .callout-title-inner {
+                font-weight: 650;
+                letter-spacing: 0.02em;
+            }
+        }
+
+
+        // --------------------------------------------------------------------
+        // Content
+        // --------------------------------------------------------------------
+
+        > .callout-content {
+            position: relative;
+
+            z-index: 2;
+
+            margin: 0;
+
+            padding-top: 0.9rem;
+
+            border-top:
+                1px dashed
+                rgba(var(--ctp-overlay1), 0.58);
+        }
+    }
+}
+
+// Overcast Clouds callouts: soft pastel panels with tiny stars, sparkles, and polka dots.
+.theme-light.ctp-overcast-clouds-light,
+.theme-dark.ctp-overcast-clouds-dark {
+    .callout:not([data-callout-metadata*="revert"]):not([data-callout="blank-container"]):not([data-callout="multi-column"]) {
+        --cloud-callout-bg: rgba(var(--ctp-surface0), 0.72);
+        --cloud-callout-border: rgba(var(--ctp-mauve), 0.28);
+        --cloud-callout-text: rgb(var(--ctp-subtext1));
+        --cloud-callout-accent: rgba(var(--ctp-pink), 0.65);
+        --cloud-callout-sparkle: rgba(var(--ctp-mauve), 0.7);
+        --cloud-callout-dot: rgba(var(--ctp-mauve), 0.12);
+
+        position: relative;
+        overflow: hidden;
+
+        padding: 0.8rem 1rem 0.9rem;
+
+        border: 1px solid var(--cloud-callout-border);
+        border-radius: 14px;
+
+        background-color: var(--cloud-callout-bg);
+
+        background-image:
+            radial-gradient(
+                circle at 2px 2px,
+                var(--cloud-callout-dot) 1px,
+                transparent 1.5px
+            );
+
+        background-size: 18px 18px;
+
+        box-shadow:
+            0 3px 10px rgba(var(--ctp-crust), 0.06),
+            inset 0 0 0 1px rgba(var(--ctp-surface2), 0.2);
+
+
+        // --------------------------------------------------------------------
+        // Decorative stars and sparkles
+        // --------------------------------------------------------------------
+
+        &::before {
+            content: "✦  ·  ⋆";
+
+            position: absolute;
+
+            top: 0.65rem;
+            left: 0.8rem;
+
+            z-index: 2;
+
+            color: var(--cloud-callout-sparkle);
+
+            font-size: 0.75rem;
+            letter-spacing: 0.18rem;
+
+            opacity: 0.72;
+
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "⋆  ·  ✦";
+
+            position: absolute;
+
+            right: 0.8rem;
+            bottom: 0.7rem;
+
+            z-index: 2;
+
+            color: var(--cloud-callout-sparkle);
+
+            font-size: 0.75rem;
+            letter-spacing: 0.18rem;
+
+            opacity: 0.72;
+
+            pointer-events: none;
+        }
+
+
+        // --------------------------------------------------------------------
+        // Title
+        // --------------------------------------------------------------------
+
+        > .callout-title {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            min-height: 2rem;
+            margin: 0 0 0.55rem;
+            padding: 0.35rem 2.5rem;
+            border-bottom: 1px dashed rgba(var(--ctp-mauve), 0.24);
+            background: transparent;
+            text-align: center;
+
+            .callout-icon,
+            .callout-fold,
+            .callout-title-inner {
+                color: var(--cloud-callout-text);
+            }
+
+            .callout-title-inner {
+                font-weight: 650;
+                letter-spacing: 0.015em;
+            }
+
+            .callout-icon {
+                flex: 0 0 auto;
+            }
+
+            .callout-fold {
+                flex: 0 0 auto;
+            }
+        }
+
+        > .callout-title::before {
+            content: "✧";
+
+            position: absolute;
+
+            left: 0.55rem;
+
+            color: var(--cloud-callout-accent);
+
+            font-size: 0.9rem;
+
+            opacity: 0.8;
+        }
+
+        > .callout-title::after {
+            content: "✧";
+
+            position: absolute;
+
+            right: 0.55rem;
+
+            color: var(--cloud-callout-accent);
+
+            font-size: 0.9rem;
+
+            opacity: 0.8;
+        }
+
+        > .callout-content {
+            position: relative;
+            z-index: 3;
+
+            padding: 0.25rem 0.15rem 0.15rem;
+
+            color: var(--cloud-callout-text);
+        }
+    }
+}
+
 @import "styles/block.scss";
 @import "styles/sleek.scss";
 @import "styles/lacey-frame.scss";

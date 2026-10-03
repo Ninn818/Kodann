@@ -1,25 +1,197 @@
-.anp-list-toggle div.el-ul>ul.has-list-bullet>li>ul.has-list-bullet>li {
-    &>.list-bullet::after {
-        --list-bullet-border: 1px solid var(--list-marker-color);
-        background-color: transparent;
-        width: calc(var(--list-bullet-size) - 1px);
-        height: calc(var(--list-bullet-size) - 1px);
+// Themed list markers: each theme gets its own bullet language.
+
+// Shared fallback: target the actual markdown list marker in Obsidian preview.
+.markdown-rendered ul li::marker,
+.markdown-rendered ol li::marker,
+.markdown-preview-view ul li::marker,
+.markdown-preview-view ol li::marker {
+    color: var(--list-marker-color, var(--text-muted));
+    font-weight: 600;
+}
+
+// ============================================================================
+// Blueberry & Crème
+// ============================================================================
+
+.theme-light.ctp-blueberry-creme-light,
+.theme-dark.ctp-blueberry-creme-dark {
+    .markdown-rendered ul > li::marker,
+    .markdown-preview-view ul > li::marker {
+        color: rgba(var(--ctp-mauve), 0.86);
     }
 
-    >ul.has-list-bullet>li {
-        &>.list-bullet::after {
-            --list-bullet-radius: 0;
-            background-color: var(--list-marker-color);
-        }
+    .markdown-rendered ul ul > li::marker,
+    .markdown-preview-view ul ul > li::marker {
+        color: rgba(var(--ctp-blue), 0.86);
+    }
 
-        >ul.has-list-bullet>li {
-            &>.list-bullet::after {
-                width: calc(var(--list-bullet-size) - 1px);
-                height: calc(var(--list-bullet-size) - 1px);
-                --list-bullet-radius: 0;
-                --list-bullet-border: 1px solid var(--list-marker-color);
-                background-color: transparent;
-            }
-        }
+    .markdown-rendered ul ul ul > li::marker,
+    .markdown-preview-view ul ul ul > li::marker {
+        color: rgba(var(--ctp-plum), 0.82);
+    }
+
+    .markdown-rendered ul,
+    .markdown-preview-view ul {
+        list-style-type: square;
+    }
+
+    .markdown-rendered ul ul,
+    .markdown-preview-view ul ul {
+        list-style-type: circle;
+    }
+
+    .markdown-rendered ul ul ul,
+    .markdown-preview-view ul ul ul {
+        list-style-type: square;
+    }
+}
+
+
+// ============================================================================
+// Etching
+// ============================================================================
+
+.theme-light.ctp-etching-light,
+.theme-dark.ctp-etching-dark {
+    .markdown-rendered ul > li::marker,
+    .markdown-preview-view ul > li::marker {
+        color: rgba(var(--ctp-sapphire), 0.82);
+    }
+
+    .markdown-rendered ul ul > li::marker,
+    .markdown-preview-view ul ul > li::marker {
+        color: rgba(var(--ctp-blue), 0.8);
+    }
+
+    .markdown-rendered ul ul ul > li::marker,
+    .markdown-preview-view ul ul ul > li::marker {
+        color: rgba(var(--ctp-overlay2), 0.9);
+    }
+
+    .markdown-rendered ul,
+    .markdown-preview-view ul {
+        list-style-type: circle;
+    }
+
+    .markdown-rendered ul ul,
+    .markdown-preview-view ul ul {
+        list-style-type: square;
+    }
+
+    .markdown-rendered ul ul ul,
+    .markdown-preview-view ul ul ul {
+        list-style-type: disc;
+    }
+}
+
+
+// ============================================================================
+// Overcast Clouds
+// ============================================================================
+
+.theme-light.ctp-overcast-clouds-light,
+.theme-dark.ctp-overcast-clouds-dark {
+    .markdown-rendered ul > li::marker,
+    .markdown-preview-view ul > li::marker {
+        color: rgba(var(--ctp-pink), 0.82);
+    }
+
+    .markdown-rendered ul ul > li::marker,
+    .markdown-preview-view ul ul > li::marker {
+        color: rgba(var(--ctp-mauve), 0.82);
+    }
+
+    .markdown-rendered ul ul ul > li::marker,
+    .markdown-preview-view ul ul ul > li::marker {
+        color: rgba(var(--ctp-pink), 0.76);
+    }
+
+    .markdown-rendered ul,
+    .markdown-preview-view ul {
+        list-style-type: "✦";
+    }
+
+    .markdown-rendered ul ul,
+    .markdown-preview-view ul ul {
+        list-style-type: circle;
+    }
+
+    .markdown-rendered ul ul ul,
+    .markdown-preview-view ul ul ul {
+        list-style-type: "♡";
+    }
+}
+
+// ============================================================================
+// Kawaii
+// ============================================================================
+
+.theme-light.ctp-kawaii-light,
+.theme-dark.ctp-kawaii-dark {
+    .markdown-rendered ul > li::marker,
+    .markdown-preview-view ul > li::marker {
+        color: rgba(var(--ctp-pink), 0.8);
+    }
+
+    .markdown-rendered ul ul > li::marker,
+    .markdown-preview-view ul ul > li::marker {
+        color: rgba(var(--ctp-green), 0.8);
+    }
+
+    .markdown-rendered ul ul ul > li::marker,
+    .markdown-preview-view ul ul ul > li::marker {
+        color: rgba(var(--ctp-lavender), 0.82);
+    }
+
+    .markdown-rendered ul,
+    .markdown-preview-view ul {
+        list-style-type: circle;
+    }
+
+    .markdown-rendered ul ul,
+    .markdown-preview-view ul ul {
+        list-style-type: square;
+    }
+
+    .markdown-rendered ul ul ul,
+    .markdown-preview-view ul ul ul {
+        list-style-type: disc;
+    }
+}
+
+// ============================================================================
+// Sandy Beaches
+// ============================================================================
+
+.theme-light.ctp-sandy-beaches-light,
+.theme-dark.ctp-sandy-beaches-dark {
+    .markdown-rendered ul > li::marker,
+    .markdown-preview-view ul > li::marker {
+        color: rgba(var(--ctp-yellow), 0.8);
+    }
+
+    .markdown-rendered ul ul > li::marker,
+    .markdown-preview-view ul ul > li::marker {
+        color: rgba(var(--ctp-peach), 0.82);
+    }
+
+    .markdown-rendered ul ul ul > li::marker,
+    .markdown-preview-view ul ul ul > li::marker {
+        color: rgba(var(--ctp-sky), 0.82);
+    }
+
+    .markdown-rendered ul,
+    .markdown-preview-view ul {
+        list-style-type: disc;
+    }
+
+    .markdown-rendered ul ul,
+    .markdown-preview-view ul ul {
+        list-style-type: square;
+    }
+
+    .markdown-rendered ul ul ul,
+    .markdown-preview-view ul ul ul {
+        list-style-type: circle;
     }
 }
