@@ -1,0 +1,85 @@
+/* ==========================================================================
+   AURORA WORKSPACE LAYOUT
+   A softly luminous workspace with color-washed panels.
+   ========================================================================== */
+
+body.anp-aurora {
+    --anp-aurora-gap: 8px;
+    --divider-color: rgba(var(--ctp-blue), 0.2);
+    --divider-width: var(--anp-aurora-gap);
+    --divider-width-hover: var(--anp-aurora-gap);
+
+    .horizontal-main-container,
+    .workspace {
+        background:
+            radial-gradient(ellipse at 12% 0%, rgba(var(--ctp-blue), 0.12), transparent 42%),
+            radial-gradient(ellipse at 88% 100%, rgba(var(--ctp-pink), 0.1), transparent 44%),
+            var(--background-secondary);
+    }
+
+    .workspace {
+        padding: var(--anp-aurora-gap);
+    }
+
+    .workspace-tabs,
+    .workspace-tab-container,
+    .workspace-split {
+        background-color: transparent;
+    }
+
+    .workspace-leaf,
+    .workspace-split.mod-horizontal > .workspace-tabs > .workspace-tab-container,
+    .workspace-split.mod-vertical > .workspace-tabs > .workspace-tab-container {
+        overflow: hidden;
+        border: 1px solid rgba(var(--ctp-blue), 0.24);
+        border-radius: var(--radius-xl);
+        background:
+            linear-gradient(145deg, rgba(var(--ctp-blue), 0.075), transparent 44%),
+            linear-gradient(325deg, rgba(var(--ctp-pink), 0.065), transparent 48%),
+            var(--background-primary);
+        box-shadow:
+            0 5px 18px rgba(var(--ctp-crust), 0.08),
+            inset 0 1px 0 rgba(var(--ctp-text), 0.04);
+    }
+
+    .workspace-tab-header-container {
+        border: 0;
+        background-color: transparent;
+    }
+
+    .workspace-tab-header.is-active {
+        border-radius: var(--radius-m);
+        background-color: rgba(var(--ctp-blue), 0.12);
+    }
+
+    .workspace-ribbon.mod-left {
+        background-color: transparent;
+    }
+
+    .workspace-drop-overlay::before {
+        width: calc(100% - var(--anp-aurora-gap) * 2);
+        height: calc(100% - var(--anp-aurora-gap) * 2);
+        margin: auto;
+        border: 1px solid rgba(var(--ctp-sky), 0.55);
+        border-radius: var(--radius-xl);
+        background-color: rgba(var(--ctp-blue), 0.12);
+    }
+}
+
+body.anp-aurora:not(.is-mobile) {
+    .workspace-split.mod-left-split,
+    .workspace-split.mod-right-split {
+        padding-bottom: var(--anp-aurora-gap);
+    }
+}
+
+body.anp-aurora.is-mobile {
+    .workspace,
+    .workspace-leaf,
+    .workspace-tab-container {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}

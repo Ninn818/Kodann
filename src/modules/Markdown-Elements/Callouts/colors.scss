@@ -62,3 +62,10 @@
         }
     }
 }
+
+.theme-light.ctp-kawaii-light,
+.theme-dark.ctp-kawaii-dark {
+    .callout[data-callout="note"] {
+        --callout-color: var(--ctp-pink);
+    }
+}

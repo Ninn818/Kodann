@@ -1,0 +1,72 @@
+/* ==========================================================================
+   ZEN WORKSPACE LAYOUT
+   A quiet, seamless canvas with crisp dividers and understated tabs.
+   ========================================================================== */
+
+body.anp-zen {
+    --divider-color: rgba(var(--ctp-overlay1), 0.48);
+    --divider-width: 1px;
+    --divider-width-hover: 2px;
+
+    .horizontal-main-container,
+    .workspace,
+    .workspace-tabs,
+    .workspace-tab-container,
+    .workspace-split,
+    .workspace-leaf {
+        background-color: var(--background-primary);
+        box-shadow: none;
+    }
+
+    .workspace {
+        border-top: 1px solid rgba(var(--ctp-overlay1), 0.28);
+    }
+
+    .workspace-leaf {
+        border: 0;
+        border-radius: 0;
+    }
+
+    .workspace-tab-header-container {
+        border: 0;
+        background-color: var(--background-primary);
+    }
+
+    .workspace-tab-header {
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .workspace-tab-header.is-active {
+        background-color: transparent;
+    }
+
+    .workspace-tab-header.is-active::after {
+        position: absolute;
+        right: 12px;
+        bottom: 0;
+        left: 12px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: rgb(var(--ctp-accent));
+        content: "";
+    }
+
+    .workspace-ribbon.mod-left,
+    .workspace-ribbon.mod-left::before {
+        background-color: var(--background-primary);
+        border: 0;
+    }
+
+    .workspace-tab-header-container .clickable-icon:hover,
+    .workspace-ribbon .clickable-icon:hover {
+        background-color: rgba(var(--ctp-overlay1), 0.12);
+    }
+
+    .workspace-drop-overlay::before {
+        border: 1px solid rgba(var(--ctp-accent), 0.55);
+        background-color: rgba(var(--ctp-accent), 0.08);
+    }
+}

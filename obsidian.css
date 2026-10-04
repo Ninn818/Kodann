@@ -1069,6 +1069,15 @@ settings:
     -
         label: Cards
         value: anp-card-layout
+    -
+        label: Gallery
+        value: anp-gallery
+    -
+        label: Aurora
+        value: anp-aurora
+    -
+        label: Zen
+        value: anp-zen
 -
     id: anp-bg-fix
     title: Background fix for applying colors
@@ -2376,6 +2385,206 @@ input.slider,
   filter: brightness(95%);
 }
 
+.theme-dark.ctp-mocha,
+.theme-dark.ctp-mocha-old {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-lavender), 0.2);
+  --canvas-color: var(--ctp-lavender);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-lavender), 0.35);
+  --kodann-canvas-node-radius: 12px;
+  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.28);
+}
+
+.theme-dark.ctp-mocha-old {
+  --canvas-dot-pattern: rgba(var(--ctp-mauve), 0.2);
+  --canvas-color: var(--ctp-mauve);
+  --kodann-canvas-node-border: rgba(var(--ctp-mauve), 0.38);
+  --kodann-canvas-node-radius: 7px;
+  --kodann-canvas-node-shadow: 0 2px 8px rgba(var(--ctp-crust), 0.22);
+}
+
+.theme-light.ctp-sandy-beaches-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-peach), 0.42);
+  --canvas-color: var(--ctp-sapphire);
+  --canvas-color-1: var(--ctp-maroon);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-blue);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-peach), 0.55);
+  --kodann-canvas-node-radius: 8px;
+  --kodann-canvas-node-shadow: 0 2px 6px rgba(var(--ctp-overlay2), 0.1);
+}
+
+.theme-dark.ctp-sandy-beaches-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-peach), 0.3);
+  --canvas-color: var(--ctp-teal);
+  --canvas-color-1: var(--ctp-maroon);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-blue);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-peach), 0.42);
+  --kodann-canvas-node-radius: 8px;
+  --kodann-canvas-node-shadow: 0 3px 10px rgba(var(--ctp-crust), 0.25);
+}
+
+.theme-light.ctp-overcast-clouds-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-lavender), 0.38);
+  --canvas-color: var(--ctp-mauve);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-mauve), 0.38);
+  --kodann-canvas-node-radius: 16px;
+  --kodann-canvas-node-shadow: 0 5px 16px rgba(var(--ctp-mauve), 0.12);
+}
+
+.theme-dark.ctp-overcast-clouds-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.32);
+  --canvas-color: var(--ctp-lavender);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-lavender), 0.36);
+  --kodann-canvas-node-radius: 16px;
+  --kodann-canvas-node-shadow: 0 5px 16px rgba(var(--ctp-crust), 0.3);
+}
+
+.theme-light.ctp-etching-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-overlay1), 0.32);
+  --canvas-color: var(--ctp-sapphire);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-overlay1), 0.62);
+  --kodann-canvas-node-radius: 2px;
+  --kodann-canvas-node-shadow: none;
+}
+
+.theme-dark.ctp-etching-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-overlay1), 0.34);
+  --canvas-color: var(--ctp-sapphire);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-overlay1), 0.62);
+  --kodann-canvas-node-radius: 2px;
+  --kodann-canvas-node-shadow: none;
+}
+
+.theme-light.ctp-kawaii-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-pink), 0.34);
+  --canvas-color: var(--ctp-pink);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-pink), 0.46);
+  --kodann-canvas-node-radius: 18px;
+  --kodann-canvas-node-shadow: 0 4px 12px rgba(var(--ctp-mauve), 0.16);
+}
+
+.theme-dark.ctp-kawaii-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-pink), 0.24);
+  --canvas-color: var(--ctp-pink);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-pink), 0.42);
+  --kodann-canvas-node-radius: 18px;
+  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.3);
+}
+
+.theme-light.ctp-blueberry-creme-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.3);
+  --canvas-color: var(--ctp-blue);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-blue), 0.32);
+  --kodann-canvas-node-radius: 13px;
+  --kodann-canvas-node-shadow: 0 4px 12px rgba(var(--ctp-blue), 0.1);
+}
+
+.theme-dark.ctp-blueberry-creme-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.25);
+  --canvas-color: var(--ctp-sky);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-sky), 0.34);
+  --kodann-canvas-node-radius: 13px;
+  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.3);
+}
+
+.canvas-node-container {
+  border-color: var(--kodann-canvas-node-border, var(--background-modifier-border));
+  border-radius: var(--kodann-canvas-node-radius, var(--radius-m));
+  box-shadow: var(--kodann-canvas-node-shadow, var(--shadow-s));
+}
+
+.canvas-edges path.canvas-display-path {
+  stroke: rgba(var(--canvas-color), 0.86) !important;
+}
+
+.canvas-edges .canvas-path-end {
+  fill: rgba(var(--canvas-color), 0.86) !important;
+  stroke: rgba(var(--canvas-color), 0.86) !important;
+}
+
 .anp-canvas-dark-bg .canvas-wrapper {
   background-color: var(--background-secondary);
 }
@@ -2503,6 +2712,75 @@ input.slider,
 /* Inline title visibility */
 .inline-title {
   display: var(--anp-inline-title-vis, block);
+}
+
+.theme-light.ctp-kawaii-light .inline-title,
+.theme-dark.ctp-kawaii-dark .inline-title,
+.theme-light.ctp-overcast-clouds-light .inline-title,
+.theme-dark.ctp-overcast-clouds-dark .inline-title {
+  position: relative;
+  display: var(--anp-inline-title-vis, inline-block);
+  max-width: 100%;
+  padding-right: 0.75em;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  -webkit-text-stroke: 1px rgb(var(--anp-inline-title-outline));
+}
+
+.theme-light.ctp-kawaii-light,
+.theme-dark.ctp-kawaii-dark {
+  --anp-inline-title-outline: var(--ctp-mauve);
+}
+.theme-light.ctp-kawaii-light .inline-title::before,
+.theme-light.ctp-kawaii-light .inline-title::after,
+.theme-dark.ctp-kawaii-dark .inline-title::before,
+.theme-dark.ctp-kawaii-dark .inline-title::after {
+  position: absolute;
+  color: rgb(var(--ctp-pink));
+  font-size: 0.42em;
+  line-height: 1;
+  -webkit-text-stroke: 0;
+  pointer-events: none;
+}
+.theme-light.ctp-kawaii-light .inline-title::before,
+.theme-dark.ctp-kawaii-dark .inline-title::before {
+  content: "✦";
+  top: 0.1em;
+  right: 0.55em;
+}
+.theme-light.ctp-kawaii-light .inline-title::after,
+.theme-dark.ctp-kawaii-dark .inline-title::after {
+  content: "✧";
+  right: 0.05em;
+  bottom: 0.05em;
+}
+
+.theme-light.ctp-overcast-clouds-light,
+.theme-dark.ctp-overcast-clouds-dark {
+  --anp-inline-title-outline: var(--ctp-sapphire);
+}
+.theme-light.ctp-overcast-clouds-light .inline-title::before,
+.theme-light.ctp-overcast-clouds-light .inline-title::after,
+.theme-dark.ctp-overcast-clouds-dark .inline-title::before,
+.theme-dark.ctp-overcast-clouds-dark .inline-title::after {
+  position: absolute;
+  color: rgb(var(--ctp-pink));
+  font-size: 0.42em;
+  line-height: 1;
+  -webkit-text-stroke: 0;
+  pointer-events: none;
+}
+.theme-light.ctp-overcast-clouds-light .inline-title::before,
+.theme-dark.ctp-overcast-clouds-dark .inline-title::before {
+  content: "♡";
+  top: 0.1em;
+  right: 0.55em;
+}
+.theme-light.ctp-overcast-clouds-light .inline-title::after,
+.theme-dark.ctp-overcast-clouds-dark .inline-title::after {
+  content: "♥";
+  right: 0.05em;
+  bottom: 0.05em;
 }
 
 /* Search page hover item fix */
@@ -3274,6 +3552,481 @@ body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-root:not(
   padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 
+/* Gallery Workspace Layout */
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Core variables
+     ---------------------------------------------------------------------- */
+  --anp-gallery-background: var(--background-secondary);
+  --anp-gallery-panel: var(--background-primary);
+  --anp-gallery-border: var(--background-modifier-border);
+  --anp-gallery-gap: 10px;
+  --anp-gallery-radius: var(--radius-xl);
+  --anp-gallery-shadow:
+      0 3px 10px rgba(0, 0, 0, 0.055);
+  --anp-gallery-shadow-small:
+      0 2px 6px rgba(0, 0, 0, 0.04);
+  --divider-color: transparent;
+  --divider-width: var(--anp-gallery-gap);
+  --divider-width-hover: var(--anp-gallery-gap);
+  --ribbon-padding: 0;
+  --tab-container-background: var(--anp-gallery-background);
+}
+body.anp-gallery .sidebar-toggle-button .clickable-icon,
+body.anp-gallery .workspace-ribbon .clickable-icon,
+body.anp-gallery .workspace-tab-header-container .clickable-icon,
+body.anp-gallery .workspace-tab-header-container .workspace-tab-header,
+body.anp-gallery .workspace-tab-header-container .workspace-tab-header-inner,
+body.anp-gallery .workspace-split.mod-left-split .view-header .clickable-icon,
+body.anp-gallery .workspace-split.mod-left-split .nav-header .clickable-icon,
+body.anp-gallery .workspace-split.mod-right-split .view-header .clickable-icon,
+body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon,
+body.anp-gallery .side-dock-actions .clickable-icon {
+  background: transparent;
+}
+body.anp-gallery .sidebar-toggle-button .clickable-icon:hover,
+body.anp-gallery .sidebar-toggle-button .clickable-icon:active,
+body.anp-gallery .workspace-ribbon .clickable-icon:hover,
+body.anp-gallery .workspace-ribbon .clickable-icon:active,
+body.anp-gallery .workspace-tab-header-container .clickable-icon:hover,
+body.anp-gallery .workspace-tab-header-container .clickable-icon:active,
+body.anp-gallery .workspace-tab-header-container .workspace-tab-header:hover,
+body.anp-gallery .workspace-tab-header-container .workspace-tab-header.is-active,
+body.anp-gallery .workspace-split.mod-left-split .view-header .clickable-icon:hover,
+body.anp-gallery .workspace-split.mod-left-split .view-header .clickable-icon:active,
+body.anp-gallery .workspace-split.mod-left-split .nav-header .clickable-icon:hover,
+body.anp-gallery .workspace-split.mod-left-split .nav-header .clickable-icon:active,
+body.anp-gallery .workspace-split.mod-right-split .view-header .clickable-icon:hover,
+body.anp-gallery .workspace-split.mod-right-split .view-header .clickable-icon:active,
+body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon:hover,
+body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon:active,
+body.anp-gallery .side-dock-actions .clickable-icon:hover,
+body.anp-gallery .side-dock-actions .clickable-icon:active {
+  background: transparent;
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Application shell
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery .horizontal-main-container {
+  background-color: var(--anp-gallery-background);
+  --titlebar-background: var(--anp-gallery-background);
+  --ribbon-background: var(--anp-gallery-background);
+  --ribbon-background-collapsed: var(--anp-gallery-background);
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Workspace
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery .workspace {
+  background-color: var(--anp-gallery-background);
+  margin-left: var(--anp-gallery-gap);
+  margin-right: var(--anp-gallery-gap);
+  margin-bottom: var(--anp-gallery-gap);
+  /* --------------------------------------------------------------
+     Base workspace tabs
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-tabs {
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Every editor leaf becomes a panel
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-leaf {
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow);
+  overflow: hidden;
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Tab container
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-tab-container {
+  background-color: var(--anp-gallery-panel);
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Top tab strip
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-tabs.mod-top .workspace-tab-header-container {
+  background-color: var(--anp-gallery-background);
+  border: none;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Left sidebar
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-split.mod-left-split {
+  background-color: var(--anp-gallery-background);
+  padding-right: var(--anp-gallery-gap);
+}
+body.anp-gallery .workspace .workspace-split.mod-left-split .workspace-tabs {
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow-small);
+  overflow: hidden;
+}
+body.anp-gallery .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
+  background-color: var(--anp-gallery-panel);
+  border: none;
+}
+body.anp-gallery .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  margin-top: var(--anp-gallery-gap);
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow-small);
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Right sidebar
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-split.mod-right-split {
+  background-color: var(--anp-gallery-background);
+  padding-left: var(--anp-gallery-gap);
+}
+body.anp-gallery .workspace .workspace-split.mod-right-split .workspace-tabs {
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow-small);
+  overflow: hidden;
+}
+body.anp-gallery .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  background-color: var(--anp-gallery-panel);
+  border: none;
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Internal vertical splits
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-split.mod-vertical {
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace .workspace-split.mod-vertical > .workspace-tabs {
+  padding-left: calc(var(--anp-gallery-gap) / 2);
+  padding-right: calc(var(--anp-gallery-gap) / 2);
+}
+body.anp-gallery .workspace .workspace-split.mod-vertical > .workspace-tabs .workspace-tab-container {
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow-small);
+  overflow: hidden;
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Internal horizontal splits
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-split.mod-horizontal {
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace .workspace-split.mod-horizontal > .workspace-tabs {
+  padding-top: calc(var(--anp-gallery-gap) / 2);
+  padding-bottom: calc(var(--anp-gallery-gap) / 2);
+}
+body.anp-gallery .workspace .workspace-split.mod-horizontal > .workspace-tabs .workspace-tab-container {
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow-small);
+  overflow: hidden;
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Stacked workspace
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-tabs.mod-stacked .workspace-tab-container {
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace .workspace-tabs.mod-stacked .workspace-tab-header {
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius) 0 0 var(--anp-gallery-radius);
+  background-color: var(--anp-gallery-panel);
+}
+body.anp-gallery .workspace .workspace-tabs.mod-stacked .workspace-leaf {
+  border: 1px solid var(--anp-gallery-border);
+  border-left: none;
+  border-radius: 0 var(--anp-gallery-radius) var(--anp-gallery-radius) 0;
+}
+body.anp-gallery .workspace {
+  /* --------------------------------------------------------------
+     Ribbon
+     -------------------------------------------------------------- */
+}
+body.anp-gallery .workspace .workspace-ribbon.mod-left {
+  margin-right: var(--anp-gallery-gap);
+  background-color: var(--anp-gallery-background);
+}
+body.anp-gallery .workspace .workspace-ribbon.mod-left::before {
+  border-bottom: none;
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Workspace action panel
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery.anp-card-layout-actions .side-dock-actions {
+  margin-top: var(--anp-gallery-gap);
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius) var(--anp-gallery-radius) 0 0;
+  box-shadow: var(--anp-gallery-shadow-small);
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     File explorer panel
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
+  background-color: var(--anp-gallery-panel);
+  border: 1px solid var(--anp-gallery-border);
+  border-radius: var(--anp-gallery-radius);
+  box-shadow: var(--anp-gallery-shadow);
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Resize handles
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+body.anp-gallery .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: calc(100% - var(--header-height));
+  bottom: 0;
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Drop overlay
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery .workspace-drop-overlay::before {
+  width: calc(100% - var(--anp-gallery-gap) * 2);
+  height: calc(100% - var(--anp-gallery-gap) * 2);
+  margin: auto;
+  border-radius: var(--anp-gallery-radius);
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Fixed status bar
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery.anp-fixed-status-bar .workspace {
+  margin-bottom: 0;
+}
+body.anp-gallery {
+  /* ----------------------------------------------------------------------
+     Popout
+     ---------------------------------------------------------------------- */
+}
+body.anp-gallery.is-popout-window .workspace {
+  margin: 0;
+}
+
+/* ==========================================================================
+   GALLERY — DESKTOP
+   ========================================================================== */
+body.anp-gallery:not(.is-mobile) .workspace {
+  /* --------------------------------------------------------------
+     Left sidebar bottom spacing
+     -------------------------------------------------------------- */
+}
+body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-left-split {
+  padding-bottom: var(--anp-gallery-gap);
+}
+body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-gallery-radius);
+}
+body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-bottom-left-radius: var(--anp-gallery-radius);
+}
+body.anp-gallery:not(.is-mobile) .workspace {
+  /* --------------------------------------------------------------
+     Right sidebar bottom spacing
+     -------------------------------------------------------------- */
+}
+body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-gallery-gap);
+}
+body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-gallery-radius);
+}
+body.anp-gallery:not(.is-mobile) .workspace {
+  /* --------------------------------------------------------------
+     Main editor breathing room
+     -------------------------------------------------------------- */
+}
+body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-root {
+  padding-bottom: var(--anp-gallery-gap);
+}
+
+/* ==========================================================================
+   GALLERY — MOBILE
+   ========================================================================== */
+body.anp-gallery.is-mobile .workspace {
+  margin: 0;
+}
+body.anp-gallery.is-mobile .workspace-split.mod-left-split,
+body.anp-gallery.is-mobile .workspace-split.mod-right-split {
+  padding-left: 0;
+  padding-right: 0;
+}
+body.anp-gallery.is-mobile .workspace-leaf {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   AURORA WORKSPACE LAYOUT
+   A softly luminous workspace with color-washed panels.
+   ========================================================================== */
+body.anp-aurora {
+  --anp-aurora-gap: 8px;
+  --divider-color: rgba(var(--ctp-blue), 0.2);
+  --divider-width: var(--anp-aurora-gap);
+  --divider-width-hover: var(--anp-aurora-gap);
+}
+body.anp-aurora .horizontal-main-container,
+body.anp-aurora .workspace {
+  background: radial-gradient(ellipse at 12% 0%, rgba(var(--ctp-blue), 0.12), transparent 42%), radial-gradient(ellipse at 88% 100%, rgba(var(--ctp-pink), 0.1), transparent 44%), var(--background-secondary);
+}
+body.anp-aurora .workspace {
+  padding: var(--anp-aurora-gap);
+}
+body.anp-aurora .workspace-tabs,
+body.anp-aurora .workspace-tab-container,
+body.anp-aurora .workspace-split {
+  background-color: transparent;
+}
+body.anp-aurora .workspace-leaf,
+body.anp-aurora .workspace-split.mod-horizontal > .workspace-tabs > .workspace-tab-container,
+body.anp-aurora .workspace-split.mod-vertical > .workspace-tabs > .workspace-tab-container {
+  overflow: hidden;
+  border: 1px solid rgba(var(--ctp-blue), 0.24);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, rgba(var(--ctp-blue), 0.075), transparent 44%), linear-gradient(325deg, rgba(var(--ctp-pink), 0.065), transparent 48%), var(--background-primary);
+  box-shadow: 0 5px 18px rgba(var(--ctp-crust), 0.08), inset 0 1px 0 rgba(var(--ctp-text), 0.04);
+}
+body.anp-aurora .workspace-tab-header-container {
+  border: 0;
+  background-color: transparent;
+}
+body.anp-aurora .workspace-tab-header.is-active {
+  border-radius: var(--radius-m);
+  background-color: rgba(var(--ctp-blue), 0.12);
+}
+body.anp-aurora .workspace-ribbon.mod-left {
+  background-color: transparent;
+}
+body.anp-aurora .workspace-drop-overlay::before {
+  width: calc(100% - var(--anp-aurora-gap) * 2);
+  height: calc(100% - var(--anp-aurora-gap) * 2);
+  margin: auto;
+  border: 1px solid rgba(var(--ctp-sky), 0.55);
+  border-radius: var(--radius-xl);
+  background-color: rgba(var(--ctp-blue), 0.12);
+}
+
+body.anp-aurora:not(.is-mobile) .workspace-split.mod-left-split,
+body.anp-aurora:not(.is-mobile) .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-aurora-gap);
+}
+
+body.anp-aurora.is-mobile .workspace,
+body.anp-aurora.is-mobile .workspace-leaf,
+body.anp-aurora.is-mobile .workspace-tab-container {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   ZEN WORKSPACE LAYOUT
+   A quiet, seamless canvas with crisp dividers and understated tabs.
+   ========================================================================== */
+body.anp-zen {
+  --divider-color: rgba(var(--ctp-overlay1), 0.48);
+  --divider-width: 1px;
+  --divider-width-hover: 2px;
+}
+body.anp-zen .horizontal-main-container,
+body.anp-zen .workspace,
+body.anp-zen .workspace-tabs,
+body.anp-zen .workspace-tab-container,
+body.anp-zen .workspace-split,
+body.anp-zen .workspace-leaf {
+  background-color: var(--background-primary);
+  box-shadow: none;
+}
+body.anp-zen .workspace {
+  border-top: 1px solid rgba(var(--ctp-overlay1), 0.28);
+}
+body.anp-zen .workspace-leaf {
+  border: 0;
+  border-radius: 0;
+}
+body.anp-zen .workspace-tab-header-container {
+  border: 0;
+  background-color: var(--background-primary);
+}
+body.anp-zen .workspace-tab-header {
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+body.anp-zen .workspace-tab-header.is-active {
+  background-color: transparent;
+}
+body.anp-zen .workspace-tab-header.is-active::after {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  left: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(var(--ctp-accent));
+  content: "";
+}
+body.anp-zen .workspace-ribbon.mod-left,
+body.anp-zen .workspace-ribbon.mod-left::before {
+  background-color: var(--background-primary);
+  border: 0;
+}
+body.anp-zen .workspace-tab-header-container .clickable-icon:hover,
+body.anp-zen .workspace-ribbon .clickable-icon:hover {
+  background-color: rgba(var(--ctp-overlay1), 0.12);
+}
+body.anp-zen .workspace-drop-overlay::before {
+  border: 1px solid rgba(var(--ctp-accent), 0.55);
+  background-color: rgba(var(--ctp-accent), 0.08);
+}
+
 .anp-bg-fix .workspace,
 .anp-bg-fix .app-container,
 .anp-bg-fix .horizontal-main-container {
@@ -3375,7 +4128,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --blueberry-border: rgba(var(--ctp-overlay1), 0.72);
   --blueberry-inner-border: rgba(var(--ctp-surface2), 0.55);
   --blueberry-divider: rgba(var(--ctp-overlay1), 0.62);
-  --blueberry-title-text: var(--text-normal);
+  --blueberry-title-text: #F4F0F7;
   position: relative;
   overflow: hidden;
   padding: 0.8rem 1rem 0.9rem;
@@ -3427,7 +4180,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .theme-light.ctp-blueberry-creme-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-title .callout-title-inner,
 .theme-dark.ctp-blueberry-creme-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-title .callout-title-inner {
   font-weight: 600;
-  text-shadow: 0 1px 1px rgba(var(--ctp-base), 0.18);
+  text-shadow: 0 1px 2px rgba(var(--ctp-base), 0.45);
 }
 .theme-light.ctp-blueberry-creme-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-content,
 .theme-dark.ctp-blueberry-creme-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-content {
@@ -3675,6 +4428,220 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   color: var(--cloud-callout-text);
 }
 
+.theme-light.ctp-sandy-beaches-light .callout {
+  --callout-color: var(--ctp-peach);
+  --callout-blend-mode: normal;
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(135deg, rgba(var(--ctp-base), 0.88), rgba(var(--ctp-surface0), 0.88));
+  padding: 0;
+  overflow: visible;
+  box-shadow: 0 1px 0 rgba(var(--ctp-base), 0.85) inset, 0 1px 3px rgba(var(--ctp-overlay2), 0.055);
+  margin: 8px 0;
+  transition: box-shadow 160ms ease, background-color 160ms ease;
+}
+.theme-light.ctp-sandy-beaches-light .callout::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  pointer-events: none;
+  z-index: 0;
+  border: 3px solid transparent;
+  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 3 Q3 0 6 3 T12 3 T18 3 T24 3 M0 21 Q3 24 6 21 T12 21 T18 21 T24 21 M3 0 Q0 3 3 6 T3 12 T3 18 T3 24 M21 0 Q24 3 21 6 T21 12 T21 18 T21 24' fill='none' stroke='%23b9a98f' stroke-width='1.25'/%3E%3C/svg%3E");
+  border-image-slice: 3;
+  border-image-repeat: round;
+  opacity: 0.72;
+  border-radius: 6px;
+}
+.theme-light.ctp-sandy-beaches-light .callout::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  pointer-events: none;
+  z-index: 0;
+  border: 1px solid rgba(var(--ctp-peach), 0.14);
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(var(--ctp-base), 0.12) inset;
+}
+.theme-light.ctp-sandy-beaches-light .callout-title,
+.theme-light.ctp-sandy-beaches-light .callout-content {
+  position: relative;
+  z-index: 2;
+}
+.theme-light.ctp-sandy-beaches-light .callout-title {
+  min-height: 0;
+  padding: 8px 12px 3px;
+  background: transparent;
+  color: rgb(var(--ctp-subtext1));
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  text-transform: none;
+}
+.theme-light.ctp-sandy-beaches-light .callout-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--ctp-peach));
+  opacity: 0.72;
+}
+.theme-light.ctp-sandy-beaches-light .callout-icon svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 1.5;
+}
+.theme-light.ctp-sandy-beaches-light .callout-content {
+  padding: 2px 12px 9px;
+  color: rgb(var(--ctp-subtext0));
+  font-size: 0.86em;
+  line-height: 1.5;
+}
+.theme-light.ctp-sandy-beaches-light .callout-content p {
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+}
+.theme-light.ctp-sandy-beaches-light .callout-content p:last-child {
+  margin-bottom: 0;
+}
+.theme-light.ctp-sandy-beaches-light .callout-content a {
+  color: rgb(var(--ctp-teal));
+  text-decoration-color: rgba(var(--ctp-teal), 0.32);
+  text-underline-offset: 2px;
+}
+.theme-light.ctp-sandy-beaches-light .callout-content a:hover {
+  color: rgb(var(--ctp-sapphire));
+  text-decoration-color: rgba(var(--ctp-sapphire), 0.6);
+}
+.theme-light.ctp-sandy-beaches-light .callout:hover {
+  box-shadow: 0 1px 0 rgba(var(--ctp-base), 0.9) inset, 0 2px 5px rgba(var(--ctp-overlay2), 0.075);
+}
+.theme-light.ctp-sandy-beaches-light .callout:hover::before {
+  opacity: 0.9;
+}
+.theme-light.ctp-sandy-beaches-light .callout-content .metadata,
+.theme-light.ctp-sandy-beaches-light .callout-content small {
+  color: rgb(var(--ctp-overlay0));
+  font-size: 0.82em;
+  letter-spacing: 0.01em;
+}
+.theme-light.ctp-sandy-beaches-light .callout[data-callout=note] {
+  background: linear-gradient(135deg, rgba(var(--ctp-base), 0.9), rgba(var(--ctp-surface0), 0.9));
+}
+.theme-light.ctp-sandy-beaches-light .callout[data-callout=note] .callout-icon {
+  color: rgb(var(--ctp-peach));
+  opacity: 0.72;
+}
+
+.theme-dark.ctp-sandy-beaches-dark .callout {
+  --callout-color: var(--ctp-peach);
+  --callout-blend-mode: normal;
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(135deg, rgba(var(--ctp-surface0), 0.96), rgba(var(--ctp-base), 0.96));
+  padding: 0;
+  overflow: visible;
+  box-shadow: 0 1px 0 rgba(var(--ctp-text), 0.035) inset, 0 2px 5px rgba(var(--ctp-crust), 0.12);
+  margin: 8px 0;
+  transition: box-shadow 160ms ease, background-color 160ms ease;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  pointer-events: none;
+  z-index: 0;
+  border: 3px solid transparent;
+  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 3 Q3 0 6 3 T12 3 T18 3 T24 3 M0 21 Q3 24 6 21 T12 21 T18 21 T24 21 M3 0 Q0 3 3 6 T3 12 T3 18 T3 24 M21 0 Q24 3 21 6 T21 12 T21 18 T21 24' fill='none' stroke='%23b9aa91' stroke-width='1.25'/%3E%3C/svg%3E");
+  border-image-slice: 3;
+  border-image-repeat: round;
+  opacity: 0.52;
+  border-radius: 6px;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  pointer-events: none;
+  z-index: 0;
+  border: 1px solid rgba(var(--ctp-peach), 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(var(--ctp-crust), 0.14) inset;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-title,
+.theme-dark.ctp-sandy-beaches-dark .callout-content {
+  position: relative;
+  z-index: 2;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-title {
+  min-height: 0;
+  padding: 8px 12px 3px;
+  background: transparent;
+  color: rgb(var(--ctp-subtext1));
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  text-transform: none;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--ctp-peach));
+  opacity: 0.66;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-icon svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 1.5;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-content {
+  padding: 2px 12px 9px;
+  color: rgb(var(--ctp-subtext0));
+  font-size: 0.86em;
+  line-height: 1.5;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-content p {
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-content p:last-child {
+  margin-bottom: 0;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-content a {
+  color: rgb(var(--ctp-teal));
+  text-decoration-color: rgba(var(--ctp-teal), 0.28);
+  text-underline-offset: 2px;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-content a:hover {
+  color: rgb(var(--ctp-subtext1));
+  text-decoration-color: rgba(var(--ctp-subtext1), 0.55);
+}
+.theme-dark.ctp-sandy-beaches-dark .callout:hover {
+  box-shadow: 0 1px 0 rgba(var(--ctp-text), 0.045) inset, 0 3px 7px rgba(var(--ctp-crust), 0.16);
+}
+.theme-dark.ctp-sandy-beaches-dark .callout:hover::before {
+  opacity: 0.72;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout-content .metadata,
+.theme-dark.ctp-sandy-beaches-dark .callout-content small {
+  color: rgb(var(--ctp-overlay0));
+  font-size: 0.82em;
+  letter-spacing: 0.01em;
+}
+.theme-dark.ctp-sandy-beaches-dark .callout[data-callout=note] {
+  background: linear-gradient(135deg, rgba(var(--ctp-surface0), 0.97), rgba(var(--ctp-base), 0.97));
+}
+.theme-dark.ctp-sandy-beaches-dark .callout[data-callout=note] .callout-icon {
+  color: rgb(var(--ctp-peach));
+  opacity: 0.64;
+}
+
 .anp-callout-block .callout:not([data-callout-metadata*=anp-sleek]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]),
@@ -3800,6 +4767,11 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --callout-color: var(--ctp-accent);
 }
 
+.theme-light.ctp-kawaii-light .callout[data-callout=note],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=note] {
+  --callout-color: var(--ctp-pink);
+}
+
 /*---------------CUSTOM CALLOUTS---------------*/
 .callout[data-callout=formula] {
   --callout-color: var(--ctp-text);
@@ -3836,10 +4808,23 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
-.markdown-rendered .internal-link:hover, .markdown-rendered .internal-link:active, .markdown-rendered .internal-link.is-unresolved:hover, .markdown-rendered .internal-link.is-unresolved {
-  text-decoration-line: none;
+body {
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-decoration-active: none;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+  --link-external-decoration-active: none;
+  --link-unresolved-decoration: none;
+  --link-unresolved-decoration-hover: none;
+  --link-unresolved-decoration-active: none;
 }
-.markdown-rendered .internal-link {
+
+.markdown-rendered a,
+.markdown-rendered a:hover,
+.markdown-rendered a:active,
+.markdown-rendered a:focus,
+.markdown-rendered a:visited {
   text-decoration-line: none;
 }
 
@@ -3925,24 +4910,27 @@ video {
   --h6-color: #9DA5BF;
 }
 
+/* ============================================================================
+   SANDY BEACHES — HEADINGS
+   ============================================================================ */
 .theme-light.ctp-sandy-beaches-light .app-container,
 .theme-light.ctp-sandy-beaches-light .print {
-  --h1-color: #D3C6B8;
-  --h2-color: #E2C8AF;
-  --h3-color: #B8E2EF;
-  --h4-color: #BFE5C2;
-  --h5-color: #F4E1B8;
-  --h6-color: #E8C4C0;
+  --h1-color: rgb(var(--ctp-peach));
+  --h2-color: rgb(var(--ctp-yellow));
+  --h3-color: rgb(var(--ctp-teal));
+  --h4-color: rgb(var(--ctp-maroon));
+  --h5-color: rgb(var(--ctp-green));
+  --h6-color: rgb(var(--ctp-overlay2));
 }
 
 .theme-dark.ctp-sandy-beaches-dark .app-container,
 .theme-dark.ctp-sandy-beaches-dark .print {
-  --h1-color: #D7C7B6;
-  --h2-color: #E5C9A9;
-  --h3-color: #D3F1FA;
-  --h4-color: #D2F0D5;
-  --h5-color: #FFF0D3;
-  --h6-color: #F1D5D1;
+  --h1-color: rgb(var(--ctp-peach));
+  --h2-color: rgb(var(--ctp-teal));
+  --h3-color: rgb(var(--ctp-mauve));
+  --h4-color: rgb(var(--ctp-maroon));
+  --h5-color: rgb(var(--ctp-sapphire));
+  --h6-color: rgb(var(--ctp-subtext0));
 }
 
 .theme-light.ctp-blueberry-creme-light .app-container,
@@ -4747,41 +5735,77 @@ hr {
   list-style-type: disc;
 }
 
-.theme-light.ctp-sandy-beaches-light .markdown-rendered ul > li::marker,
-.theme-light.ctp-sandy-beaches-light .markdown-preview-view ul > li::marker,
-.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul > li::marker,
-.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul > li::marker {
-  color: rgba(var(--ctp-yellow), 0.8);
-}
-.theme-light.ctp-sandy-beaches-light .markdown-rendered ul ul > li::marker,
-.theme-light.ctp-sandy-beaches-light .markdown-preview-view ul ul > li::marker,
-.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul ul > li::marker,
-.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul > li::marker {
-  color: rgba(var(--ctp-peach), 0.82);
-}
-.theme-light.ctp-sandy-beaches-light .markdown-rendered ul ul ul > li::marker,
-.theme-light.ctp-sandy-beaches-light .markdown-preview-view ul ul ul > li::marker,
-.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul ul ul > li::marker,
-.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul ul > li::marker {
-  color: rgba(var(--ctp-sky), 0.82);
-}
 .theme-light.ctp-sandy-beaches-light .markdown-rendered ul,
 .theme-light.ctp-sandy-beaches-light .markdown-preview-view ul,
+.theme-light.ctp-sandy-beaches-light .markdown-rendered ol,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view ol,
 .theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul,
-.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul {
-  list-style-type: disc;
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ol,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ol {
+  margin-left: 0.3rem;
+  padding-left: 0.8rem;
+  list-style: none;
+}
+.theme-light.ctp-sandy-beaches-light .markdown-rendered li,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view li,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered li,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view li {
+  position: relative;
+  margin: 0.2rem 0;
+  padding-left: 0.7rem;
+  color: rgba(var(--ctp-subtext1), 0.96);
+}
+.theme-light.ctp-sandy-beaches-light .markdown-rendered li::before,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view li::before {
+  content: "";
+  position: absolute;
+  left: -0.4rem;
+  top: 0.68rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: rgba(var(--ctp-peach), 0.92);
+  box-shadow: inset 0 0 0 1px rgba(var(--ctp-surface0), 0.25);
+}
+.theme-light.ctp-sandy-beaches-light .markdown-rendered ul ul li::before,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view ul ul li::before,
+.theme-light.ctp-sandy-beaches-light .markdown-rendered ol li::before,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view ol li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul ul li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ol li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ol li::before {
+  left: -0.7rem;
+  background: rgba(var(--ctp-sapphire), 0.8);
 }
 .theme-light.ctp-sandy-beaches-light .markdown-rendered ul ul,
 .theme-light.ctp-sandy-beaches-light .markdown-preview-view ul ul,
+.theme-light.ctp-sandy-beaches-light .markdown-rendered ol ol,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view ol ol,
 .theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul ul,
-.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul {
-  list-style-type: square;
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ol ol,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ol ol {
+  margin-top: 0.15rem;
+  padding-left: 1.1rem;
+  border-left: 1px solid rgba(var(--ctp-overlay1), 0.5);
 }
-.theme-light.ctp-sandy-beaches-light .markdown-rendered ul ul ul,
-.theme-light.ctp-sandy-beaches-light .markdown-preview-view ul ul ul,
-.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul ul ul,
-.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul ul {
-  list-style-type: circle;
+.theme-light.ctp-sandy-beaches-light .markdown-rendered ul ul ul li::before,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view ul ul ul li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered ul ul ul li::before,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view ul ul ul li::before {
+  background: rgba(var(--ctp-mauve), 0.82);
+  width: 0.28rem;
+  height: 0.28rem;
+}
+.theme-light.ctp-sandy-beaches-light .markdown-rendered li::marker,
+.theme-light.ctp-sandy-beaches-light .markdown-preview-view li::marker,
+.theme-dark.ctp-sandy-beaches-dark .markdown-rendered li::marker,
+.theme-dark.ctp-sandy-beaches-dark .markdown-preview-view li::marker {
+  content: "";
 }
 
 .anp-latex-inline-rosewater span.math:not(.math-block) {
@@ -5139,6 +6163,392 @@ table.dataview.table-view-table > tbody > tr:hover {
   width: var(--anp-table-width-pct);
   margin-left: calc(50% - var(--anp-table-width-pct) / 2);
   margin-right: calc(50% - var(--anp-table-width-pct) / 2);
+}
+
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+  overflow: hidden;
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  padding: 0.55rem 0.8rem;
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child {
+  border-right: 0;
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > * {
+  border-bottom: 0;
+}
+
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+  background-color: rgba(var(--ctp-base), 0.55);
+  border: 1px solid rgba(var(--ctp-mauve), 0.28);
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(var(--ctp-crust), 0.05), inset 0 0 0 1px rgba(var(--ctp-surface2), 0.16);
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  border-right: 1px solid rgba(var(--ctp-mauve), 0.16);
+  border-bottom: 1px solid rgba(var(--ctp-mauve), 0.16);
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th {
+  background-color: rgba(var(--ctp-mauve), 0.13);
+  color: rgb(var(--ctp-mauve));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  box-shadow: inset 0 -1px 0 rgba(var(--ctp-mauve), 0.18);
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td {
+  background-color: rgba(var(--ctp-blue), 0.045);
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td {
+  background-color: rgba(var(--ctp-pink), 0.08);
+}
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-blueberry-creme-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-light.ctp-blueberry-creme-light .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-blueberry-creme-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-blueberry-creme-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-blueberry-creme-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) code {
+  background-color: rgba(var(--ctp-blue), 0.11);
+  border: 1px solid rgba(var(--ctp-blue), 0.12);
+  border-radius: 6px;
+  color: rgb(var(--ctp-blue));
+  padding: 0.12rem 0.35rem;
+}
+
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+  background-color: rgba(var(--ctp-base), 0.38);
+  border: 1px solid rgba(var(--ctp-text), 0.38);
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(var(--ctp-text), 0.08), inset 0 0 0 1px rgba(var(--ctp-base), 0.3);
+}
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  border-right: 1px solid rgba(var(--ctp-text), 0.2);
+  border-bottom: 1px solid rgba(var(--ctp-text), 0.2);
+}
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th {
+  background-color: rgba(var(--ctp-surface1), 0.28);
+  color: rgb(var(--ctp-text));
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  box-shadow: inset 0 -2px 0 rgba(var(--ctp-text), 0.14);
+}
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td {
+  background-color: rgba(var(--ctp-surface1), 0.14);
+}
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td {
+  background-color: rgba(var(--ctp-text), 0.045);
+}
+.theme-light.ctp-etching-light .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-etching-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-light.ctp-etching-light .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-etching-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-etching-dark .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-etching-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-etching-dark .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-etching-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) code {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(var(--ctp-text), 0.28);
+  border-radius: 0;
+  color: rgb(var(--ctp-text));
+  padding: 0.08rem 0.25rem;
+}
+
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+  background-color: rgba(var(--ctp-surface0), 0.58);
+  border: 1px solid rgba(var(--ctp-mauve), 0.22);
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.055), inset 0 0 0 1px rgba(var(--ctp-surface2), 0.18);
+}
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  border-right: 1px solid rgba(var(--ctp-mauve), 0.13);
+  border-bottom: 1px solid rgba(var(--ctp-mauve), 0.13);
+}
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th {
+  position: relative;
+  background-color: rgba(var(--ctp-pink), 0.11);
+  color: rgb(var(--ctp-mauve));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table thead th:first-child::before,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th:first-child::before,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table thead th:first-child::before,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th:first-child::before,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table thead th:first-child::before,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th:first-child::before,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table thead th:first-child::before,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th:first-child::before {
+  content: "✦";
+  margin-right: 0.45rem;
+  color: rgba(var(--ctp-pink), 0.62);
+  font-size: 0.75em;
+}
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td {
+  background-color: rgba(var(--ctp-blue), 0.035);
+}
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td {
+  background-color: rgba(var(--ctp-pink), 0.07);
+}
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-overcast-clouds-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-light.ctp-overcast-clouds-light .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-overcast-clouds-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) code {
+  background-color: rgba(var(--ctp-green), 0.1);
+  border: 1px solid rgba(var(--ctp-green), 0.1);
+  border-radius: 6px;
+  color: rgb(var(--ctp-teal));
+  padding: 0.12rem 0.35rem;
 }
 
 /*-Custom folder title-*/
@@ -8420,203 +9830,3 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     grid-template-columns: 1fr;
   }
 }
-.theme-dark.ctp-mocha,
-.theme-dark.ctp-mocha-old {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-lavender), 0.2);
-  --canvas-color: var(--ctp-lavender);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-mauve);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-lavender), 0.35);
-  --kodann-canvas-node-radius: 12px;
-  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.28);
-}
-
-.theme-dark.ctp-mocha-old {
-  --canvas-dot-pattern: rgba(var(--ctp-mauve), 0.2);
-  --canvas-color: var(--ctp-mauve);
-  --kodann-canvas-node-border: rgba(var(--ctp-mauve), 0.38);
-  --kodann-canvas-node-radius: 7px;
-  --kodann-canvas-node-shadow: 0 2px 8px rgba(var(--ctp-crust), 0.22);
-}
-
-.theme-light.ctp-sandy-beaches-light {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-peach), 0.42);
-  --canvas-color: var(--ctp-sapphire);
-  --canvas-color-1: var(--ctp-maroon);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-teal);
-  --canvas-color-6: var(--ctp-blue);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-peach), 0.55);
-  --kodann-canvas-node-radius: 8px;
-  --kodann-canvas-node-shadow: 0 2px 6px rgba(var(--ctp-overlay2), 0.1);
-}
-
-.theme-dark.ctp-sandy-beaches-dark {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-peach), 0.3);
-  --canvas-color: var(--ctp-teal);
-  --canvas-color-1: var(--ctp-maroon);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-teal);
-  --canvas-color-6: var(--ctp-blue);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-peach), 0.42);
-  --kodann-canvas-node-radius: 8px;
-  --kodann-canvas-node-shadow: 0 3px 10px rgba(var(--ctp-crust), 0.25);
-}
-
-.theme-light.ctp-overcast-clouds-light {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-lavender), 0.38);
-  --canvas-color: var(--ctp-mauve);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-lavender);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-mauve), 0.38);
-  --kodann-canvas-node-radius: 16px;
-  --kodann-canvas-node-shadow: 0 5px 16px rgba(var(--ctp-mauve), 0.12);
-}
-
-.theme-dark.ctp-overcast-clouds-dark {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.32);
-  --canvas-color: var(--ctp-lavender);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-lavender);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-lavender), 0.36);
-  --kodann-canvas-node-radius: 16px;
-  --kodann-canvas-node-shadow: 0 5px 16px rgba(var(--ctp-crust), 0.3);
-}
-
-.theme-light.ctp-etching-light {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-overlay1), 0.32);
-  --canvas-color: var(--ctp-sapphire);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-mauve);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-overlay1), 0.62);
-  --kodann-canvas-node-radius: 2px;
-  --kodann-canvas-node-shadow: none;
-}
-
-.theme-dark.ctp-etching-dark {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-overlay1), 0.34);
-  --canvas-color: var(--ctp-sapphire);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-mauve);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-overlay1), 0.62);
-  --kodann-canvas-node-radius: 2px;
-  --kodann-canvas-node-shadow: none;
-}
-
-.theme-light.ctp-kawaii-light {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-pink), 0.34);
-  --canvas-color: var(--ctp-pink);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-teal);
-  --canvas-color-6: var(--ctp-lavender);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-pink), 0.46);
-  --kodann-canvas-node-radius: 18px;
-  --kodann-canvas-node-shadow: 0 4px 12px rgba(var(--ctp-mauve), 0.16);
-}
-
-.theme-dark.ctp-kawaii-dark {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-pink), 0.24);
-  --canvas-color: var(--ctp-pink);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-teal);
-  --canvas-color-6: var(--ctp-lavender);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-pink), 0.42);
-  --kodann-canvas-node-radius: 18px;
-  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.3);
-}
-
-.theme-light.ctp-blueberry-creme-light {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.3);
-  --canvas-color: var(--ctp-blue);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-mauve);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-blue), 0.32);
-  --kodann-canvas-node-radius: 13px;
-  --kodann-canvas-node-shadow: 0 4px 12px rgba(var(--ctp-blue), 0.1);
-}
-
-.theme-dark.ctp-blueberry-creme-dark {
-  --canvas-background: rgb(var(--ctp-base));
-  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.25);
-  --canvas-color: var(--ctp-sky);
-  --canvas-color-1: var(--ctp-red);
-  --canvas-color-2: var(--ctp-peach);
-  --canvas-color-3: var(--ctp-yellow);
-  --canvas-color-4: var(--ctp-green);
-  --canvas-color-5: var(--ctp-sky);
-  --canvas-color-6: var(--ctp-mauve);
-  --canvas-card-label-color: rgb(var(--ctp-text));
-  --kodann-canvas-node-border: rgba(var(--ctp-sky), 0.34);
-  --kodann-canvas-node-radius: 13px;
-  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.3);
-}
-
-.canvas-node-container {
-  border-color: var(--kodann-canvas-node-border, var(--background-modifier-border));
-  border-radius: var(--kodann-canvas-node-radius, var(--radius-m));
-  box-shadow: var(--kodann-canvas-node-shadow, var(--shadow-s));
-}
-
-.canvas-edges path.canvas-display-path {
-  stroke: rgba(var(--canvas-color), 0.86) !important;
-}
-
-.canvas-edges .canvas-path-end {
-  fill: rgba(var(--canvas-color), 0.86) !important;
-  stroke: rgba(var(--canvas-color), 0.86) !important;
-}
-

@@ -1,0 +1,544 @@
+
+/* Gallery Workspace Layout */
+body.anp-gallery {
+
+    /* ----------------------------------------------------------------------
+       Core variables
+       ---------------------------------------------------------------------- */
+
+    --anp-gallery-background: var(--background-secondary);
+    --anp-gallery-panel: var(--background-primary);
+    --anp-gallery-border: var(--background-modifier-border);
+
+    --anp-gallery-gap: 10px;
+    --anp-gallery-radius: var(--radius-xl);
+
+    --anp-gallery-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.055);
+
+    --anp-gallery-shadow-small:
+        0 2px 6px rgba(0, 0, 0, 0.04);
+
+    --divider-color: transparent;
+    --divider-width: var(--anp-gallery-gap);
+    --divider-width-hover: var(--anp-gallery-gap);
+
+    --ribbon-padding: 0;
+
+    --tab-container-background: var(--anp-gallery-background);
+
+    .sidebar-toggle-button .clickable-icon,
+    .workspace-ribbon .clickable-icon,
+    .workspace-tab-header-container .clickable-icon,
+    .workspace-tab-header-container .workspace-tab-header,
+    .workspace-tab-header-container .workspace-tab-header-inner,
+    .workspace-split.mod-left-split .view-header .clickable-icon,
+    .workspace-split.mod-left-split .nav-header .clickable-icon,
+    .workspace-split.mod-right-split .view-header .clickable-icon,
+    .workspace-split.mod-right-split .nav-header .clickable-icon,
+    .side-dock-actions .clickable-icon {
+        background: transparent;
+    }
+
+    .sidebar-toggle-button .clickable-icon:hover,
+    .sidebar-toggle-button .clickable-icon:active,
+    .workspace-ribbon .clickable-icon:hover,
+    .workspace-ribbon .clickable-icon:active,
+    .workspace-tab-header-container .clickable-icon:hover,
+    .workspace-tab-header-container .clickable-icon:active,
+    .workspace-tab-header-container .workspace-tab-header:hover,
+    .workspace-tab-header-container .workspace-tab-header.is-active,
+    .workspace-split.mod-left-split .view-header .clickable-icon:hover,
+    .workspace-split.mod-left-split .view-header .clickable-icon:active,
+    .workspace-split.mod-left-split .nav-header .clickable-icon:hover,
+    .workspace-split.mod-left-split .nav-header .clickable-icon:active,
+    .workspace-split.mod-right-split .view-header .clickable-icon:hover,
+    .workspace-split.mod-right-split .view-header .clickable-icon:active,
+    .workspace-split.mod-right-split .nav-header .clickable-icon:hover,
+    .workspace-split.mod-right-split .nav-header .clickable-icon:active,
+    .side-dock-actions .clickable-icon:hover,
+    .side-dock-actions .clickable-icon:active {
+        background: transparent;
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Application shell
+       ---------------------------------------------------------------------- */
+
+    .horizontal-main-container {
+        background-color: var(--anp-gallery-background);
+
+        --titlebar-background: var(--anp-gallery-background);
+        --ribbon-background: var(--anp-gallery-background);
+        --ribbon-background-collapsed: var(--anp-gallery-background);
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Workspace
+       ---------------------------------------------------------------------- */
+
+    .workspace {
+
+        background-color: var(--anp-gallery-background);
+
+        margin-left: var(--anp-gallery-gap);
+        margin-right: var(--anp-gallery-gap);
+        margin-bottom: var(--anp-gallery-gap);
+
+
+        /* --------------------------------------------------------------
+           Base workspace tabs
+           -------------------------------------------------------------- */
+
+        .workspace-tabs {
+            background-color: var(--anp-gallery-background);
+        }
+
+
+        /* --------------------------------------------------------------
+           Every editor leaf becomes a panel
+           -------------------------------------------------------------- */
+
+        .workspace-leaf {
+
+            background-color: var(--anp-gallery-panel);
+
+            border:
+                1px solid
+                var(--anp-gallery-border);
+
+            border-radius: var(--anp-gallery-radius);
+
+            box-shadow: var(--anp-gallery-shadow);
+
+            overflow: hidden;
+        }
+
+
+        /* --------------------------------------------------------------
+           Tab container
+           -------------------------------------------------------------- */
+
+        .workspace-tab-container {
+
+            background-color: var(--anp-gallery-panel);
+        }
+
+
+        /* --------------------------------------------------------------
+           Top tab strip
+           -------------------------------------------------------------- */
+
+        .workspace-tabs.mod-top {
+
+            .workspace-tab-header-container {
+
+                background-color: var(--anp-gallery-background);
+
+                border: none;
+
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Left sidebar
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-left-split {
+
+            background-color: var(--anp-gallery-background);
+
+            padding-right: var(--anp-gallery-gap);
+
+            .workspace-tabs {
+
+                background-color: var(--anp-gallery-background);
+
+                .workspace-tab-container {
+
+                    background-color: var(--anp-gallery-panel);
+
+                    border:
+                        1px solid
+                        var(--anp-gallery-border);
+
+                    border-radius: var(--anp-gallery-radius);
+
+                    box-shadow: var(--anp-gallery-shadow-small);
+
+                    overflow: hidden;
+                }
+
+                .workspace-tab-header-container {
+
+                    background-color: var(--anp-gallery-panel);
+
+                    border: none;
+                }
+            }
+
+
+            .workspace-sidedock-vault-profile {
+
+                margin-top: var(--anp-gallery-gap);
+
+                background-color: var(--anp-gallery-panel);
+
+                border:
+                    1px solid
+                    var(--anp-gallery-border);
+
+                border-radius: var(--anp-gallery-radius);
+
+                box-shadow: var(--anp-gallery-shadow-small);
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Right sidebar
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-right-split {
+
+            background-color: var(--anp-gallery-background);
+
+            padding-left: var(--anp-gallery-gap);
+
+            .workspace-tabs {
+
+                background-color: var(--anp-gallery-background);
+
+                .workspace-tab-container {
+
+                    background-color: var(--anp-gallery-panel);
+
+                    border:
+                        1px solid
+                        var(--anp-gallery-border);
+
+                    border-radius: var(--anp-gallery-radius);
+
+                    box-shadow: var(--anp-gallery-shadow-small);
+
+                    overflow: hidden;
+                }
+
+                .workspace-tab-header-container {
+
+                    background-color: var(--anp-gallery-panel);
+
+                    border: none;
+                }
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Internal vertical splits
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-vertical {
+
+            background-color: var(--anp-gallery-background);
+
+            > .workspace-tabs {
+
+                padding-left: calc(var(--anp-gallery-gap) / 2);
+                padding-right: calc(var(--anp-gallery-gap) / 2);
+
+                .workspace-tab-container {
+
+                    background-color: var(--anp-gallery-panel);
+
+                    border:
+                        1px solid
+                        var(--anp-gallery-border);
+
+                    border-radius: var(--anp-gallery-radius);
+
+                    box-shadow: var(--anp-gallery-shadow-small);
+
+                    overflow: hidden;
+                }
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Internal horizontal splits
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-horizontal {
+
+            background-color: var(--anp-gallery-background);
+
+            > .workspace-tabs {
+
+                padding-top: calc(var(--anp-gallery-gap) / 2);
+                padding-bottom: calc(var(--anp-gallery-gap) / 2);
+
+                .workspace-tab-container {
+
+                    background-color: var(--anp-gallery-panel);
+
+                    border:
+                        1px solid
+                        var(--anp-gallery-border);
+
+                    border-radius: var(--anp-gallery-radius);
+
+                    box-shadow: var(--anp-gallery-shadow-small);
+
+                    overflow: hidden;
+                }
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Stacked workspace
+           -------------------------------------------------------------- */
+
+        .workspace-tabs.mod-stacked {
+
+            .workspace-tab-container {
+                background-color: var(--anp-gallery-background);
+            }
+
+            .workspace-tab-header {
+
+                border:
+                    1px solid
+                    var(--anp-gallery-border);
+
+                border-radius:
+                    var(--anp-gallery-radius)
+                    0
+                    0
+                    var(--anp-gallery-radius);
+
+                background-color: var(--anp-gallery-panel);
+            }
+
+            .workspace-leaf {
+
+                border:
+                    1px solid
+                    var(--anp-gallery-border);
+
+                border-left: none;
+
+                border-radius:
+                    0
+                    var(--anp-gallery-radius)
+                    var(--anp-gallery-radius)
+                    0;
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Ribbon
+           -------------------------------------------------------------- */
+
+        .workspace-ribbon.mod-left {
+
+            margin-right: var(--anp-gallery-gap);
+
+            background-color: var(--anp-gallery-background);
+        }
+
+        .workspace-ribbon.mod-left::before {
+            border-bottom: none;
+        }
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Workspace action panel
+       ---------------------------------------------------------------------- */
+
+    &.anp-card-layout-actions {
+
+        .side-dock-actions {
+
+            margin-top: var(--anp-gallery-gap);
+
+            background-color: var(--anp-gallery-panel);
+
+            border:
+                1px solid
+                var(--anp-gallery-border);
+
+            border-radius:
+                var(--anp-gallery-radius)
+                var(--anp-gallery-radius)
+                0
+                0;
+
+            box-shadow: var(--anp-gallery-shadow-small);
+        }
+    }
+
+
+    /* ----------------------------------------------------------------------
+       File explorer panel
+       ---------------------------------------------------------------------- */
+
+    &.anp-card-layout-filebrowser {
+
+        .workspace-leaf-content[data-type="file-explorer"] {
+
+            background-color: var(--anp-gallery-panel);
+
+            border:
+                1px solid
+                var(--anp-gallery-border);
+
+            border-radius: var(--anp-gallery-radius);
+
+            box-shadow: var(--anp-gallery-shadow);
+        }
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Resize handles
+       ---------------------------------------------------------------------- */
+
+    .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+    .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+
+        height: calc(100% - var(--header-height));
+        bottom: 0;
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Drop overlay
+       ---------------------------------------------------------------------- */
+
+    .workspace-drop-overlay::before {
+
+        width: calc(100% - var(--anp-gallery-gap) * 2);
+        height: calc(100% - var(--anp-gallery-gap) * 2);
+
+        margin: auto;
+
+        border-radius: var(--anp-gallery-radius);
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Fixed status bar
+       ---------------------------------------------------------------------- */
+
+    &.anp-fixed-status-bar {
+
+        .workspace {
+            margin-bottom: 0;
+        }
+    }
+
+
+    /* ----------------------------------------------------------------------
+       Popout
+       ---------------------------------------------------------------------- */
+
+    &.is-popout-window {
+
+        .workspace {
+            margin: 0;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   GALLERY — DESKTOP
+   ========================================================================== */
+
+body.anp-gallery:not(.is-mobile) {
+
+    .workspace {
+
+        /* --------------------------------------------------------------
+           Left sidebar bottom spacing
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-left-split {
+
+            padding-bottom: var(--anp-gallery-gap);
+
+            .workspace-tabs:last-child {
+
+                .workspace-tab-container {
+                    border-bottom-left-radius: var(--anp-gallery-radius);
+                }
+            }
+
+            .workspace-sidedock-vault-profile {
+                border-bottom-left-radius: var(--anp-gallery-radius);
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Right sidebar bottom spacing
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-right-split {
+
+            padding-bottom: var(--anp-gallery-gap);
+
+            .workspace-tabs:last-child {
+
+                .workspace-tab-container {
+                    border-bottom-right-radius: var(--anp-gallery-radius);
+                }
+            }
+        }
+
+
+        /* --------------------------------------------------------------
+           Main editor breathing room
+           -------------------------------------------------------------- */
+
+        .workspace-split.mod-root {
+
+            padding-bottom: var(--anp-gallery-gap);
+        }
+    }
+}
+
+
+/* ==========================================================================
+   GALLERY — MOBILE
+   ========================================================================== */
+
+body.anp-gallery.is-mobile {
+
+    .workspace {
+        margin: 0;
+    }
+
+    .workspace-split.mod-left-split,
+    .workspace-split.mod-right-split {
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .workspace-leaf {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+}

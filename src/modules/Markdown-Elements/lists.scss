@@ -165,33 +165,62 @@
 
 .theme-light.ctp-sandy-beaches-light,
 .theme-dark.ctp-sandy-beaches-dark {
-    .markdown-rendered ul > li::marker,
-    .markdown-preview-view ul > li::marker {
-        color: rgba(var(--ctp-yellow), 0.8);
-    }
-
-    .markdown-rendered ul ul > li::marker,
-    .markdown-preview-view ul ul > li::marker {
-        color: rgba(var(--ctp-peach), 0.82);
-    }
-
-    .markdown-rendered ul ul ul > li::marker,
-    .markdown-preview-view ul ul ul > li::marker {
-        color: rgba(var(--ctp-sky), 0.82);
-    }
-
     .markdown-rendered ul,
-    .markdown-preview-view ul {
-        list-style-type: disc;
+    .markdown-preview-view ul,
+    .markdown-rendered ol,
+    .markdown-preview-view ol {
+        margin-left: 0.3rem;
+        padding-left: 0.8rem;
+        list-style: none;
+    }
+
+    .markdown-rendered li,
+    .markdown-preview-view li {
+        position: relative;
+        margin: 0.2rem 0;
+        padding-left: 0.7rem;
+        color: rgba(var(--ctp-subtext1), 0.96);
+    }
+
+    .markdown-rendered li::before,
+    .markdown-preview-view li::before {
+        content: "";
+        position: absolute;
+        left: -0.4rem;
+        top: 0.68rem;
+        width: 0.38rem;
+        height: 0.38rem;
+        border-radius: 50%;
+        background: rgba(var(--ctp-peach), 0.92);
+        box-shadow: inset 0 0 0 1px rgba(var(--ctp-surface0), 0.25);
+    }
+
+    .markdown-rendered ul ul li::before,
+    .markdown-preview-view ul ul li::before,
+    .markdown-rendered ol li::before,
+    .markdown-preview-view ol li::before {
+        left: -0.7rem;
+        background: rgba(var(--ctp-sapphire), 0.8);
     }
 
     .markdown-rendered ul ul,
-    .markdown-preview-view ul ul {
-        list-style-type: square;
+    .markdown-preview-view ul ul,
+    .markdown-rendered ol ol,
+    .markdown-preview-view ol ol {
+        margin-top: 0.15rem;
+        padding-left: 1.1rem;
+        border-left: 1px solid rgba(var(--ctp-overlay1), 0.5);
     }
 
-    .markdown-rendered ul ul ul,
-    .markdown-preview-view ul ul ul {
-        list-style-type: circle;
+    .markdown-rendered ul ul ul li::before,
+    .markdown-preview-view ul ul ul li::before {
+        background: rgba(var(--ctp-mauve), 0.82);
+        width: 0.28rem;
+        height: 0.28rem;
+    }
+
+    .markdown-rendered li::marker,
+    .markdown-preview-view li::marker {
+        content: "";
     }
 }
