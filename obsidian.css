@@ -8420,3 +8420,203 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     grid-template-columns: 1fr;
   }
 }
+.theme-dark.ctp-mocha,
+.theme-dark.ctp-mocha-old {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-lavender), 0.2);
+  --canvas-color: var(--ctp-lavender);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-lavender), 0.35);
+  --kodann-canvas-node-radius: 12px;
+  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.28);
+}
+
+.theme-dark.ctp-mocha-old {
+  --canvas-dot-pattern: rgba(var(--ctp-mauve), 0.2);
+  --canvas-color: var(--ctp-mauve);
+  --kodann-canvas-node-border: rgba(var(--ctp-mauve), 0.38);
+  --kodann-canvas-node-radius: 7px;
+  --kodann-canvas-node-shadow: 0 2px 8px rgba(var(--ctp-crust), 0.22);
+}
+
+.theme-light.ctp-sandy-beaches-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-peach), 0.42);
+  --canvas-color: var(--ctp-sapphire);
+  --canvas-color-1: var(--ctp-maroon);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-blue);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-peach), 0.55);
+  --kodann-canvas-node-radius: 8px;
+  --kodann-canvas-node-shadow: 0 2px 6px rgba(var(--ctp-overlay2), 0.1);
+}
+
+.theme-dark.ctp-sandy-beaches-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-peach), 0.3);
+  --canvas-color: var(--ctp-teal);
+  --canvas-color-1: var(--ctp-maroon);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-blue);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-peach), 0.42);
+  --kodann-canvas-node-radius: 8px;
+  --kodann-canvas-node-shadow: 0 3px 10px rgba(var(--ctp-crust), 0.25);
+}
+
+.theme-light.ctp-overcast-clouds-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-lavender), 0.38);
+  --canvas-color: var(--ctp-mauve);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-mauve), 0.38);
+  --kodann-canvas-node-radius: 16px;
+  --kodann-canvas-node-shadow: 0 5px 16px rgba(var(--ctp-mauve), 0.12);
+}
+
+.theme-dark.ctp-overcast-clouds-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.32);
+  --canvas-color: var(--ctp-lavender);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-lavender), 0.36);
+  --kodann-canvas-node-radius: 16px;
+  --kodann-canvas-node-shadow: 0 5px 16px rgba(var(--ctp-crust), 0.3);
+}
+
+.theme-light.ctp-etching-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-overlay1), 0.32);
+  --canvas-color: var(--ctp-sapphire);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-overlay1), 0.62);
+  --kodann-canvas-node-radius: 2px;
+  --kodann-canvas-node-shadow: none;
+}
+
+.theme-dark.ctp-etching-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-overlay1), 0.34);
+  --canvas-color: var(--ctp-sapphire);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-overlay1), 0.62);
+  --kodann-canvas-node-radius: 2px;
+  --kodann-canvas-node-shadow: none;
+}
+
+.theme-light.ctp-kawaii-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-pink), 0.34);
+  --canvas-color: var(--ctp-pink);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-pink), 0.46);
+  --kodann-canvas-node-radius: 18px;
+  --kodann-canvas-node-shadow: 0 4px 12px rgba(var(--ctp-mauve), 0.16);
+}
+
+.theme-dark.ctp-kawaii-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-pink), 0.24);
+  --canvas-color: var(--ctp-pink);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-teal);
+  --canvas-color-6: var(--ctp-lavender);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-pink), 0.42);
+  --kodann-canvas-node-radius: 18px;
+  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.3);
+}
+
+.theme-light.ctp-blueberry-creme-light {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.3);
+  --canvas-color: var(--ctp-blue);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-blue), 0.32);
+  --kodann-canvas-node-radius: 13px;
+  --kodann-canvas-node-shadow: 0 4px 12px rgba(var(--ctp-blue), 0.1);
+}
+
+.theme-dark.ctp-blueberry-creme-dark {
+  --canvas-background: rgb(var(--ctp-base));
+  --canvas-dot-pattern: rgba(var(--ctp-blue), 0.25);
+  --canvas-color: var(--ctp-sky);
+  --canvas-color-1: var(--ctp-red);
+  --canvas-color-2: var(--ctp-peach);
+  --canvas-color-3: var(--ctp-yellow);
+  --canvas-color-4: var(--ctp-green);
+  --canvas-color-5: var(--ctp-sky);
+  --canvas-color-6: var(--ctp-mauve);
+  --canvas-card-label-color: rgb(var(--ctp-text));
+  --kodann-canvas-node-border: rgba(var(--ctp-sky), 0.34);
+  --kodann-canvas-node-radius: 13px;
+  --kodann-canvas-node-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.3);
+}
+
+.canvas-node-container {
+  border-color: var(--kodann-canvas-node-border, var(--background-modifier-border));
+  border-radius: var(--kodann-canvas-node-radius, var(--radius-m));
+  box-shadow: var(--kodann-canvas-node-shadow, var(--shadow-s));
+}
+
+.canvas-edges path.canvas-display-path {
+  stroke: rgba(var(--canvas-color), 0.86) !important;
+}
+
+.canvas-edges .canvas-path-end {
+  fill: rgba(var(--canvas-color), 0.86) !important;
+  stroke: rgba(var(--canvas-color), 0.86) !important;
+}
+
