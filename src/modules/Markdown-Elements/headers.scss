@@ -10,8 +10,8 @@
 .theme-light.ctp-overcast-clouds-light .print {
     --h1-color: #C98FA8;
     --h2-color: #B69BC4;
-    --h3-color: #91A8C4;
-    --h4-color: #C49AAE;
+    --h3-color: #d29fab;
+    --h4-color: #9196c4;
     --h5-color: #A99FBA;
     --h6-color: #8F91A8;
 }
@@ -20,8 +20,8 @@
 .theme-dark.ctp-overcast-clouds-dark .print {
     --h1-color: #e5a9cc;
     --h2-color: #C9B1DC;
-    --h3-color: #A9C3DF;
-    --h4-color: #d7a8c1;
+    --h3-color: #d29fab;
+    --h4-color: #9196c4;
     --h5-color: #B9AECF;
     --h6-color: #9DA5BF;
 }
@@ -34,7 +34,7 @@
 .theme-light.ctp-sandy-beaches-light .app-container,
 .theme-light.ctp-sandy-beaches-light .print {
     --h1-color: rgb(var(--ctp-peach));
-    --h2-color: rgb(var(--ctp-yellow));
+    --h2-color: #765C46;
     --h3-color: rgb(var(--ctp-teal));
     --h4-color: rgb(var(--ctp-maroon));
     --h5-color: rgb(var(--ctp-green));

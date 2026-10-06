@@ -1,0 +1,215 @@
+/* Media Library dashboard colors
+   Override the plugin's preset colors with Kodann's active theme variables. */
+.media-dashboard-stat-bar-average {
+    align-items: center;
+    background: color-mix(in srgb, var(--interactive-accent) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--interactive-accent) 22%, transparent);
+    border-radius: 7px;
+    color: var(--text-normal);
+    display: inline-flex;
+    font-size: 0.82em;
+    font-weight: 600;
+    gap: 8px;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+button.media-dashboard-chart-button {
+    background: var(--interactive-normal) !important;
+    border: 1px solid var(--background-modifier-border) !important;
+    border-radius: 12px !important;
+    color: var(--text-muted) !important;
+    transition: all 0.15s ease !important;
+}
+
+button.media-dashboard-chart-button:hover {
+    background: var(--background-modifier-hover) !important;
+    border-color: var(--interactive-accent) !important;
+    color: var(--text-normal) !important;
+}
+
+button.media-dashboard-chart-button.is-active {
+    background: color-mix(in srgb, var(--interactive-accent) 35%, var(--background-secondary)) !important;
+    border-color: color-mix(in srgb, var(--interactive-accent) 60%, var(--background-modifier-border)) !important;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--interactive-accent) 15%, transparent) !important;
+    color: var(--text-normal) !important;
+}
+
+.media-dashboard-bar-fill,
+.media-dashboard-goal-fill {
+    background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--interactive-accent) 84%, var(--background-primary)),
+        color-mix(in srgb, var(--interactive-accent) 68%, var(--background-primary))
+    ) !important;
+    border-radius: inherit;
+    box-shadow: none !important;
+    transition: width 240ms ease;
+}
+
+.media-dashboard-pie {
+    background: conic-gradient(
+        rgba(var(--ctp-rosewater), 0.92) 0deg 60deg,
+        rgba(var(--ctp-peach), 0.82) 60deg 120deg,
+        rgba(var(--ctp-yellow), 0.8) 120deg 180deg,
+        rgba(var(--ctp-green), 0.82) 180deg 240deg,
+        rgba(var(--ctp-teal), 0.78) 240deg 300deg,
+        rgba(var(--ctp-blue), 0.82) 300deg 360deg
+    ) !important;
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text-normal) 8%, transparent);
+}
+
+/* Keep the legend dots in the same theme-color order as the pie slices. */
+.media-dashboard-pie-row:nth-child(6n + 1) .media-dashboard-pie-dot {
+    background: rgb(var(--ctp-rosewater)) !important;
+}
+
+.media-dashboard-pie-row:nth-child(6n + 2) .media-dashboard-pie-dot {
+    background: rgb(var(--ctp-peach)) !important;
+}
+
+.media-dashboard-pie-row:nth-child(6n + 3) .media-dashboard-pie-dot {
+    background: rgb(var(--ctp-yellow)) !important;
+}
+
+.media-dashboard-pie-row:nth-child(6n + 4) .media-dashboard-pie-dot {
+    background: rgb(var(--ctp-green)) !important;
+}
+
+.media-dashboard-pie-row:nth-child(6n + 5) .media-dashboard-pie-dot {
+    background: rgb(var(--ctp-teal)) !important;
+}
+
+.media-dashboard-pie-row:nth-child(6n + 6) .media-dashboard-pie-dot {
+    background: rgb(var(--ctp-blue)) !important;
+}
+
+/* Match dashboard panels, spotlight badges, and diary rows to Kodann colors. */
+.media-dashboard-panel:hover {
+    border-color: color-mix(in srgb, var(--interactive-accent) 28%, var(--background-modifier-border));
+    box-shadow: 0 14px 28px color-mix(in srgb, var(--background-primary) 18%, transparent);
+    transform: translateY(-2px);
+}
+
+.media-dashboard-metric-card:hover,
+.media-dashboard-metric-card.is-clickable:hover {
+    border-color: color-mix(in srgb, var(--interactive-accent) 30%, var(--background-modifier-border)) !important;
+    box-shadow: 0 12px 22px color-mix(in srgb, var(--background-primary) 14%, transparent) !important;
+    transform: translateY(-3px) !important;
+}
+
+.media-dashboard-spotlight-value {
+    background: radial-gradient(
+        circle at 30% 30%,
+        color-mix(in srgb, var(--interactive-accent) 18%, var(--background-secondary)),
+        color-mix(in srgb, var(--interactive-accent) 10%, var(--background-primary))
+    );
+    border: 1px solid color-mix(in srgb, var(--interactive-accent) 20%, var(--background-modifier-border));
+    box-shadow: 0 14px 24px color-mix(in srgb, var(--background-primary) 12%, transparent);
+    color: var(--text-normal);
+}
+
+.media-diary-row:hover {
+    background: var(--background-modifier-hover);
+    border-color: var(--interactive-accent);
+    transform: translateX(4px);
+}
+
+/* Dashboard surfaces and social-list cards use the active theme's surfaces
+   and accent, replacing the plugin's baked-in purple/gold palette. */
+.media-dashboard-hero {
+    background:
+        radial-gradient(
+            circle at top right,
+            color-mix(in srgb, var(--interactive-accent) 16%, transparent),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--text-normal) 5%, var(--background-secondary)),
+            var(--background-secondary)
+        );
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 22px;
+    box-shadow:
+        0 10px 30px color-mix(in srgb, var(--background-primary) 16%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--text-normal) 8%, transparent);
+    display: grid;
+    gap: 10px;
+    padding: 14px;
+}
+
+.media-dashboard-eyebrow {
+    background: color-mix(in srgb, var(--interactive-accent) 9%, var(--background-primary));
+    border: 1px solid color-mix(in srgb, var(--interactive-accent) 22%, var(--background-modifier-border));
+    border-radius: 999px;
+    color: var(--interactive-accent);
+    display: inline-flex;
+    letter-spacing: 0.16em;
+    padding: 4px 9px;
+    width: fit-content;
+}
+
+.media-dashboard-title {
+    background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--interactive-accent) 88%, var(--text-normal)),
+        var(--interactive-accent)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 2px 8px color-mix(in srgb, var(--interactive-accent) 16%, transparent));
+}
+
+.media-dashboard-sidebar-section {
+    background:
+        radial-gradient(
+            circle at top right,
+            color-mix(in srgb, var(--interactive-accent) 12%, transparent),
+            transparent 46%
+        ),
+        linear-gradient(180deg, var(--background-secondary), var(--background-primary-alt));
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--background-primary) 18%, transparent);
+    display: grid;
+    gap: 10px;
+    padding: 12px;
+}
+
+.media-social-list-card {
+    background: linear-gradient(
+        145deg,
+        color-mix(in srgb, var(--interactive-accent) 8%, var(--background-secondary)),
+        color-mix(in srgb, var(--text-normal) 2%, var(--background-secondary))
+    );
+    border: 1px solid color-mix(in srgb, var(--interactive-accent) 24%, var(--background-modifier-border));
+    border-radius: 8px;
+    display: grid;
+    gap: 6px;
+    padding: 10px;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.media-social-list-card:hover {
+    border-color: color-mix(in srgb, var(--interactive-accent) 50%, var(--background-modifier-border));
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--background-primary) 18%, transparent);
+    transform: translateY(-1px);
+}
+
+.media-social-create-row input,
+.media-social-create-row button {
+    background: color-mix(in srgb, var(--background-primary) 76%, transparent);
+    border: 1px solid color-mix(in srgb, var(--interactive-accent) 24%, var(--background-modifier-border));
+    border-radius: 8px;
+    color: var(--text-normal);
+    padding: 7px 10px;
+}
+
+.media-social-create-row input:focus,
+.media-social-create-row button:hover {
+    border-color: color-mix(in srgb, var(--interactive-accent) 60%, var(--background-modifier-border));
+}

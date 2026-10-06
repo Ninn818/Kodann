@@ -70,3 +70,10 @@ body.anp-zen {
         background-color: rgba(var(--ctp-accent), 0.08);
     }
 }
+
+body.anp-zen:not(.is-mobile) {
+    .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+        background-color: transparent;
+        border-top: 0;
+    }
+}

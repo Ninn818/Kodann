@@ -649,12 +649,12 @@
         position: relative;
         border: 0;
         border-radius: 0;
-        background: linear-gradient(135deg, rgba(var(--ctp-base), 0.88), rgba(var(--ctp-surface0), 0.88));
+        background-color: rgba(var(--ctp-base), 0.92);
         padding: 0;
         overflow: visible;
         box-shadow: 0 1px 0 rgba(var(--ctp-base), 0.85) inset, 0 1px 3px rgba(var(--ctp-overlay2), 0.055);
-        margin: 8px 0;
-        transition: box-shadow 160ms ease, background-color 160ms ease;
+        margin: 18px 0;
+        transition: box-shadow 160ms ease;
     }
 
     .callout::before {
@@ -757,10 +757,6 @@
         letter-spacing: 0.01em;
     }
 
-    .callout[data-callout="note"] {
-        background: linear-gradient(135deg, rgba(var(--ctp-base), 0.9), rgba(var(--ctp-surface0), 0.9));
-    }
-
     .callout[data-callout="note"] .callout-icon {
         color: rgb(var(--ctp-peach));
         opacity: 0.72;
@@ -774,12 +770,12 @@
         position: relative;
         border: 0;
         border-radius: 0;
-        background: linear-gradient(135deg, rgba(var(--ctp-surface0), 0.96), rgba(var(--ctp-base), 0.96));
+        background-color: rgba(var(--ctp-surface0), 0.96);
         padding: 0;
         overflow: visible;
         box-shadow: 0 1px 0 rgba(var(--ctp-text), 0.035) inset, 0 2px 5px rgba(var(--ctp-crust), 0.12);
-        margin: 8px 0;
-        transition: box-shadow 160ms ease, background-color 160ms ease;
+        margin: 18px 0;
+        transition: box-shadow 160ms ease;
     }
 
     .callout::before {
@@ -880,10 +876,6 @@
         color: rgb(var(--ctp-overlay0));
         font-size: 0.82em;
         letter-spacing: 0.01em;
-    }
-
-    .callout[data-callout="note"] {
-        background: linear-gradient(135deg, rgba(var(--ctp-surface0), 0.97), rgba(var(--ctp-base), 0.97));
     }
 
     .callout[data-callout="note"] .callout-icon {

@@ -30,8 +30,6 @@ body.anp-gallery {
     .sidebar-toggle-button .clickable-icon,
     .workspace-ribbon .clickable-icon,
     .workspace-tab-header-container .clickable-icon,
-    .workspace-tab-header-container .workspace-tab-header,
-    .workspace-tab-header-container .workspace-tab-header-inner,
     .workspace-split.mod-left-split .view-header .clickable-icon,
     .workspace-split.mod-left-split .nav-header .clickable-icon,
     .workspace-split.mod-right-split .view-header .clickable-icon,
@@ -40,14 +38,31 @@ body.anp-gallery {
         background: transparent;
     }
 
+    .sidebar-toggle-button .clickable-icon,
+    .workspace-ribbon .clickable-icon,
+    .workspace-tab-header-container .clickable-icon,
+    .workspace-split.mod-left-split .view-header .clickable-icon,
+    .workspace-split.mod-left-split .nav-header .clickable-icon,
+    .workspace-split.mod-right-split .view-header .clickable-icon,
+    .workspace-split.mod-right-split .nav-header .clickable-icon,
+    .side-dock-actions .clickable-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        transition: background-color 120ms ease;
+    }
+
     .sidebar-toggle-button .clickable-icon:hover,
     .sidebar-toggle-button .clickable-icon:active,
     .workspace-ribbon .clickable-icon:hover,
     .workspace-ribbon .clickable-icon:active,
     .workspace-tab-header-container .clickable-icon:hover,
     .workspace-tab-header-container .clickable-icon:active,
-    .workspace-tab-header-container .workspace-tab-header:hover,
-    .workspace-tab-header-container .workspace-tab-header.is-active,
+    .side-dock-actions .clickable-icon:hover,
+    .side-dock-actions .clickable-icon:active {
+        background-color: var(--background-modifier-hover);
+    }
+
     .workspace-split.mod-left-split .view-header .clickable-icon:hover,
     .workspace-split.mod-left-split .view-header .clickable-icon:active,
     .workspace-split.mod-left-split .nav-header .clickable-icon:hover,
@@ -55,10 +70,8 @@ body.anp-gallery {
     .workspace-split.mod-right-split .view-header .clickable-icon:hover,
     .workspace-split.mod-right-split .view-header .clickable-icon:active,
     .workspace-split.mod-right-split .nav-header .clickable-icon:hover,
-    .workspace-split.mod-right-split .nav-header .clickable-icon:active,
-    .side-dock-actions .clickable-icon:hover,
-    .side-dock-actions .clickable-icon:active {
-        background: transparent;
+    .workspace-split.mod-right-split .nav-header .clickable-icon:active {
+        background-color: var(--background-modifier-hover);
     }
 
 
@@ -139,8 +152,61 @@ body.anp-gallery {
 
                 border: none;
 
-                padding-left: 4px;
-                padding-right: 4px;
+                gap: 4px;
+                padding: 5px 8px;
+            }
+
+            .workspace-tab-header {
+                min-height: 30px;
+                border: 1px solid transparent;
+                border-radius: 9px;
+                background-color: transparent;
+                transition:
+                    background-color 120ms ease,
+                    border-color 120ms ease;
+            }
+
+            .workspace-tab-header:hover {
+                background-color: var(--background-modifier-hover);
+            }
+
+            .workspace-tab-header.is-active {
+                border-color: var(--anp-gallery-border);
+                background-color: var(--anp-gallery-panel);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.035);
+            }
+        }
+
+        .workspace-split.mod-left-split,
+        .workspace-split.mod-right-split {
+
+            .nav-header,
+            .view-header {
+                align-items: center;
+                min-height: 40px;
+                padding: 4px 8px;
+                border-bottom: 1px solid var(--anp-gallery-border);
+                background-color: transparent;
+            }
+
+            .workspace-tab-header-container {
+                align-items: center;
+                min-height: 40px;
+                padding: 4px 8px;
+            }
+
+            .workspace-tab-header-container-inner,
+            .workspace-tab-header {
+                align-items: center;
+            }
+
+            .nav-header .clickable-icon,
+            .view-header .clickable-icon,
+            .workspace-tab-header-container .clickable-icon {
+                width: 30px;
+                height: 30px;
+                border-radius: 8px;
+                transition: background-color 120ms ease;
             }
         }
 
@@ -176,12 +242,25 @@ body.anp-gallery {
 
                 .workspace-tab-header-container {
 
-                    background-color: var(--anp-gallery-panel);
-
                     border: none;
+                    gap: 4px;
+                }
+
+                .workspace-tab-header {
+                    min-height: 30px;
+                    border-radius: 8px;
+                    background-color: transparent;
+                    transition: background-color 120ms ease;
+                }
+
+                .workspace-tab-header:hover {
+                    background-color: var(--background-modifier-hover);
+                }
+
+                .workspace-tab-header.is-active {
+                    background-color: var(--background-modifier-active);
                 }
             }
-
 
             .workspace-sidedock-vault-profile {
 
@@ -230,8 +309,6 @@ body.anp-gallery {
                 }
 
                 .workspace-tab-header-container {
-
-                    background-color: var(--anp-gallery-panel);
 
                     border: none;
                 }
@@ -349,6 +426,7 @@ body.anp-gallery {
 
         .workspace-ribbon.mod-left {
 
+            align-items: center;
             margin-right: var(--anp-gallery-gap);
 
             background-color: var(--anp-gallery-background);
@@ -356,7 +434,12 @@ body.anp-gallery {
 
         .workspace-ribbon.mod-left::before {
             border-bottom: none;
+            background-color: transparent;
         }
+    }
+
+    .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+        background-color: transparent;
     }
 
 

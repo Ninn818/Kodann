@@ -93,32 +93,40 @@
 .theme-dark.ctp-overcast-clouds-dark {
     .markdown-rendered ul > li::marker,
     .markdown-preview-view ul > li::marker {
+        content: "✦";
         color: rgba(var(--ctp-pink), 0.82);
     }
 
     .markdown-rendered ul ul > li::marker,
     .markdown-preview-view ul ul > li::marker {
+        content: "✦";
         color: rgba(var(--ctp-mauve), 0.82);
     }
 
     .markdown-rendered ul ul ul > li::marker,
     .markdown-preview-view ul ul ul > li::marker {
+        content: "✦";
         color: rgba(var(--ctp-pink), 0.76);
+    }
+
+    .markdown-source-view.mod-cm6 .list-bullet::after {
+        content: "✦";
+        display: flex;
+        width: 1em;
+        height: 1em;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        color: rgba(var(--ctp-pink), 0.82);
+        font-size: 0.72em;
+        line-height: 1;
     }
 
     .markdown-rendered ul,
     .markdown-preview-view ul {
-        list-style-type: "✦";
-    }
-
-    .markdown-rendered ul ul,
-    .markdown-preview-view ul ul {
-        list-style-type: circle;
-    }
-
-    .markdown-rendered ul ul ul,
-    .markdown-preview-view ul ul ul {
-        list-style-type: "♡";
+        list-style-type: none;
     }
 }
 

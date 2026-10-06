@@ -191,6 +191,52 @@ $table-styling: th-highlight, row-alt, col-alt, full, checkered;
     }
 }
 
+.theme-light.ctp-sandy-beaches-light,
+.theme-dark.ctp-sandy-beaches-dark {
+    .markdown-preview-view:not(.cards):not(.table-disable) table,
+    .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    .is-live-preview:not(.cards):not(.table-disable) table,
+    .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        background-color: rgba(var(--ctp-base), 0.78);
+        border: 1px solid rgba(var(--ctp-peach), 0.38);
+        border-radius: 12px;
+        box-shadow:
+            0 3px 10px rgba(var(--ctp-crust), 0.08),
+            inset 0 0 0 1px rgba(var(--ctp-surface2), 0.16);
+
+        td,
+        th {
+            padding: 0.55rem 0.8rem;
+            border-right: 1px solid rgba(var(--ctp-peach), 0.2);
+            border-bottom: 1px solid rgba(var(--ctp-peach), 0.2);
+        }
+
+        thead th {
+            background-color: rgba(var(--ctp-peach), 0.2);
+            color: rgb(var(--ctp-text));
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            box-shadow: inset 0 -1px 0 rgba(var(--ctp-peach), 0.28);
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: rgba(var(--ctp-surface0), 0.24);
+        }
+
+        tbody tr:hover td {
+            background-color: rgba(var(--ctp-yellow), 0.18);
+        }
+
+        code {
+            background-color: rgba(var(--ctp-peach), 0.14);
+            border: 1px solid rgba(var(--ctp-peach), 0.16);
+            border-radius: 6px;
+            color: rgb(var(--ctp-text));
+            padding: 0.12rem 0.35rem;
+        }
+    }
+}
+
 .theme-light.ctp-blueberry-creme-light,
 .theme-dark.ctp-blueberry-creme-dark {
     .markdown-preview-view:not(.cards):not(.table-disable) table,
