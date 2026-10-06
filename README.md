@@ -49,6 +49,12 @@ cssclasses:
 
 The `cssjournal` class styles the note and any embedded Bases card view, including a numbered card grid, framed images, and italic captions. It also styles tables in that note. Other notes are unchanged.
 
+## Media Library
+
+Kodann includes styling for the Media Library plugin's dashboard and social lists. Dashboard panels, chart controls, bars, and other surfaces use the active Kodann palette, so their colors follow the selected theme in both light and dark mode. Pie charts and their legend dots use a coordinated rainbow of theme colors.
+
+Install and enable the Media Library plugin separately; its dashboard styles are applied automatically when using Kodann.
+
 ## Community Contributions
 
 For upstream AnuPpuccin discussions and community snippets, visit [the original project](https://github.com/AnubisNekhet/AnuPpuccin/discussions/categories/snippets).
