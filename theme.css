@@ -38,6 +38,9 @@ settings:
         label: Overcast Clouds
         value: ctp-overcast-clouds-light
     -
+        label: Botanical
+        value: ctp-botanical-light
+    -
         label: Etching
         value: ctp-etching-light
     -
@@ -60,6 +63,9 @@ settings:
     -
         label: Overcast Clouds Dark
         value: ctp-overcast-clouds-dark
+    -
+        label: Botanical
+        value: ctp-botanical-dark
     -
         label: Etching
         value: ctp-etching-dark
@@ -1350,62 +1356,120 @@ settings:
   --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 41, 37, 50));
 }
 
+.theme-light.ctp-botanical-light, .ctp-botanical-light .themed-color-wrapper > .theme-light {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 182, 111, 104));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 169, 95, 89));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 193, 138, 127));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 145, 135, 122));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 166, 83, 74));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 117, 73, 65));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 194, 138, 104));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 196, 169, 111));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 105, 116, 81));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 114, 128, 106));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 146, 152, 139));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 119, 125, 112));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 119, 119, 108));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 165, 154, 136));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 64, 58, 49));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 92, 85, 73));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 114, 106, 93));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 136, 127, 113));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 160, 150, 134));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 184, 173, 153));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 205, 194, 172));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 222, 212, 192));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 233, 224, 206));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 244, 238, 223));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 234, 225, 205));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 222, 211, 187));
+}
+
+.theme-dark.ctp-botanical-dark, .ctp-botanical-dark .themed-color-wrapper > .theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 210, 155, 140));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 200, 138, 124));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 208, 162, 149));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 170, 157, 139));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 200, 121, 105));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 166, 95, 84));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 211, 162, 119));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 201, 180, 126));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 160, 173, 123));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 148, 164, 134));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 168, 176, 154));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 135, 145, 127));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 135, 135, 122));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 178, 165, 143));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 234, 225, 209));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 208, 197, 176));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 179, 167, 143));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 149, 138, 117));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 124, 115, 95));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 101, 94, 78));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 80, 77, 62));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 65, 69, 56));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 52, 59, 48));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 41, 49, 39));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 34, 41, 32));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 27, 33, 26));
+}
+
 .theme-light.ctp-etching-light, .ctp-etching-light .themed-color-wrapper > .theme-light {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 181, 177, 174));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 166, 165, 163));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 179, 178, 177));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 153, 155, 160));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 146, 125, 122));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 125, 111, 112));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 162, 141, 132));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 170, 169, 148));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 133, 140, 137));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 133, 141, 146));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 132, 145, 155));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 119, 131, 142));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 119, 127, 139));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 146, 146, 155));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 63, 66, 70));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 87, 92, 98));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 110, 116, 122));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 130, 136, 142));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 154, 160, 166));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 177, 183, 188));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 211, 215, 218));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 222, 226, 229));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 233, 236, 238));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 243, 245, 246));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 235, 238, 240));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 226, 229, 232));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 120, 114, 114));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 100, 95, 104));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 138, 131, 129));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 120, 114, 114));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 112, 95, 92));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 83, 77, 87));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 175, 168, 143));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 197, 186, 152));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 155, 155, 130));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 150, 148, 136));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 141, 137, 132));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 106, 101, 103));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 100, 95, 104));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 130, 124, 125));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 52, 49, 56));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 74, 69, 78));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 100, 95, 104));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 120, 114, 114));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 146, 139, 134));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 176, 169, 146));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 213, 204, 176));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 230, 221, 191));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 240, 231, 204));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 255, 243, 207));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 245, 235, 203));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 232, 221, 187));
 }
 
 .theme-dark.ctp-etching-dark, .ctp-etching-dark .themed-color-wrapper > .theme-dark {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 194, 185, 178));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 179, 175, 171));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 196, 193, 190));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 171, 174, 180));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 181, 142, 137));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 159, 129, 128));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 182, 160, 145));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 189, 187, 162));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 164, 170, 166));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 159, 169, 174));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 157, 170, 181));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 144, 157, 168));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 149, 157, 168));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 176, 175, 183));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 224, 227, 230));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 196, 201, 205));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 168, 174, 179));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 141, 148, 154));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 119, 126, 132));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 98, 105, 111));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 77, 83, 89));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 65, 71, 77));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 55, 61, 67));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 46, 52, 58));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 40, 46, 52));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 34, 40, 46));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 201, 192, 168));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 183, 174, 160));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 208, 200, 184));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 175, 168, 143));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 181, 142, 123));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 148, 121, 111));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 194, 181, 143));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 213, 201, 159));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 175, 174, 145));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 165, 163, 149));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 165, 158, 154));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 139, 133, 138));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 120, 114, 114));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 180, 170, 162));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 255, 243, 207));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 221, 213, 196));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 189, 181, 167));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 175, 168, 143));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 146, 140, 131));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 120, 114, 114));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 120, 114, 114));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 100, 95, 104));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 91, 86, 96));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 83, 77, 87));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 72, 67, 76));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 57, 53, 61));
 }
 
 .theme-light.ctp-kawaii-light, .ctp-kawaii-light .themed-color-wrapper > .theme-light {
@@ -3554,23 +3618,21 @@ body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-root:not(
 
 /* Gallery Workspace Layout */
 body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Core variables
-     ---------------------------------------------------------------------- */
   --anp-gallery-background: var(--background-secondary);
   --anp-gallery-panel: var(--background-primary);
   --anp-gallery-border: var(--background-modifier-border);
   --anp-gallery-gap: 10px;
   --anp-gallery-radius: var(--radius-xl);
-  --anp-gallery-shadow:
-      0 3px 10px rgba(0, 0, 0, 0.055);
-  --anp-gallery-shadow-small:
-      0 2px 6px rgba(0, 0, 0, 0.04);
+  --anp-gallery-shadow: 0 3px 10px rgba(0, 0, 0, 0.055);
+  --anp-gallery-shadow-small: 0 2px 6px rgba(0, 0, 0, 0.04);
   --divider-color: transparent;
   --divider-width: var(--anp-gallery-gap);
   --divider-width-hover: var(--anp-gallery-gap);
   --ribbon-padding: 0;
   --tab-container-background: var(--anp-gallery-background);
+}
+body.anp-gallery.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: calc(var(--size-4-2) + var(--frame-left-space));
 }
 body.anp-gallery .sidebar-toggle-button .clickable-icon,
 body.anp-gallery .workspace-ribbon .clickable-icon,
@@ -3581,15 +3643,6 @@ body.anp-gallery .workspace-split.mod-right-split .view-header .clickable-icon,
 body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon,
 body.anp-gallery .side-dock-actions .clickable-icon {
   background: transparent;
-}
-body.anp-gallery .sidebar-toggle-button .clickable-icon,
-body.anp-gallery .workspace-ribbon .clickable-icon,
-body.anp-gallery .workspace-tab-header-container .clickable-icon,
-body.anp-gallery .workspace-split.mod-left-split .view-header .clickable-icon,
-body.anp-gallery .workspace-split.mod-left-split .nav-header .clickable-icon,
-body.anp-gallery .workspace-split.mod-right-split .view-header .clickable-icon,
-body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon,
-body.anp-gallery .side-dock-actions .clickable-icon {
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -3602,9 +3655,7 @@ body.anp-gallery .workspace-ribbon .clickable-icon:active,
 body.anp-gallery .workspace-tab-header-container .clickable-icon:hover,
 body.anp-gallery .workspace-tab-header-container .clickable-icon:active,
 body.anp-gallery .side-dock-actions .clickable-icon:hover,
-body.anp-gallery .side-dock-actions .clickable-icon:active {
-  background-color: var(--background-modifier-hover);
-}
+body.anp-gallery .side-dock-actions .clickable-icon:active,
 body.anp-gallery .workspace-split.mod-left-split .view-header .clickable-icon:hover,
 body.anp-gallery .workspace-split.mod-left-split .view-header .clickable-icon:active,
 body.anp-gallery .workspace-split.mod-left-split .nav-header .clickable-icon:hover,
@@ -3615,38 +3666,20 @@ body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon:ho
 body.anp-gallery .workspace-split.mod-right-split .nav-header .clickable-icon:active {
   background-color: var(--background-modifier-hover);
 }
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Application shell
-     ---------------------------------------------------------------------- */
-}
 body.anp-gallery .horizontal-main-container {
   background-color: var(--anp-gallery-background);
   --titlebar-background: var(--anp-gallery-background);
   --ribbon-background: var(--anp-gallery-background);
   --ribbon-background-collapsed: var(--anp-gallery-background);
 }
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Workspace
-     ---------------------------------------------------------------------- */
-}
 body.anp-gallery .workspace {
   background-color: var(--anp-gallery-background);
   margin-left: var(--anp-gallery-gap);
   margin-right: var(--anp-gallery-gap);
   margin-bottom: var(--anp-gallery-gap);
-  /* --------------------------------------------------------------
-     Base workspace tabs
-     -------------------------------------------------------------- */
 }
 body.anp-gallery .workspace .workspace-tabs {
   background-color: var(--anp-gallery-background);
-}
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Every editor leaf becomes a panel
-     -------------------------------------------------------------- */
 }
 body.anp-gallery .workspace .workspace-leaf {
   background-color: var(--anp-gallery-panel);
@@ -3655,18 +3688,8 @@ body.anp-gallery .workspace .workspace-leaf {
   box-shadow: var(--anp-gallery-shadow);
   overflow: hidden;
 }
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Tab container
-     -------------------------------------------------------------- */
-}
 body.anp-gallery .workspace .workspace-tab-container {
   background-color: var(--anp-gallery-panel);
-}
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Top tab strip
-     -------------------------------------------------------------- */
 }
 body.anp-gallery .workspace .workspace-tabs.mod-top .workspace-tab-header-container {
   background-color: var(--anp-gallery-background);
@@ -3722,11 +3745,6 @@ body.anp-gallery .workspace .workspace-split.mod-right-split .workspace-tab-head
   border-radius: 8px;
   transition: background-color 120ms ease;
 }
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Left sidebar
-     -------------------------------------------------------------- */
-}
 body.anp-gallery .workspace .workspace-split.mod-left-split {
   background-color: var(--anp-gallery-background);
   padding-right: var(--anp-gallery-gap);
@@ -3764,11 +3782,6 @@ body.anp-gallery .workspace .workspace-split.mod-left-split .workspace-sidedock-
   border-radius: var(--anp-gallery-radius);
   box-shadow: var(--anp-gallery-shadow-small);
 }
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Right sidebar
-     -------------------------------------------------------------- */
-}
 body.anp-gallery .workspace .workspace-split.mod-right-split {
   background-color: var(--anp-gallery-background);
   padding-left: var(--anp-gallery-gap);
@@ -3786,11 +3799,6 @@ body.anp-gallery .workspace .workspace-split.mod-right-split .workspace-tabs .wo
 body.anp-gallery .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
   border: none;
 }
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Internal vertical splits
-     -------------------------------------------------------------- */
-}
 body.anp-gallery .workspace .workspace-split.mod-vertical {
   background-color: var(--anp-gallery-background);
 }
@@ -3804,11 +3812,6 @@ body.anp-gallery .workspace .workspace-split.mod-vertical > .workspace-tabs .wor
   border-radius: var(--anp-gallery-radius);
   box-shadow: var(--anp-gallery-shadow-small);
   overflow: hidden;
-}
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Internal horizontal splits
-     -------------------------------------------------------------- */
 }
 body.anp-gallery .workspace .workspace-split.mod-horizontal {
   background-color: var(--anp-gallery-background);
@@ -3824,11 +3827,6 @@ body.anp-gallery .workspace .workspace-split.mod-horizontal > .workspace-tabs .w
   box-shadow: var(--anp-gallery-shadow-small);
   overflow: hidden;
 }
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Stacked workspace
-     -------------------------------------------------------------- */
-}
 body.anp-gallery .workspace .workspace-tabs.mod-stacked .workspace-tab-container {
   background-color: var(--anp-gallery-background);
 }
@@ -3842,13 +3840,9 @@ body.anp-gallery .workspace .workspace-tabs.mod-stacked .workspace-leaf {
   border-left: none;
   border-radius: 0 var(--anp-gallery-radius) var(--anp-gallery-radius) 0;
 }
-body.anp-gallery .workspace {
-  /* --------------------------------------------------------------
-     Ribbon
-     -------------------------------------------------------------- */
-}
 body.anp-gallery .workspace .workspace-ribbon.mod-left {
   align-items: center;
+  margin-top: calc(var(--header-height) - 1px);
   margin-right: var(--anp-gallery-gap);
   background-color: var(--anp-gallery-background);
 }
@@ -3856,13 +3850,12 @@ body.anp-gallery .workspace .workspace-ribbon.mod-left::before {
   border-bottom: none;
   background-color: transparent;
 }
+body.anp-gallery .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-left {
+  transform: none;
+  margin-left: 0;
+}
 body.anp-gallery .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
   background-color: transparent;
-}
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Workspace action panel
-     ---------------------------------------------------------------------- */
 }
 body.anp-gallery.anp-card-layout-actions .side-dock-actions {
   margin-top: var(--anp-gallery-gap);
@@ -3871,31 +3864,16 @@ body.anp-gallery.anp-card-layout-actions .side-dock-actions {
   border-radius: var(--anp-gallery-radius) var(--anp-gallery-radius) 0 0;
   box-shadow: var(--anp-gallery-shadow-small);
 }
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     File explorer panel
-     ---------------------------------------------------------------------- */
-}
 body.anp-gallery.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
   background-color: var(--anp-gallery-panel);
   border: 1px solid var(--anp-gallery-border);
   border-radius: var(--anp-gallery-radius);
   box-shadow: var(--anp-gallery-shadow);
 }
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Resize handles
-     ---------------------------------------------------------------------- */
-}
 body.anp-gallery .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 body.anp-gallery .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(100% - var(--header-height));
   bottom: 0;
-}
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Drop overlay
-     ---------------------------------------------------------------------- */
 }
 body.anp-gallery .workspace-drop-overlay::before {
   width: calc(100% - var(--anp-gallery-gap) * 2);
@@ -3903,31 +3881,14 @@ body.anp-gallery .workspace-drop-overlay::before {
   margin: auto;
   border-radius: var(--anp-gallery-radius);
 }
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Fixed status bar
-     ---------------------------------------------------------------------- */
-}
 body.anp-gallery.anp-fixed-status-bar .workspace {
   margin-bottom: 0;
-}
-body.anp-gallery {
-  /* ----------------------------------------------------------------------
-     Popout
-     ---------------------------------------------------------------------- */
 }
 body.anp-gallery.is-popout-window .workspace {
   margin: 0;
 }
 
-/* ==========================================================================
-   GALLERY — DESKTOP
-   ========================================================================== */
-body.anp-gallery:not(.is-mobile) .workspace {
-  /* --------------------------------------------------------------
-     Left sidebar bottom spacing
-     -------------------------------------------------------------- */
-}
+/* Gallery — Desktop */
 body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-left-split {
   padding-bottom: var(--anp-gallery-gap);
 }
@@ -3937,42 +3898,26 @@ body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-left-split .wor
 body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-bottom-left-radius: var(--anp-gallery-radius);
 }
-body.anp-gallery:not(.is-mobile) .workspace {
-  /* --------------------------------------------------------------
-     Right sidebar bottom spacing
-     -------------------------------------------------------------- */
-}
 body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-right-split {
   padding-bottom: var(--anp-gallery-gap);
 }
 body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
   border-bottom-right-radius: var(--anp-gallery-radius);
 }
-body.anp-gallery:not(.is-mobile) .workspace {
-  /* --------------------------------------------------------------
-     Main editor breathing room
-     -------------------------------------------------------------- */
-}
 body.anp-gallery:not(.is-mobile) .workspace .workspace-split.mod-root {
   padding-bottom: var(--anp-gallery-gap);
 }
 
-/* ==========================================================================
-   GALLERY — MOBILE
-   ========================================================================== */
-body.anp-gallery.is-mobile .workspace {
-  margin: 0;
+/* Gallery — macOS window controls*/
+body.anp-gallery.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-left {
+  transform: none;
+  margin-left: 0;
 }
-body.anp-gallery.is-mobile .workspace-split.mod-left-split,
-body.anp-gallery.is-mobile .workspace-split.mod-right-split {
-  padding-left: 0;
-  padding-right: 0;
+body.anp-gallery.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace-ribbon.mod-left {
+  margin-top: calc(var(--header-height) - 1px);
 }
-body.anp-gallery.is-mobile .workspace-leaf {
-  border-radius: 0;
-  border-left: none;
-  border-right: none;
-  box-shadow: none;
+body.anp-gallery.mod-macos.is-hidden-frameless:not(.is-popout-window) .titlebar {
+  z-index: 20;
 }
 
 /* ==========================================================================
@@ -4320,6 +4265,43 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .theme-dark.ctp-kawaii-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-fold,
 .theme-dark.ctp-kawaii-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-title-inner {
   color: var(--text-normal);
+}
+
+.theme-light.ctp-botanical-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]),
+.theme-dark.ctp-botanical-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) {
+  position: relative;
+  overflow: hidden;
+  padding: 0.8rem 1rem 0.9rem;
+  border: 1px solid rgba(var(--ctp-green), 0.38);
+  border-left: 4px solid rgba(var(--ctp-rosewater), 0.82);
+  border-radius: 8px 16px 8px 16px;
+  background: linear-gradient(135deg, rgba(var(--ctp-base), 0.96), rgba(var(--ctp-surface0), 0.76));
+  box-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.1), inset 0 0 0 1px rgba(var(--ctp-surface2), 0.16);
+}
+.theme-light.ctp-botanical-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-title,
+.theme-dark.ctp-botanical-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-title {
+  display: flex;
+  align-items: center;
+  min-height: 2rem;
+  margin: 0 0 0.55rem;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px dashed rgba(var(--ctp-green), 0.32);
+  background: linear-gradient(90deg, rgba(var(--ctp-green), 0.12), transparent 72%);
+  color: rgb(var(--ctp-text));
+}
+.theme-light.ctp-botanical-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-icon,
+.theme-light.ctp-botanical-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-fold,
+.theme-light.ctp-botanical-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-title-inner,
+.theme-dark.ctp-botanical-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-icon,
+.theme-dark.ctp-botanical-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-fold,
+.theme-dark.ctp-botanical-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) .callout-title-inner {
+  color: rgb(var(--ctp-text));
+}
+.theme-light.ctp-botanical-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-content,
+.theme-dark.ctp-botanical-dark .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]) > .callout-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 0.15rem;
 }
 
 .theme-light.ctp-etching-light .callout:not([data-callout-metadata*=revert]):not([data-callout=blank-container]):not([data-callout=multi-column]),
@@ -5027,24 +5009,44 @@ video {
   --h6-color: #F3E9DF;
 }
 
+.theme-light.ctp-botanical-light .app-container,
+.theme-light.ctp-botanical-light .print {
+  --h1-color: rgb(var(--ctp-maroon));
+  --h2-color: rgb(var(--ctp-green));
+  --h3-color: rgb(var(--ctp-red));
+  --h4-color: rgb(var(--ctp-teal));
+  --h5-color: rgb(var(--ctp-peach));
+  --h6-color: rgb(var(--ctp-subtext0));
+}
+
+.theme-dark.ctp-botanical-dark .app-container,
+.theme-dark.ctp-botanical-dark .print {
+  --h1-color: rgb(var(--ctp-rosewater));
+  --h2-color: rgb(var(--ctp-green));
+  --h3-color: rgb(var(--ctp-peach));
+  --h4-color: rgb(var(--ctp-teal));
+  --h5-color: rgb(var(--ctp-yellow));
+  --h6-color: rgb(var(--ctp-subtext0));
+}
+
 .theme-light.ctp-etching-light .app-container,
 .theme-light.ctp-etching-light .print {
-  --h1-color: rgb(var(--ctp-sapphire));
-  --h2-color: rgb(var(--ctp-blue));
-  --h3-color: rgb(var(--ctp-sky));
-  --h4-color: rgb(var(--ctp-teal));
-  --h5-color: rgb(var(--ctp-green));
-  --h6-color: rgb(var(--ctp-lavender));
+  --h1-color: rgb(var(--ctp-text));
+  --h2-color: rgb(var(--ctp-subtext1));
+  --h3-color: rgb(var(--ctp-blue));
+  --h4-color: rgb(var(--ctp-sapphire));
+  --h5-color: rgb(var(--ctp-maroon));
+  --h6-color: rgb(var(--ctp-overlay2));
 }
 
 .theme-dark.ctp-etching-dark .app-container,
 .theme-dark.ctp-etching-dark .print {
-  --h1-color: #B3BEC7;
-  --h2-color: #A2B0BD;
-  --h3-color: #9AA9B6;
-  --h4-color: #A8B7A8;
-  --h5-color: #B5BAB2;
-  --h6-color: #C7C2D2;
+  --h1-color: rgb(var(--ctp-text));
+  --h2-color: rgb(var(--ctp-subtext1));
+  --h3-color: rgb(var(--ctp-rosewater));
+  --h4-color: rgb(var(--ctp-peach));
+  --h5-color: rgb(var(--ctp-green));
+  --h6-color: rgb(var(--ctp-subtext0));
 }
 
 .theme-light.ctp-etching-light .markdown-rendered h1,
@@ -5059,7 +5061,7 @@ video {
 .theme-dark.ctp-etching-dark .markdown-rendered h4,
 .theme-dark.ctp-etching-dark .markdown-rendered h5,
 .theme-dark.ctp-etching-dark .markdown-rendered h6 {
-  background: linear-gradient(90deg, rgb(var(--ctp-sapphire)) 0%, rgb(var(--ctp-blue)) 35%, rgb(var(--ctp-sky)) 100%);
+  background: linear-gradient(90deg, rgb(var(--ctp-text)) 0%, rgb(var(--ctp-subtext1)) 55%, rgb(var(--ctp-blue)) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -6268,7 +6270,15 @@ table.dataview.table-view-table > tbody > tr:hover {
 .theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
 .theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
 .theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table,
-.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
   overflow: hidden;
 }
 .theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
@@ -6318,7 +6328,23 @@ table.dataview.table-view-table > tbody > tr:hover {
 .theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table td,
 .theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table th,
 .theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
-.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
   padding: 0.55rem 0.8rem;
 }
 .theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
@@ -6344,7 +6370,15 @@ table.dataview.table-view-table > tbody > tr:hover {
 .theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
 .theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
 .theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
-.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child {
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr > :last-child,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table tr > :last-child,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr > :last-child {
   border-right: 0;
 }
 .theme-light.ctp-blueberry-creme-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
@@ -6370,8 +6404,97 @@ table.dataview.table-view-table > tbody > tr:hover {
 .theme-dark.ctp-overcast-clouds-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
 .theme-dark.ctp-overcast-clouds-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
 .theme-dark.ctp-overcast-clouds-dark .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
-.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > * {
+.theme-dark.ctp-overcast-clouds-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table tbody:last-child > tr:last-child > *,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody:last-child > tr:last-child > * {
   border-bottom: 0;
+}
+
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+  background-color: rgba(var(--ctp-base), 0.78);
+  border: 1px solid rgba(var(--ctp-green), 0.42);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(var(--ctp-crust), 0.1), inset 0 0 0 1px rgba(var(--ctp-surface2), 0.2);
+}
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table td,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table th,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  border-right: 1px solid rgba(var(--ctp-green), 0.16);
+  border-bottom: 1px solid rgba(var(--ctp-green), 0.16);
+}
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead th,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table thead th,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead th {
+  background-color: rgba(var(--ctp-green), 0.2);
+  color: rgb(var(--ctp-text));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  box-shadow: inset 0 -2px 0 rgba(var(--ctp-green), 0.24);
+}
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:nth-child(even) td,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:nth-child(even) td {
+  background-color: rgba(var(--ctp-peach), 0.08);
+}
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table tbody tr:hover td,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) tbody tr:hover td {
+  background-color: rgba(var(--ctp-rosewater), 0.16);
+}
+.theme-light.ctp-botanical-light .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-botanical-light .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-light.ctp-botanical-light .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-light.ctp-botanical-light .is-live-preview.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-botanical-dark .markdown-preview-view:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-botanical-dark .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) code,
+.theme-dark.ctp-botanical-dark .is-live-preview:not(.cards):not(.table-disable) table code,
+.theme-dark.ctp-botanical-dark .is-live-preview.cards:not(.table-disable) table:not(.dataview) code {
+  background-color: rgba(var(--ctp-green), 0.1);
+  border: 1px solid rgba(var(--ctp-green), 0.16);
+  border-radius: 5px;
+  color: rgb(var(--ctp-text));
+  padding: 0.12rem 0.35rem;
 }
 
 .theme-light.ctp-sandy-beaches-light .markdown-preview-view:not(.cards):not(.table-disable) table,
@@ -10037,37 +10160,6 @@ button.media-dashboard-chart-button.is-active {
   border-radius: inherit;
   box-shadow: none !important;
   transition: width 240ms ease;
-}
-
-.media-dashboard-pie {
-  background: conic-gradient(rgba(var(--ctp-rosewater), 0.92) 0deg 60deg, rgba(var(--ctp-peach), 0.82) 60deg 120deg, rgba(var(--ctp-yellow), 0.8) 120deg 180deg, rgba(var(--ctp-green), 0.82) 180deg 240deg, rgba(var(--ctp-teal), 0.78) 240deg 300deg, rgba(var(--ctp-blue), 0.82) 300deg 360deg) !important;
-  border: 1px solid var(--background-modifier-border);
-  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text-normal) 8%, transparent);
-}
-
-/* Keep the legend dots in the same theme-color order as the pie slices. */
-.media-dashboard-pie-row:nth-child(6n+1) .media-dashboard-pie-dot {
-  background: rgb(var(--ctp-rosewater)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n+2) .media-dashboard-pie-dot {
-  background: rgb(var(--ctp-peach)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n+3) .media-dashboard-pie-dot {
-  background: rgb(var(--ctp-yellow)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n+4) .media-dashboard-pie-dot {
-  background: rgb(var(--ctp-green)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n+5) .media-dashboard-pie-dot {
-  background: rgb(var(--ctp-teal)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n+6) .media-dashboard-pie-dot {
-  background: rgb(var(--ctp-blue)) !important;
 }
 
 /* Match dashboard panels, spotlight badges, and diary rows to Kodann colors. */

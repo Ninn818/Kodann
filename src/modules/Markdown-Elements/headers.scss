@@ -71,24 +71,44 @@
     --h6-color: #F3E9DF;
 }
 
+.theme-light.ctp-botanical-light .app-container,
+.theme-light.ctp-botanical-light .print {
+    --h1-color: rgb(var(--ctp-maroon));
+    --h2-color: rgb(var(--ctp-green));
+    --h3-color: rgb(var(--ctp-red));
+    --h4-color: rgb(var(--ctp-teal));
+    --h5-color: rgb(var(--ctp-peach));
+    --h6-color: rgb(var(--ctp-subtext0));
+}
+
+.theme-dark.ctp-botanical-dark .app-container,
+.theme-dark.ctp-botanical-dark .print {
+    --h1-color: rgb(var(--ctp-rosewater));
+    --h2-color: rgb(var(--ctp-green));
+    --h3-color: rgb(var(--ctp-peach));
+    --h4-color: rgb(var(--ctp-teal));
+    --h5-color: rgb(var(--ctp-yellow));
+    --h6-color: rgb(var(--ctp-subtext0));
+}
+
 .theme-light.ctp-etching-light .app-container,
 .theme-light.ctp-etching-light .print {
-    --h1-color: rgb(var(--ctp-sapphire));
-    --h2-color: rgb(var(--ctp-blue));
-    --h3-color: rgb(var(--ctp-sky));
-    --h4-color: rgb(var(--ctp-teal));
-    --h5-color: rgb(var(--ctp-green));
-    --h6-color: rgb(var(--ctp-lavender));
+    --h1-color: rgb(var(--ctp-text));
+    --h2-color: rgb(var(--ctp-subtext1));
+    --h3-color: rgb(var(--ctp-blue));
+    --h4-color: rgb(var(--ctp-sapphire));
+    --h5-color: rgb(var(--ctp-maroon));
+    --h6-color: rgb(var(--ctp-overlay2));
 }
 
 .theme-dark.ctp-etching-dark .app-container,
 .theme-dark.ctp-etching-dark .print {
-    --h1-color: #B3BEC7;
-    --h2-color: #A2B0BD;
-    --h3-color: #9AA9B6;
-    --h4-color: #A8B7A8;
-    --h5-color: #B5BAB2;
-    --h6-color: #C7C2D2;
+    --h1-color: rgb(var(--ctp-text));
+    --h2-color: rgb(var(--ctp-subtext1));
+    --h3-color: rgb(var(--ctp-rosewater));
+    --h4-color: rgb(var(--ctp-peach));
+    --h5-color: rgb(var(--ctp-green));
+    --h6-color: rgb(var(--ctp-subtext0));
 }
 
 .theme-light.ctp-etching-light .markdown-rendered h1,
@@ -103,7 +123,7 @@
 .theme-dark.ctp-etching-dark .markdown-rendered h4,
 .theme-dark.ctp-etching-dark .markdown-rendered h5,
 .theme-dark.ctp-etching-dark .markdown-rendered h6 {
-    background: linear-gradient(90deg, rgb(var(--ctp-sapphire)) 0%, rgb(var(--ctp-blue)) 35%, rgb(var(--ctp-sky)) 100%);
+    background: linear-gradient(90deg, rgb(var(--ctp-text)) 0%, rgb(var(--ctp-subtext1)) 55%, rgb(var(--ctp-blue)) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

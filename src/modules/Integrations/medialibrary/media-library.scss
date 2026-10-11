@@ -48,43 +48,6 @@ button.media-dashboard-chart-button.is-active {
     transition: width 240ms ease;
 }
 
-.media-dashboard-pie {
-    background: conic-gradient(
-        rgba(var(--ctp-rosewater), 0.92) 0deg 60deg,
-        rgba(var(--ctp-peach), 0.82) 60deg 120deg,
-        rgba(var(--ctp-yellow), 0.8) 120deg 180deg,
-        rgba(var(--ctp-green), 0.82) 180deg 240deg,
-        rgba(var(--ctp-teal), 0.78) 240deg 300deg,
-        rgba(var(--ctp-blue), 0.82) 300deg 360deg
-    ) !important;
-    border: 1px solid var(--background-modifier-border);
-    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text-normal) 8%, transparent);
-}
-
-/* Keep the legend dots in the same theme-color order as the pie slices. */
-.media-dashboard-pie-row:nth-child(6n + 1) .media-dashboard-pie-dot {
-    background: rgb(var(--ctp-rosewater)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n + 2) .media-dashboard-pie-dot {
-    background: rgb(var(--ctp-peach)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n + 3) .media-dashboard-pie-dot {
-    background: rgb(var(--ctp-yellow)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n + 4) .media-dashboard-pie-dot {
-    background: rgb(var(--ctp-green)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n + 5) .media-dashboard-pie-dot {
-    background: rgb(var(--ctp-teal)) !important;
-}
-
-.media-dashboard-pie-row:nth-child(6n + 6) .media-dashboard-pie-dot {
-    background: rgb(var(--ctp-blue)) !important;
-}
 
 /* Match dashboard panels, spotlight badges, and diary rows to Kodann colors. */
 .media-dashboard-panel:hover {

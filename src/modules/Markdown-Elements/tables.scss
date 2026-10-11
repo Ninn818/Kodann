@@ -169,7 +169,9 @@ $table-styling: th-highlight, row-alt, col-alt, full, checkered;
 .theme-light.ctp-etching-light,
 .theme-dark.ctp-etching-dark,
 .theme-light.ctp-overcast-clouds-light,
-.theme-dark.ctp-overcast-clouds-dark {
+.theme-dark.ctp-overcast-clouds-dark,
+.theme-light.ctp-botanical-light,
+.theme-dark.ctp-botanical-dark {
     .markdown-preview-view:not(.cards):not(.table-disable) table,
     .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
     .is-live-preview:not(.cards):not(.table-disable) table,
@@ -187,6 +189,51 @@ $table-styling: th-highlight, row-alt, col-alt, full, checkered;
 
         tbody:last-child > tr:last-child > * {
             border-bottom: 0;
+        }
+    }
+}
+
+.theme-light.ctp-botanical-light,
+.theme-dark.ctp-botanical-dark {
+    .markdown-preview-view:not(.cards):not(.table-disable) table,
+    .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    .is-live-preview:not(.cards):not(.table-disable) table,
+    .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        background-color: rgba(var(--ctp-base), 0.78);
+        border: 1px solid rgba(var(--ctp-green), 0.42);
+        border-radius: 10px;
+        box-shadow:
+            0 4px 14px rgba(var(--ctp-crust), 0.1),
+            inset 0 0 0 1px rgba(var(--ctp-surface2), 0.2);
+
+        td,
+        th {
+            border-right: 1px solid rgba(var(--ctp-green), 0.16);
+            border-bottom: 1px solid rgba(var(--ctp-green), 0.16);
+        }
+
+        thead th {
+            background-color: rgba(var(--ctp-green), 0.2);
+            color: rgb(var(--ctp-text));
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            box-shadow: inset 0 -2px 0 rgba(var(--ctp-green), 0.24);
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: rgba(var(--ctp-peach), 0.08);
+        }
+
+        tbody tr:hover td {
+            background-color: rgba(var(--ctp-rosewater), 0.16);
+        }
+
+        code {
+            background-color: rgba(var(--ctp-green), 0.1);
+            border: 1px solid rgba(var(--ctp-green), 0.16);
+            border-radius: 5px;
+            color: rgb(var(--ctp-text));
+            padding: 0.12rem 0.35rem;
         }
     }
 }

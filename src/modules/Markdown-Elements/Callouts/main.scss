@@ -295,6 +295,47 @@
     }
 }
 
+// Botanical callouts: parchment panels with sage borders and rose accents.
+.theme-light.ctp-botanical-light,
+.theme-dark.ctp-botanical-dark {
+    .callout:not([data-callout-metadata*="revert"]):not([data-callout="blank-container"]):not([data-callout="multi-column"]) {
+        position: relative;
+        overflow: hidden;
+        padding: 0.8rem 1rem 0.9rem;
+        border: 1px solid rgba(var(--ctp-green), 0.38);
+        border-left: 4px solid rgba(var(--ctp-rosewater), 0.82);
+        border-radius: 8px 16px 8px 16px;
+        background:
+            linear-gradient(135deg, rgba(var(--ctp-base), 0.96), rgba(var(--ctp-surface0), 0.76));
+        box-shadow:
+            0 4px 14px rgba(var(--ctp-crust), 0.1),
+            inset 0 0 0 1px rgba(var(--ctp-surface2), 0.16);
+
+        > .callout-title {
+            display: flex;
+            align-items: center;
+            min-height: 2rem;
+            margin: 0 0 0.55rem;
+            padding: 0.35rem 0.5rem;
+            border-bottom: 1px dashed rgba(var(--ctp-green), 0.32);
+            background: linear-gradient(90deg, rgba(var(--ctp-green), 0.12), transparent 72%);
+            color: rgb(var(--ctp-text));
+        }
+
+        .callout-icon,
+        .callout-fold,
+        .callout-title-inner {
+            color: rgb(var(--ctp-text));
+        }
+
+        > .callout-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 0.15rem;
+        }
+    }
+}
+
 // Etching callouts: vintage engraved-paper shape with a raised arched top.
 // Etching callouts: responsive vintage engraved-paper silhouette.
 .theme-light.ctp-etching-light,
