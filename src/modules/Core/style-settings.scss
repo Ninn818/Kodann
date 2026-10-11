@@ -1141,6 +1141,22 @@ settings:
     default: 20
     format: px
 
+# Integrations
+
+-
+    id: anp-integrations-header
+    title: Integrations
+    description: Toggle optional plugin-specific styling
+    type: heading
+    level: 1
+    collapsed: true
+-
+    id: anp-media-library-styles
+    title: Enable Media Library Styling
+    description: Apply Kodann colors and surfaces to the Media Library dashboard and social lists
+    type: class-toggle
+    default: true
+
 # Credits
 
 -

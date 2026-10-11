@@ -1,5 +1,6 @@
 /* Media Library dashboard colors
    Override the plugin's preset colors with Kodann's active theme variables. */
+body.anp-media-library-styles {
 .media-dashboard-stat-bar-average {
     align-items: center;
     background: color-mix(in srgb, var(--interactive-accent) 8%, transparent);
@@ -175,4 +176,5 @@ button.media-dashboard-chart-button.is-active {
 .media-social-create-row input:focus,
 .media-social-create-row button:hover {
     border-color: color-mix(in srgb, var(--interactive-accent) 60%, var(--background-modifier-border));
+}
 }

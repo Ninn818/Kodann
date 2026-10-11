@@ -36,6 +36,12 @@ Go to your Kodann folder (<code>.obsidian/themes/Kodann</code>) and run:<br><br>
 Clone the GitHub repo, run <code>npm install</code>, then run <code>make build</code> in the root folder to generate both theme stylesheets.
 </details>
 
+## Floating Theme Widget
+
+The optional companion plugin adds a floating widget for switching between light and dark mode and selecting a Kodann palette. It requires the Kodann theme and is separate because themes cannot run the JavaScript needed for interactive controls.
+
+To install it manually, create `.obsidian/plugins/kodann-theme-widget` in your vault and copy `manifest.json`, `main.js`, and `styles.css` from this repository's `companion-plugin` folder into it. In Obsidian, enable **Kodann Theme Widget** under **Settings → Community plugins**. The widget appears in the lower-right corner. Its palette choice is saved by the plugin and applied over the flavor selection in Style Settings. Mocha and Mocha Old are dark-only; the widget uses Sandy Beaches when either is selected in light mode.
+
 ## Journal View
 
 Enable the optional paper-style journal layout on an individual note by adding this frontmatter:
@@ -49,9 +55,22 @@ cssclasses:
 
 The `cssjournal` class styles the note and any embedded Bases card view, including a numbered card grid, framed images, and italic captions. It also styles tables in that note. Other notes are unchanged.
 
+## Bases Card Styles
+
+Kodann includes optional styles for Obsidian Bases card views. Add the desired class to the view's **CSS classes** field in the Bases view configuration:
+
+| CSS class | Style |
+| --- | --- |
+| `hide-bases-header` | Hides the Bases header, toolbar, metadata container, and pagination in Reading view; they remain visible while editing. |
+| `polaroid-cards` | Slightly rotated photo cards with a centered title and hover lift. |
+| `library-cards` | Ruled catalog cards with an accent-color edge and compact property labels. |
+| `postage-cards` | Stationery cards with a dashed stamp-like border and inset frame. |
+
+These classes only affect the Bases view where they are applied.
+
 ## Media Library
 
-Kodann includes styling for the Media Library plugin's dashboard and social lists. Dashboard panels, chart controls, bars, and other surfaces use the active Kodann palette, so their colors follow the selected theme in both light and dark mode. Pie charts and their legend dots use a coordinated rainbow of theme colors.
+Kodann includes optional styling for the Media Library plugin's dashboard and social lists. Enable or disable **Enable Media Library Styling** under Style Settings → Integrations. When enabled, dashboard panels, chart controls, bars, and other surfaces use the active Kodann palette in both light and dark mode, and pie charts use a coordinated rainbow of theme colors.
 
 Install and enable the Media Library plugin separately; its dashboard styles are applied automatically when using Kodann.
 
@@ -64,7 +83,7 @@ For upstream AnuPpuccin discussions and community snippets, visit [the original 
 ### Custom palette
 
 <p align="center"> <img src="assets/gh-colorscheme-preview.webp"> </p>
-The theme includes 12 built-in flavors across six palette families, with more available through the <a href="https://github.com/Ninn818/Kodann/blob/main/snippets/extended-colorschemes.css">extended colorschemes</a> snippet. Palette colors are integrated throughout the interface, including callouts and other UI elements.
+The theme includes 14 built-in flavors across seven palette families, including Botanical, a parchment-and-olive palette, and Etching, an antique paper-and-ink palette. More colors are available through the <a href="https://github.com/Ninn818/Kodann/blob/main/snippets/extended-colorschemes.css">extended colorschemes</a> snippet. Palette colors are integrated throughout the interface, including callouts and other UI elements.
 
 ### Layouts
 
@@ -181,7 +200,8 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Royal Velvet](https://github.com/caro401/royal-velvet)   | No         | Yes       | -                                                                                                                           |
 | Sandy Beaches                                             | Yes        | Yes       | Light palette provided by [melnhh](https://github.com/melnhh); both flavors have a subtle 2% warm tint.                       |
 | Blueberry & Creme                                         | Yes        | Yes       | Custom palette; the light flavor adds a lace-framed callout style.                                                          |
-| Etching                                                   | Yes        | Yes       | Custom palette.                                                                                                             |
+| Botanical                                                 | Yes        | Yes       | Custom parchment, rose, and olive palette.                                                                                  |
+| Etching                                                   | Yes        | Yes       | Custom antique parchment-and-ink palette.                                                                                   |
 | Kawaii                                                    | Yes        | Yes       | Custom palette.                                                                                                             |
 | Overcast Clouds                                           | Yes        | Yes       | Custom palette.                                                                                                             |
 | [Solarized](https://github.com/altercation/solarized)     | Yes        | Yes       | -                                                                                                                           |

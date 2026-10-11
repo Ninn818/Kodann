@@ -261,9 +261,24 @@ body.anp-gallery {
 
         .workspace-ribbon.mod-left {
             align-items: center;
+            box-sizing: border-box;
+            flex: 0 0 32px;
             margin-top: calc(var(--header-height) - 1px);
             margin-right: var(--anp-gallery-gap);
             background-color: var(--anp-gallery-background);
+            min-width: 32px;
+            width: 32px;
+
+            .clickable-icon {
+                width: 22px;
+                height: 22px;
+                padding: 3px;
+            }
+
+            .clickable-icon svg {
+                width: 15px;
+                height: 15px;
+            }
         }
 
         .workspace-ribbon.mod-left::before {
@@ -300,12 +315,6 @@ body.anp-gallery {
             border-radius: var(--anp-gallery-radius);
             box-shadow: var(--anp-gallery-shadow);
         }
-    }
-
-    .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-    .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-        height: calc(100% - var(--header-height));
-        bottom: 0;
     }
 
     .workspace-drop-overlay::before {

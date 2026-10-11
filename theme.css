@@ -1152,6 +1152,22 @@ settings:
     default: 20
     format: px
 
+# Integrations
+
+-
+    id: anp-integrations-header
+    title: Integrations
+    description: Toggle optional plugin-specific styling
+    type: heading
+    level: 1
+    collapsed: true
+-
+    id: anp-media-library-styles
+    title: Enable Media Library Styling
+    description: Apply Kodann colors and surfaces to the Media Library dashboard and social lists
+    type: class-toggle
+    default: true
+
 # Credits
 
 -
@@ -3842,9 +3858,22 @@ body.anp-gallery .workspace .workspace-tabs.mod-stacked .workspace-leaf {
 }
 body.anp-gallery .workspace .workspace-ribbon.mod-left {
   align-items: center;
+  box-sizing: border-box;
+  flex: 0 0 32px;
   margin-top: calc(var(--header-height) - 1px);
   margin-right: var(--anp-gallery-gap);
   background-color: var(--anp-gallery-background);
+  min-width: 32px;
+  width: 32px;
+}
+body.anp-gallery .workspace .workspace-ribbon.mod-left .clickable-icon {
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+}
+body.anp-gallery .workspace .workspace-ribbon.mod-left .clickable-icon svg {
+  width: 15px;
+  height: 15px;
 }
 body.anp-gallery .workspace .workspace-ribbon.mod-left::before {
   border-bottom: none;
@@ -3869,11 +3898,6 @@ body.anp-gallery.anp-card-layout-filebrowser .workspace-leaf-content[data-type=f
   border: 1px solid var(--anp-gallery-border);
   border-radius: var(--anp-gallery-radius);
   box-shadow: var(--anp-gallery-shadow);
-}
-body.anp-gallery .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-body.anp-gallery .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height: calc(100% - var(--header-height));
-  bottom: 0;
 }
 body.anp-gallery .workspace-drop-overlay::before {
   width: calc(100% - var(--anp-gallery-gap) * 2);
@@ -4826,6 +4850,57 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .theme-light.ctp-kawaii-light .callout[data-callout=note],
 .theme-dark.ctp-kawaii-dark .callout[data-callout=note] {
   --callout-color: var(--ctp-pink);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=abstract], .theme-light.ctp-kawaii-light .callout[data-callout=summary], .theme-light.ctp-kawaii-light .callout[data-callout=tldr], .theme-light.ctp-kawaii-light .callout[data-callout=seealso],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=abstract],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=summary],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=tldr],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=seealso] {
+  --callout-color: var(--ctp-blue);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=info], .theme-light.ctp-kawaii-light .callout[data-callout=todo], .theme-light.ctp-kawaii-light .callout[data-callout=tip], .theme-light.ctp-kawaii-light .callout[data-callout=hint], .theme-light.ctp-kawaii-light .callout[data-callout=important],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=info],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=todo],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=tip],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=hint],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=important] {
+  --callout-color: var(--ctp-sky);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=success], .theme-light.ctp-kawaii-light .callout[data-callout=check], .theme-light.ctp-kawaii-light .callout[data-callout=done], .theme-light.ctp-kawaii-light .callout[data-callout=question], .theme-light.ctp-kawaii-light .callout[data-callout=help], .theme-light.ctp-kawaii-light .callout[data-callout=faq],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=success],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=check],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=done],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=question],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=help],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=faq] {
+  --callout-color: var(--ctp-green);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=warning], .theme-light.ctp-kawaii-light .callout[data-callout=caution], .theme-light.ctp-kawaii-light .callout[data-callout=attention],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=warning],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=caution],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=attention] {
+  --callout-color: var(--ctp-peach);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=failure], .theme-light.ctp-kawaii-light .callout[data-callout=fail], .theme-light.ctp-kawaii-light .callout[data-callout=missing],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=failure],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=fail],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=missing] {
+  --callout-color: var(--ctp-maroon);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=danger], .theme-light.ctp-kawaii-light .callout[data-callout=error], .theme-light.ctp-kawaii-light .callout[data-callout=bug],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=danger],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=error],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=bug] {
+  --callout-color: var(--ctp-red);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=example],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=example] {
+  --callout-color: var(--ctp-mauve);
+}
+.theme-light.ctp-kawaii-light .callout[data-callout=quote], .theme-light.ctp-kawaii-light .callout[data-callout=cite],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=quote],
+.theme-dark.ctp-kawaii-dark .callout[data-callout=cite] {
+  --callout-color: var(--ctp-lavender);
 }
 
 /*---------------CUSTOM CALLOUTS---------------*/
@@ -9143,6 +9218,139 @@ None of the original code was used and the feature was implemented from scratch.
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 19.9V16h3a2 2 0 0 0 2-2v-2H5v2c0 1.1.9 2 2 2h3v3.9a2 2 0 1 0 4 0Z'%3E%3C/path%3E%3Cpath d='M6 12V2h12v10'%3E%3C/path%3E%3Cpath d='M14 2v4'%3E%3C/path%3E%3Cpath d='M10 2v2'%3E%3C/path%3E%3C/svg%3E");
 }
 
+/* Additional Obsidian Bases card styles */
+.markdown-reading-view .hide-bases-header .bases-header,
+.markdown-reading-view .hide-bases-header .bases-toolbar,
+.markdown-reading-view .hide-bases-header .metadata-container,
+.markdown-reading-view .hide-bases-header [class*=pagination] {
+  display: none !important;
+}
+
+.polaroid-cards {
+  --bases-cards-item-background: var(--background-primary);
+  --bases-cards-item-border-color: var(--background-modifier-border);
+  --bases-cards-item-border-radius: 3px;
+  --bases-cards-item-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.polaroid-cards .bases-cards-item {
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 8px 8px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transform: rotate(-0.5deg);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.polaroid-cards .bases-cards-item:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.polaroid-cards .bases-cards-item:hover {
+  transform: translateY(-3px) rotate(0deg);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.12);
+}
+
+.polaroid-cards .bases-cards-item img {
+  border-radius: 2px;
+}
+
+.polaroid-cards .bases-cards-item-title {
+  padding-top: 10px;
+  text-align: center;
+  font-family: var(--font-text);
+  font-weight: 600;
+}
+
+/* Library catalog cards */
+.library-cards {
+  --library-card-rule: var(--background-modifier-border);
+}
+
+.library-cards .bases-cards-item {
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
+  background-color: var(--background-primary);
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, var(--library-card-rule) 28px);
+  border: 1px solid var(--background-modifier-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.library-cards .bases-cards-item:hover {
+  border-left-color: var(--color-accent-hover);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.library-cards .bases-cards-item-title {
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--background-modifier-border);
+  font-family: var(--font-monospace);
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+}
+
+.library-cards .bases-cards-item-property {
+  padding: 3px 0;
+  font-size: 0.85em;
+}
+
+.library-cards .bases-cards-item-property-name {
+  color: var(--text-muted);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Postage and stationery cards */
+.postage-cards .bases-cards-item {
+  position: relative;
+  padding: 14px;
+  background-color: var(--background-primary);
+  border: 1px dashed var(--color-accent);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 4px var(--background-secondary);
+  transition: border-style 160ms ease, transform 160ms ease;
+}
+
+.postage-cards .bases-cards-item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 13px;
+  height: 17px;
+  border: 1px dashed var(--color-accent);
+  background-color: var(--background-secondary);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.postage-cards .bases-cards-item:hover {
+  transform: translateY(-2px);
+  border-style: solid;
+}
+
+.postage-cards .bases-cards-item-title {
+  padding-right: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted var(--background-modifier-border);
+  font-weight: 600;
+}
+
+.postage-cards .bases-cards-item-property {
+  padding-top: 5px;
+  font-size: 0.88em;
+}
+
+.postage-cards .bases-cards-item-property-name {
+  color: var(--text-faint);
+}
+
 .excalibrain-searchinput,
 .multiselect-wrapper {
   --background-modifier-form-field: rgb(var(--ctp-crust));
@@ -10118,7 +10326,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 
 /* Media Library dashboard colors
    Override the plugin's preset colors with Kodann's active theme variables. */
-.media-dashboard-stat-bar-average {
+body.anp-media-library-styles .media-dashboard-stat-bar-average {
   align-items: center;
   background: color-mix(in srgb, var(--interactive-accent) 8%, transparent);
   border: 1px solid color-mix(in srgb, var(--interactive-accent) 22%, transparent);
@@ -10132,66 +10340,61 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   transition: all 0.2s ease;
   white-space: nowrap;
 }
-
-button.media-dashboard-chart-button {
+body.anp-media-library-styles button.media-dashboard-chart-button {
   background: var(--interactive-normal) !important;
   border: 1px solid var(--background-modifier-border) !important;
   border-radius: 12px !important;
   color: var(--text-muted) !important;
   transition: all 0.15s ease !important;
 }
-
-button.media-dashboard-chart-button:hover {
+body.anp-media-library-styles button.media-dashboard-chart-button:hover {
   background: var(--background-modifier-hover) !important;
   border-color: var(--interactive-accent) !important;
   color: var(--text-normal) !important;
 }
-
-button.media-dashboard-chart-button.is-active {
+body.anp-media-library-styles button.media-dashboard-chart-button.is-active {
   background: color-mix(in srgb, var(--interactive-accent) 35%, var(--background-secondary)) !important;
   border-color: color-mix(in srgb, var(--interactive-accent) 60%, var(--background-modifier-border)) !important;
   box-shadow: 0 2px 8px color-mix(in srgb, var(--interactive-accent) 15%, transparent) !important;
   color: var(--text-normal) !important;
 }
-
-.media-dashboard-bar-fill,
-.media-dashboard-goal-fill {
+body.anp-media-library-styles .media-dashboard-bar-fill,
+body.anp-media-library-styles .media-dashboard-goal-fill {
   background: linear-gradient(90deg, color-mix(in srgb, var(--interactive-accent) 84%, var(--background-primary)), color-mix(in srgb, var(--interactive-accent) 68%, var(--background-primary))) !important;
   border-radius: inherit;
   box-shadow: none !important;
   transition: width 240ms ease;
 }
-
-/* Match dashboard panels, spotlight badges, and diary rows to Kodann colors. */
-.media-dashboard-panel:hover {
+body.anp-media-library-styles {
+  /* Match dashboard panels, spotlight badges, and diary rows to Kodann colors. */
+}
+body.anp-media-library-styles .media-dashboard-panel:hover {
   border-color: color-mix(in srgb, var(--interactive-accent) 28%, var(--background-modifier-border));
   box-shadow: 0 14px 28px color-mix(in srgb, var(--background-primary) 18%, transparent);
   transform: translateY(-2px);
 }
-
-.media-dashboard-metric-card:hover,
-.media-dashboard-metric-card.is-clickable:hover {
+body.anp-media-library-styles .media-dashboard-metric-card:hover,
+body.anp-media-library-styles .media-dashboard-metric-card.is-clickable:hover {
   border-color: color-mix(in srgb, var(--interactive-accent) 30%, var(--background-modifier-border)) !important;
   box-shadow: 0 12px 22px color-mix(in srgb, var(--background-primary) 14%, transparent) !important;
   transform: translateY(-3px) !important;
 }
-
-.media-dashboard-spotlight-value {
+body.anp-media-library-styles .media-dashboard-spotlight-value {
   background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--interactive-accent) 18%, var(--background-secondary)), color-mix(in srgb, var(--interactive-accent) 10%, var(--background-primary)));
   border: 1px solid color-mix(in srgb, var(--interactive-accent) 20%, var(--background-modifier-border));
   box-shadow: 0 14px 24px color-mix(in srgb, var(--background-primary) 12%, transparent);
   color: var(--text-normal);
 }
-
-.media-diary-row:hover {
+body.anp-media-library-styles .media-diary-row:hover {
   background: var(--background-modifier-hover);
   border-color: var(--interactive-accent);
   transform: translateX(4px);
 }
-
-/* Dashboard surfaces and social-list cards use the active theme's surfaces
-   and accent, replacing the plugin's baked-in purple/gold palette. */
-.media-dashboard-hero {
+body.anp-media-library-styles {
+  /* Dashboard surfaces and social-list cards use the active theme's surfaces
+     and accent, replacing the plugin's baked-in purple/gold palette. */
+}
+body.anp-media-library-styles .media-dashboard-hero {
   background: radial-gradient(circle at top right, color-mix(in srgb, var(--interactive-accent) 16%, transparent), transparent 32%), linear-gradient(135deg, color-mix(in srgb, var(--text-normal) 5%, var(--background-secondary)), var(--background-secondary));
   border: 1px solid var(--background-modifier-border);
   border-radius: 22px;
@@ -10200,8 +10403,7 @@ button.media-dashboard-chart-button.is-active {
   gap: 10px;
   padding: 14px;
 }
-
-.media-dashboard-eyebrow {
+body.anp-media-library-styles .media-dashboard-eyebrow {
   background: color-mix(in srgb, var(--interactive-accent) 9%, var(--background-primary));
   border: 1px solid color-mix(in srgb, var(--interactive-accent) 22%, var(--background-modifier-border));
   border-radius: 999px;
@@ -10211,16 +10413,14 @@ button.media-dashboard-chart-button.is-active {
   padding: 4px 9px;
   width: fit-content;
 }
-
-.media-dashboard-title {
+body.anp-media-library-styles .media-dashboard-title {
   background: linear-gradient(90deg, color-mix(in srgb, var(--interactive-accent) 88%, var(--text-normal)), var(--interactive-accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   filter: drop-shadow(0 2px 8px color-mix(in srgb, var(--interactive-accent) 16%, transparent));
 }
-
-.media-dashboard-sidebar-section {
+body.anp-media-library-styles .media-dashboard-sidebar-section {
   background: radial-gradient(circle at top right, color-mix(in srgb, var(--interactive-accent) 12%, transparent), transparent 46%), linear-gradient(180deg, var(--background-secondary), var(--background-primary-alt));
   border: 1px solid var(--background-modifier-border);
   border-radius: 18px;
@@ -10229,8 +10429,7 @@ button.media-dashboard-chart-button.is-active {
   gap: 10px;
   padding: 12px;
 }
-
-.media-social-list-card {
+body.anp-media-library-styles .media-social-list-card {
   background: linear-gradient(145deg, color-mix(in srgb, var(--interactive-accent) 8%, var(--background-secondary)), color-mix(in srgb, var(--text-normal) 2%, var(--background-secondary)));
   border: 1px solid color-mix(in srgb, var(--interactive-accent) 24%, var(--background-modifier-border));
   border-radius: 8px;
@@ -10239,23 +10438,20 @@ button.media-dashboard-chart-button.is-active {
   padding: 10px;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
-
-.media-social-list-card:hover {
+body.anp-media-library-styles .media-social-list-card:hover {
   border-color: color-mix(in srgb, var(--interactive-accent) 50%, var(--background-modifier-border));
   box-shadow: 0 4px 14px color-mix(in srgb, var(--background-primary) 18%, transparent);
   transform: translateY(-1px);
 }
-
-.media-social-create-row input,
-.media-social-create-row button {
+body.anp-media-library-styles .media-social-create-row input,
+body.anp-media-library-styles .media-social-create-row button {
   background: color-mix(in srgb, var(--background-primary) 76%, transparent);
   border: 1px solid color-mix(in srgb, var(--interactive-accent) 24%, var(--background-modifier-border));
   border-radius: 8px;
   color: var(--text-normal);
   padding: 7px 10px;
 }
-
-.media-social-create-row input:focus,
-.media-social-create-row button:hover {
+body.anp-media-library-styles .media-social-create-row input:focus,
+body.anp-media-library-styles .media-social-create-row button:hover {
   border-color: color-mix(in srgb, var(--interactive-accent) 60%, var(--background-modifier-border));
 }
