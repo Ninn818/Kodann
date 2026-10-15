@@ -93,40 +93,26 @@
 .theme-dark.ctp-overcast-clouds-dark {
     .markdown-rendered ul > li::marker,
     .markdown-preview-view ul > li::marker {
-        content: "✦";
         color: rgba(var(--ctp-pink), 0.82);
     }
 
     .markdown-rendered ul ul > li::marker,
     .markdown-preview-view ul ul > li::marker {
-        content: "✦";
         color: rgba(var(--ctp-mauve), 0.82);
     }
 
     .markdown-rendered ul ul ul > li::marker,
     .markdown-preview-view ul ul ul > li::marker {
-        content: "✦";
         color: rgba(var(--ctp-pink), 0.76);
     }
 
     .markdown-source-view.mod-cm6 .list-bullet::after {
-        content: "✦";
-        display: flex;
-        width: 1em;
-        height: 1em;
-        align-items: center;
-        justify-content: center;
-        border: 0;
-        background: transparent;
-        box-shadow: none;
-        color: rgba(var(--ctp-pink), 0.82);
-        font-size: 0.72em;
-        line-height: 1;
+        display: none;
     }
 
     .markdown-rendered ul,
     .markdown-preview-view ul {
-        list-style-type: none;
+        list-style-type: disc;
     }
 }
 
@@ -179,7 +165,7 @@
     .markdown-preview-view ol {
         margin-left: 0.3rem;
         padding-left: 0.8rem;
-        list-style: none;
+        list-style: disc;
     }
 
     .markdown-rendered li,
@@ -192,23 +178,14 @@
 
     .markdown-rendered li::before,
     .markdown-preview-view li::before {
-        content: "";
-        position: absolute;
-        left: -0.4rem;
-        top: 0.68rem;
-        width: 0.38rem;
-        height: 0.38rem;
-        border-radius: 50%;
-        background: rgba(var(--ctp-peach), 0.92);
-        box-shadow: inset 0 0 0 1px rgba(var(--ctp-surface0), 0.25);
+        display: none;
     }
 
     .markdown-rendered ul ul li::before,
     .markdown-preview-view ul ul li::before,
     .markdown-rendered ol li::before,
     .markdown-preview-view ol li::before {
-        left: -0.7rem;
-        background: rgba(var(--ctp-sapphire), 0.8);
+        display: none;
     }
 
     .markdown-rendered ul ul,
@@ -217,18 +194,12 @@
     .markdown-preview-view ol ol {
         margin-top: 0.15rem;
         padding-left: 1.1rem;
-        border-left: 1px solid rgba(var(--ctp-overlay1), 0.5);
+        border-left: none;
     }
 
     .markdown-rendered ul ul ul li::before,
     .markdown-preview-view ul ul ul li::before {
-        background: rgba(var(--ctp-mauve), 0.82);
-        width: 0.28rem;
-        height: 0.28rem;
+        display: none;
     }
 
-    .markdown-rendered li::marker,
-    .markdown-preview-view li::marker {
-        content: "";
-    }
 }

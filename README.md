@@ -123,6 +123,7 @@ Bold and italic colors can be toggled on and off and can be customised according
 The theme comes with many custom callout styles (which can be toggled so they won't interfere with your own callout snippet).<br>
 The snippet also includes support for using the colors of your selected palette which means that the callouts don't ever look out of place :)<br>
 If you use the admonition plugin/have custom callout colors, they won't be affected by the recolor as it only targets vanilla callouts. However, you can make them use Kodann's palette to support dynamic per-palette theming.<br>
+Overcast Clouds can optionally tint callout panels with their standard callout colors using the corresponding Callouts setting.<br>
 Blueberry & Creme's light flavor gives standard callouts a scalloped lace frame with a dashed inset and floral detail.
 
 ### Custom checkboxes & Speech bubbles

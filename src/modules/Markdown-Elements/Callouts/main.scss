@@ -535,6 +535,7 @@
         --cloud-callout-border: rgba(var(--ctp-mauve), 0.28);
         --cloud-callout-text: rgb(var(--ctp-subtext1));
         --cloud-callout-accent: rgba(var(--ctp-pink), 0.65);
+        --cloud-callout-divider: rgba(var(--ctp-mauve), 0.24);
         --cloud-callout-sparkle: rgba(var(--ctp-mauve), 0.7);
         --cloud-callout-dot: rgba(var(--ctp-mauve), 0.12);
 
@@ -619,7 +620,7 @@
             min-height: 2rem;
             margin: 0 0 0.55rem;
             padding: 0.35rem 2.5rem;
-            border-bottom: 1px dashed rgba(var(--ctp-mauve), 0.24);
+            border-bottom: 1px dashed var(--cloud-callout-divider);
             background: transparent;
             text-align: center;
 
@@ -678,6 +679,22 @@
             padding: 0.25rem 0.15rem 0.15rem;
 
             color: var(--cloud-callout-text);
+        }
+    }
+}
+
+.theme-light.ctp-overcast-clouds-light.anp-overcast-clouds-callout-colors,
+.theme-dark.ctp-overcast-clouds-dark.anp-overcast-clouds-callout-colors {
+    .callout:not([data-callout-metadata*="revert"]):not([data-callout="blank-container"]):not([data-callout="multi-column"]) {
+        --cloud-callout-bg: rgba(var(--callout-color), 0.12);
+        --cloud-callout-border: rgba(var(--callout-color), 0.42);
+        --cloud-callout-accent: rgba(var(--callout-color), 0.8);
+        --cloud-callout-divider: rgba(var(--callout-color), 0.32);
+        --cloud-callout-sparkle: rgba(var(--callout-color), 0.62);
+        --cloud-callout-dot: rgba(var(--callout-color), 0.12);
+
+        > .callout-title .callout-icon {
+            color: rgb(var(--callout-color));
         }
     }
 }

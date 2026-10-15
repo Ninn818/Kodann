@@ -429,6 +429,11 @@ settings:
     id: anp-callout-color-toggle
     title: Enable Custom Callout Colors
     type: class-toggle
+-
+    id: anp-overcast-clouds-callout-colors
+    title: Use Standard Callout Colors in Overcast Clouds
+    description: Tint callout backgrounds and decorations with their usual callout colors.
+    type: class-toggle
 
 # File Editor & Markdown Elements :: Embeds
 -
