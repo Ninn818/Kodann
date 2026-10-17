@@ -36,11 +36,6 @@ Go to your Kodann folder (<code>.obsidian/themes/Kodann</code>) and run:<br><br>
 Clone the GitHub repo, run <code>npm install</code>, then run <code>make build</code> in the root folder to generate both theme stylesheets.
 </details>
 
-## Floating Theme Widget
-
-The optional companion plugin adds a floating widget for switching between light and dark mode and selecting a Kodann palette. It requires the Kodann theme and is separate because themes cannot run the JavaScript needed for interactive controls.
-
-To install it manually, create `.obsidian/plugins/kodann-theme-widget` in your vault and copy `manifest.json`, `main.js`, and `styles.css` from this repository's `companion-plugin` folder into it. In Obsidian, enable **Kodann Theme Widget** under **Settings → Community plugins**. The widget appears in the lower-right corner. Its palette choice is saved by the plugin and applied over the flavor selection in Style Settings. Mocha and Mocha Old are dark-only; the widget uses Sandy Beaches when either is selected in light mode.
 
 ## Journal View
 
@@ -64,7 +59,7 @@ Kodann includes optional styles for Obsidian Bases card views. Add the desired c
 | `hide-bases-header` | Hides the Bases header, toolbar, metadata container, and pagination in Reading view; they remain visible while editing. |
 | `polaroid-cards` | Slightly rotated photo cards with a centered title and hover lift. |
 | `library-cards` | Ruled catalog cards with an accent-color edge and compact property labels. |
-| `postage-cards` | Stationery cards with a dashed stamp-like border and inset frame. |
+| `g` | Stationery cards with a dashed stamp-like border and inset frame. |
 
 These classes only affect the Bases view where they are applied.
 

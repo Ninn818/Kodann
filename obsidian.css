@@ -1378,61 +1378,61 @@ settings:
 }
 
 .theme-light.ctp-botanical-light, .ctp-botanical-light .themed-color-wrapper > .theme-light {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 182, 111, 104));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 169, 95, 89));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 193, 138, 127));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 145, 135, 122));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 166, 83, 74));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 117, 73, 65));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 194, 138, 104));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 196, 169, 111));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 105, 116, 81));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 114, 128, 106));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 146, 152, 139));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 119, 125, 112));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 119, 119, 108));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 165, 154, 136));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 64, 58, 49));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 92, 85, 73));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 114, 106, 93));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 136, 127, 113));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 160, 150, 134));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 184, 173, 153));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 205, 194, 172));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 222, 212, 192));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 233, 224, 206));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 244, 238, 223));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 234, 225, 205));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 222, 211, 187));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 185, 130, 142));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 198, 139, 145));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 213, 160, 172));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 167, 141, 175));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 188, 119, 120));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 166, 95, 105));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 213, 161, 132));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 198, 183, 127));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 130, 155, 120));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 127, 166, 154));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 142, 175, 186));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 120, 152, 166));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 137, 155, 185));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 163, 154, 189));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 69, 74, 64));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 93, 98, 85));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 116, 120, 104));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 137, 140, 125));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 160, 162, 145));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 180, 181, 166));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 200, 200, 185));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 213, 213, 199));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 224, 224, 211));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 243, 241, 231));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 234, 233, 221));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 222, 223, 208));
 }
 
 .theme-dark.ctp-botanical-dark, .ctp-botanical-dark .themed-color-wrapper > .theme-dark {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 210, 155, 140));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 200, 138, 124));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 208, 162, 149));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 170, 157, 139));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 200, 121, 105));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 166, 95, 84));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 211, 162, 119));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 201, 180, 126));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 160, 173, 123));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 148, 164, 134));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 168, 176, 154));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 135, 145, 127));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 135, 135, 122));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 178, 165, 143));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 234, 225, 209));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 208, 197, 176));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 179, 167, 143));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 149, 138, 117));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 124, 115, 95));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 101, 94, 78));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 80, 77, 62));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 65, 69, 56));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 52, 59, 48));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 41, 49, 39));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 34, 41, 32));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 27, 33, 26));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 208, 160, 167));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 203, 146, 158));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 200, 160, 187));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 182, 161, 197));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 208, 139, 145));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 188, 125, 138));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 210, 161, 132));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 208, 192, 149));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 168, 190, 154));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 150, 189, 176));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 155, 188, 196));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 139, 169, 180));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 155, 174, 201));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 181, 169, 204));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 212, 217, 201));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 188, 196, 180));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 156, 167, 151));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 129, 140, 124));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 109, 121, 105));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 91, 103, 88));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 75, 87, 72));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 65, 77, 63));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 55, 67, 53));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 47, 57, 46));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 41, 50, 40));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 35, 43, 34));
 }
 
 .theme-light.ctp-etching-light, .ctp-etching-light .themed-color-wrapper > .theme-light {
@@ -1552,61 +1552,61 @@ settings:
 }
 
 .theme-light.ctp-blueberry-creme-light, .ctp-blueberry-creme-light .themed-color-wrapper > .theme-light {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 83, 103, 131));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 220, 214, 206));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 187, 174, 182));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 167, 162, 178));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 174, 145, 142));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 169, 154, 151));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 207, 196, 182));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 211, 203, 185));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 174, 181, 170));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 163, 173, 181));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 152, 166, 187));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 86, 102, 128));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 97, 114, 143));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 175, 182, 197));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 66, 76, 96));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 83, 103, 131));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 98, 108, 128));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 98, 108, 128));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 180, 178, 174));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 198, 196, 191));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 227, 224, 218));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 238, 235, 228));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 248, 246, 241));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 243, 241, 236));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 236, 234, 229));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 227, 226, 221));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 197, 165, 173));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 196, 154, 168));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 210, 179, 196));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 162, 169, 200));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 201, 135, 145));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 172, 115, 127));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 211, 173, 156));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 213, 201, 165));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 165, 184, 174));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 145, 185, 197));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 159, 198, 220));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 127, 166, 201));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 135, 159, 206));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 168, 178, 214));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 70, 85, 101));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 93, 107, 123));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 120, 134, 149));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 137, 153, 168));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 161, 175, 188));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 184, 196, 205));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 201, 210, 217));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 216, 223, 227));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 229, 233, 233));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 245, 243, 237));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 235, 237, 240));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 221, 228, 234));
 }
 
 .theme-dark.ctp-blueberry-creme-dark, .ctp-blueberry-creme-dark .themed-color-wrapper > .theme-dark {
-  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 243, 233, 223));
-  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 220, 208, 197));
-  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 198, 181, 189));
-  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 181, 175, 187));
-  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 190, 159, 154));
-  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 182, 165, 160));
-  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 205, 192, 179));
-  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 208, 199, 182));
-  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 177, 184, 175));
-  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 168, 177, 184));
-  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 184, 194, 207));
-  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 135, 147, 168));
-  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 163, 174, 191));
-  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 197, 200, 208));
-  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 228, 227, 225));
-  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 202, 204, 209));
-  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 175, 180, 189));
-  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 137, 148, 163));
-  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 85, 95, 111));
-  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 101, 111, 126));
-  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 80, 90, 107));
-  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 70, 80, 96));
-  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 61, 71, 87));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 52, 60, 74));
-  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 44, 52, 67));
-  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 38, 45, 60));
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 201, 160, 175));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 196, 147, 168));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 203, 169, 199));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 165, 175, 211));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 208, 142, 157));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 183, 126, 145));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 208, 165, 143));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 211, 196, 155));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 162, 185, 176));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 146, 186, 200));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 161, 197, 219));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 130, 169, 208));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 148, 169, 216));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 175, 184, 223));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 210, 223, 234));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 184, 201, 216));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 151, 172, 191));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 127, 150, 172));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 108, 130, 154));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 89, 111, 135));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 72, 93, 116));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 61, 80, 103));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 52, 70, 91));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 44, 59, 78));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 38, 51, 68));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 32, 43, 58));
 }
 
 .theme-dark {
@@ -2656,7 +2656,7 @@ input.slider,
 }
 
 .canvas-node-container {
-  border-color: var(--kodann-canvas-node-border, var(--background-modifier-border));
+  border: 1px solid var(--kodann-canvas-node-border, var(--background-modifier-border));
   border-radius: var(--kodann-canvas-node-radius, var(--radius-m));
   box-shadow: var(--kodann-canvas-node-shadow, var(--shadow-s));
 }
@@ -5087,42 +5087,42 @@ video {
 
 .theme-light.ctp-blueberry-creme-light .app-container,
 .theme-light.ctp-blueberry-creme-light .print {
-  --h1-color: #61728F;
-  --h2-color: #7A8AA3;
-  --h3-color: #A0AEBE;
-  --h4-color: #B9B5A9;
-  --h5-color: #D8D0C2;
-  --h6-color: #F3F1EC;
+  --h1-color: #7FA6C9;
+  --h2-color: #879FCE;
+  --h3-color: #91B9C5;
+  --h4-color: #718FB9;
+  --h5-color: #A2A9C8;
+  --h6-color: #C49AA8;
 }
 
 .theme-dark.ctp-blueberry-creme-dark .app-container,
 .theme-dark.ctp-blueberry-creme-dark .print {
-  --h1-color: #A3AEBF;
-  --h2-color: #B8C2CF;
-  --h3-color: #D2D7DF;
-  --h4-color: #D8CBB6;
-  --h5-color: #E7DED2;
-  --h6-color: #F3E9DF;
+  --h1-color: #A1C5DB;
+  --h2-color: #94A9D8;
+  --h3-color: #92BAC8;
+  --h4-color: #82A9D0;
+  --h5-color: #AFB8DF;
+  --h6-color: #C493A8;
 }
 
 .theme-light.ctp-botanical-light .app-container,
 .theme-light.ctp-botanical-light .print {
-  --h1-color: rgb(var(--ctp-maroon));
-  --h2-color: rgb(var(--ctp-green));
-  --h3-color: rgb(var(--ctp-red));
-  --h4-color: rgb(var(--ctp-teal));
-  --h5-color: rgb(var(--ctp-peach));
-  --h6-color: rgb(var(--ctp-subtext0));
+  --h1-color: #829B78;
+  --h2-color: #A78DAF;
+  --h3-color: #B9828E;
+  --h4-color: #7FA69A;
+  --h5-color: #B39A76;
+  --h6-color: #899BB9;
 }
 
 .theme-dark.ctp-botanical-dark .app-container,
 .theme-dark.ctp-botanical-dark .print {
-  --h1-color: rgb(var(--ctp-rosewater));
-  --h2-color: rgb(var(--ctp-green));
-  --h3-color: rgb(var(--ctp-peach));
-  --h4-color: rgb(var(--ctp-teal));
-  --h5-color: rgb(var(--ctp-yellow));
-  --h6-color: rgb(var(--ctp-subtext0));
+  --h1-color: #A8BE9A;
+  --h2-color: #B6A1C5;
+  --h3-color: #D0A0A7;
+  --h4-color: #96BDB0;
+  --h5-color: #D0C095;
+  --h6-color: #9BAEC9;
 }
 
 .theme-light.ctp-etching-light .app-container,
